@@ -1,0 +1,19 @@
+PyTorch Demo Training Result
+==================================================
+Device: cuda
+Number of samples: 200
+Input dimension: 10
+Number of classes: 2
+Number of epochs: 10
+Learning rate: 0.001
+
+Epoch [1/10] Loss: 0.6851 Accuracy: 0.5450
+Epoch [2/10] Loss: 0.6836 Accuracy: 0.5650
+Epoch [3/10] Loss: 0.6821 Accuracy: 0.5700
+Epoch [4/10] Loss: 0.6806 Accuracy: 0.5700
+Epoch [5/10] Loss: 0.6792 Accuracy: 0.5700
+Epoch [6/10] Loss: 0.6778 Accuracy: 0.5700
+Epoch [7/10] Loss: 0.6765 Accuracy: 0.5750
+Epoch [8/10] Loss: 0.6751 Accuracy: 0.5650
+Epoch [9/10] Loss: 0.6738 Accuracy: 0.5700
+Epoch [10/10] Loss: 0.6726 Accuracy: 0.5800
