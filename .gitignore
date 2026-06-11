@@ -179,3 +179,51 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Project data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Keep small sample images
+# data/samples/ is intentionally tracked
+
+# Model weights and exported models
+models/checkpoints/*
+models/onnx/*
+models/quantized/*
+!models/checkpoints/.gitkeep
+!models/onnx/.gitkeep
+!models/quantized/.gitkeep
+
+# Output files
+outputs/videos/*
+!outputs/videos/.gitkeep
+outputs/reports/*.pdf
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Model files
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.tflite
+
+# Large experiment logs
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
