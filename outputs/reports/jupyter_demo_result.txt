@@ -1,0 +1,29 @@
+Jupyter Environment and OpenCV Demo Result
+==================================================
+Operating system: Windows-10-10.0.19041-SP0
+Python version: 3.10.20
+PyTorch version: 2.5.1+cu121
+CUDA available: True
+CUDA version: 12.1
+GPU name: NVIDIA GeForce RTX 2060
+OpenCV version: 4.13.0
+NumPy version: 2.2.6
+Matplotlib version: 3.10.9
+
+Input image: data\samples\test.jpg
+Input image shape: (6016, 4016, 3)
+Input image dtype: uint8
+
+Processing steps:
+1. Read the input image
+2. Convert BGR image to RGB
+3. Convert image to grayscale
+4. Apply Gaussian blur
+5. Apply Canny edge detection
+6. Visualize results with Matplotlib
+7. Save processed images
+
+Gray output: outputs\images\jupyter_gray.jpg
+Edges output: outputs\images\jupyter_edges.jpg
+
+Result: Successful

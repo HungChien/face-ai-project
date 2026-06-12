@@ -1,10 +1,10 @@
 # Face AI Project
 
-A computer vision internship project focused on face detection, facial landmark detection, face alignment, face recognition, facial effects, and model deployment.
+A computer vision internship project focused on face detection, facial landmark detection, face alignment, face recognition, facial effects, model optimization, and deployment.
 
 ## 1. Project Overview
 
-This project aims to build a complete face AI workflow, covering both algorithm research and engineering practice.
+This project aims to build a complete face AI workflow covering both algorithm research and engineering practice.
 
 The main technical modules include:
 
@@ -14,46 +14,51 @@ The main technical modules include:
 * Face recognition and verification
 * Facial attribute editing
 * Real-time facial effects
-* Model optimization and deployment
+* Model optimization
+* ONNX conversion and deployment
+* System integration
 
-The project is implemented mainly with Python, PyTorch, OpenCV, OpenMMLab, ONNX, and Docker.
+The project is implemented mainly with Python, PyTorch, OpenCV, Jupyter Notebook, Docker, OpenMMLab, and ONNX.
 
 ## 2. Project Objectives
 
 The main objectives are:
 
 1. Build a reproducible computer vision development environment.
-2. Learn the standard workflow of OpenMMLab and MMDetection.
-3. Explore standard face datasets such as LFW and CelebA.
-4. Implement face detection, landmark detection, and alignment.
-5. Build a face recognition model based on ResNet and ArcFace.
-6. Evaluate face verification performance on LFW.
-7. Study model optimization, ONNX conversion, and deployment.
-8. Implement facial effects and real-time visual applications.
+2. Learn Git and GitHub-based version control.
+3. Learn the basic Docker image and container workflow.
+4. Use Jupyter Notebook for interactive experiments.
+5. Learn the standard OpenMMLab and MMDetection workflow.
+6. Explore standard face datasets such as LFW and CelebA.
+7. Implement face detection, facial landmark detection, and face alignment.
+8. Build a face recognition model based on ResNet and ArcFace.
+9. Evaluate face verification performance on LFW.
+10. Study model optimization, ONNX conversion, and deployment.
+11. Implement facial effects and real-time visual applications.
 
 ## 3. Current Progress
 
-| Module                               | Status    | Evidence                              |
-| ------------------------------------ | --------- | ------------------------------------- |
-| GitHub repository setup              | Completed | Repository structure and Git history  |
-| Git version control workflow         | Completed | Multiple commits and pushes           |
-| Conda and Python environment         | Completed | `docs/env_setup.md`                   |
-| PyTorch and CUDA verification        | Completed | `src/check_env.py`                    |
-| OpenCV environment verification      | Completed | `src/check_env.py`                    |
-| OpenCV image processing demo         | Completed | `src/opencv_demo.py`                  |
-| PyTorch training demo                | Completed | `src/pytorch_demo.py`                 |
-| Haar Cascade face detection baseline | Completed | `src/detection/face_detect_opencv.py` |
-| Docker Hello World                   | Completed | `Dockerfile`, `docs/docker_setup.md`  |
-| Jupyter Notebook experiment          | Pending   | Planned                               |
-| MMDetection environment setup        | Pending   | Planned                               |
-| MMDetection inference demo           | Pending   | Planned                               |
-| MMDetection training smoke test      | Pending   | Planned                               |
-| LFW dataset exploration              | Pending   | Planned                               |
-| CelebA dataset exploration           | Pending   | Planned                               |
-| MS-Celeb-1M study notes              | Pending   | Planned                               |
-| Facial landmark detection            | Pending   | Planned                               |
-| Face alignment                       | Pending   | Planned                               |
-| Face recognition and verification    | Pending   | Planned                               |
+| Module                               | Status    | Evidence                                         |
+| ------------------------------------ | --------- | ------------------------------------------------ |
+| GitHub repository setup              | Completed | Repository structure and Git history             |
+| Git version control workflow         | Completed | Multiple commits and pushes                      |
+| Conda and Python environment         | Completed | `docs/env_setup.md`                              |
+| PyTorch and CUDA verification        | Completed | `src/check_env.py`                               |
+| OpenCV environment verification      | Completed | `src/check_env.py`                               |
+| OpenCV image processing demo         | Completed | `src/opencv_demo.py`                             |
+| PyTorch training demo                | Completed | `src/pytorch_demo.py`                            |
+| Haar Cascade face detection baseline | Completed | `src/detection/face_detect_opencv.py`            |
+| Docker Hello World                   | Completed | `Dockerfile`, `src/hello_docker.py`              |
+| Jupyter Notebook experiment          | Completed | `notebooks/01_environment_and_opencv_demo.ipynb` |
+| MMDetection environment setup        | Pending   | Planned                                          |
+| MMDetection inference demo           | Pending   | Planned                                          |
+| MMDetection training smoke test      | Pending   | Planned                                          |
+| LFW dataset exploration              | Pending   | Planned                                          |
+| CelebA dataset exploration           | Pending   | Planned                                          |
+| MS-Celeb-1M study notes              | Pending   | Planned                                          |
+| Facial landmark detection            | Pending   | Planned                                          |
+| Face alignment                       | Pending   | Planned                                          |
+| Face recognition and verification    | Pending   | Planned                                          |
 
 ## 4. Verified Environment
 
@@ -90,6 +95,7 @@ face-ai-project/
 ├── docs/
 │   ├── env_setup.md
 │   ├── docker_setup.md
+│   ├── jupyter_usage.md
 │   ├── opencv_demo.md
 │   ├── pytorch_demo.md
 │   └── face_detection_baseline.md
@@ -98,6 +104,7 @@ face-ai-project/
 │   ├── onnx/
 │   └── quantized/
 ├── notebooks/
+│   └── 01_environment_and_opencv_demo.ipynb
 ├── outputs/
 │   ├── images/
 │   ├── reports/
@@ -107,6 +114,7 @@ face-ai-project/
 │   ├── app/
 │   ├── deployment/
 │   ├── detection/
+│   │   └── face_detect_opencv.py
 │   ├── effects/
 │   ├── landmark/
 │   ├── recognition/
@@ -146,9 +154,9 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-The PyTorch installation depends on the local CUDA environment.
+The PyTorch installation depends on the local operating system, GPU, and CUDA environment.
 
-The current development machine uses PyTorch with CUDA 12.1. Other machines should install the appropriate PyTorch version according to their operating system, GPU, and CUDA configuration.
+The current development machine uses PyTorch with CUDA 12.1.
 
 ### 6.4 Verify the environment
 
@@ -166,7 +174,7 @@ The script checks:
 * OpenCV version
 * NumPy version
 
-The generated report is stored under:
+The generated report is stored at:
 
 ```text
 outputs/reports/env_check_result.txt
@@ -174,9 +182,9 @@ outputs/reports/env_check_result.txt
 
 ## 7. Docker Hello World
 
-The project includes a minimal Docker example to verify the basic Docker workflow.
+The project includes a minimal Docker example for learning the basic Docker workflow.
 
-The workflow covers:
+The workflow is:
 
 ```text
 Python script
@@ -221,13 +229,106 @@ docs/docker_setup.md
 outputs/reports/docker_hello_result.txt
 ```
 
-The current Docker image is intentionally minimal and does not include PyTorch, OpenCV, CUDA, MMDetection, datasets, or model checkpoints.
+The current Docker image is intentionally minimal.
 
-Its purpose is to verify image building and container execution.
+It does not include:
 
-## 8. OpenCV Image Processing Demo
+* PyTorch
+* OpenCV
+* CUDA
+* MMDetection
+* Project datasets
+* Model checkpoints
 
-The OpenCV demo verifies basic image loading and processing operations.
+Its purpose is to verify Docker image building and container execution.
+
+## 8. Jupyter Notebook Experiment
+
+The project includes a Jupyter Notebook experiment for interactive environment verification and OpenCV image processing.
+
+Notebook:
+
+```text
+notebooks/01_environment_and_opencv_demo.ipynb
+```
+
+Documentation:
+
+```text
+docs/jupyter_usage.md
+```
+
+### 8.1 Register the Conda environment as a Jupyter kernel
+
+```bash
+conda activate face_ai
+python -m ipykernel install --user --name face_ai --display-name "Python (face_ai)"
+```
+
+### 8.2 Start Jupyter Notebook
+
+Run the following command from the repository root:
+
+```bash
+jupyter notebook
+```
+
+Select the kernel:
+
+```text
+Python (face_ai)
+```
+
+### 8.3 Notebook workflow
+
+The notebook performs the following steps:
+
+```text
+Environment verification
+→ Image loading
+→ BGR-to-RGB conversion
+→ Grayscale conversion
+→ Gaussian blur
+→ Canny edge detection
+→ Matplotlib visualization
+→ Output saving
+→ Report generation
+```
+
+The notebook verifies:
+
+* Python version
+* PyTorch version
+* CUDA availability
+* CUDA version
+* GPU device name
+* OpenCV version
+* NumPy version
+* Matplotlib version
+* Image loading
+* Image processing
+* Image visualization
+* Output saving
+
+Input image:
+
+```text
+data/samples/test.jpg
+```
+
+Generated outputs:
+
+```text
+outputs/images/jupyter_gray.jpg
+outputs/images/jupyter_edges.jpg
+outputs/reports/jupyter_demo_result.txt
+```
+
+Only safe, authorized, licensed, or synthetic input images should be used.
+
+## 9. OpenCV Image Processing Demo
+
+The OpenCV demo verifies basic image loading and image processing operations.
 
 Script:
 
@@ -251,7 +352,7 @@ Run:
 python src/opencv_demo.py
 ```
 
-The script generates image outputs under:
+The generated images are stored under:
 
 ```text
 outputs/images/
@@ -263,7 +364,7 @@ Documentation:
 docs/opencv_demo.md
 ```
 
-## 9. PyTorch Training Demo
+## 10. PyTorch Training Demo
 
 The PyTorch demo verifies that the project can complete a basic neural network training loop on CPU or GPU.
 
@@ -283,6 +384,7 @@ Synthetic data generation
 → Backward propagation
 → Parameter update
 → Result logging
+→ Checkpoint saving
 ```
 
 Run:
@@ -307,7 +409,7 @@ Documentation:
 docs/pytorch_demo.md
 ```
 
-## 10. Face Detection Baseline
+## 11. Face Detection Baseline
 
 The first face detection baseline uses OpenCV Haar Cascade.
 
@@ -338,7 +440,7 @@ The current baseline successfully detects the main frontal face in the test imag
 
 However, it also produces false-positive detections in complex background and clothing regions.
 
-This result demonstrates the limitations of traditional feature-based face detection and provides a baseline for comparison with modern deep learning detectors such as:
+This result demonstrates the limitations of traditional feature-based face detection and provides a baseline for later comparison with modern deep learning detectors such as:
 
 * MTCNN
 * RetinaFace
@@ -350,36 +452,16 @@ Documentation:
 docs/face_detection_baseline.md
 ```
 
-## 11. Jupyter Notebook Plan
-
-The next environment and tool-learning task is to add a Jupyter Notebook experiment.
-
-Planned file:
-
-```text
-notebooks/01_environment_and_opencv_demo.ipynb
-```
-
-The notebook will include:
-
-1. Importing PyTorch, OpenCV, NumPy, and Matplotlib.
-2. Printing environment and CUDA information.
-3. Reading a sample image.
-4. Converting the image from BGR to RGB.
-5. Generating a grayscale image.
-6. Performing edge detection.
-7. Displaying results with Matplotlib.
-
 ## 12. MMDetection Plan
 
 The project will use MMDetection to learn the standardized OpenMMLab computer vision workflow.
 
 Planned tasks:
 
-1. Install and verify MMEngine, MMCV, and MMDetection.
-2. Record framework and dependency versions.
+1. Install MMEngine, MMCV, and MMDetection.
+2. Verify package versions and CUDA compatibility.
 3. Run an official pretrained-model inference demo.
-4. Learn the role of config files and checkpoints.
+4. Learn the role of configuration files and checkpoints.
 5. Run a small training smoke test.
 6. Save training logs and inference results.
 7. Prepare for face detection experiments on WIDER FACE.
@@ -490,6 +572,7 @@ The following file types are generally excluded from Git tracking:
 *.mp4
 *.avi
 *.mov
+*.mkv
 *.zip
 *.tar
 *.tar.gz
@@ -505,19 +588,22 @@ The first project phase focuses on environment preparation, tool learning, frame
 
 * Conda and Python environment setup
 * PyTorch installation and CUDA verification
-* OpenCV installation and image-processing demo
+* OpenCV installation and environment verification
 * GitHub repository setup
 * Git commit and push workflow
+* OpenCV image processing demo
 * PyTorch training demo
 * Haar Cascade face detection baseline
 * Docker Desktop setup
 * Docker image creation
 * Docker Hello World container execution
-* Basic environment and experiment documentation
+* Jupyter kernel registration
+* Jupyter Notebook environment verification
+* Jupyter OpenCV image processing experiment
+* Basic experiment documentation and result reports
 
 ### Remaining
 
-* Jupyter Notebook experiment
 * MMDetection installation and environment verification
 * MMDetection pretrained-model inference
 * MMDetection training smoke test
@@ -574,7 +660,6 @@ Current limitations include:
 * The PyTorch demo uses synthetic random data.
 * The Docker image currently includes only a minimal Python runtime.
 * MMDetection has not yet been integrated.
-* Jupyter Notebook experiments have not yet been committed.
 * Dataset exploration has not yet been completed.
 * Facial landmark detection has not yet been implemented.
 * Face alignment has not yet been implemented.
@@ -587,6 +672,7 @@ Current documentation:
 ```text
 docs/env_setup.md
 docs/docker_setup.md
+docs/jupyter_usage.md
 docs/opencv_demo.md
 docs/pytorch_demo.md
 docs/face_detection_baseline.md
@@ -595,7 +681,6 @@ docs/face_detection_baseline.md
 Planned documentation:
 
 ```text
-docs/jupyter_usage.md
 docs/mmdetection_study.md
 docs/dataset_usage_policy.md
 docs/dataset_exploration.md
@@ -608,17 +693,53 @@ To reproduce the current completed experiments:
 
 ```bash
 conda activate face_ai
+
 python src/check_env.py
 python src/opencv_demo.py
 python src/pytorch_demo.py
 python src/detection/face_detect_opencv.py
+
+jupyter notebook
+
 docker build -t face-ai-hello .
 docker run --rm face-ai-hello
 ```
 
 Input images must be placed under `data/samples/` and must comply with the repository data and privacy policy.
 
-## 22. Repository
+## 22. Main Deliverables
+
+Current deliverables include:
+
+```text
+README.md
+requirements.txt
+Dockerfile
+.dockerignore
+
+src/check_env.py
+src/hello_docker.py
+src/opencv_demo.py
+src/pytorch_demo.py
+src/detection/face_detect_opencv.py
+
+notebooks/01_environment_and_opencv_demo.ipynb
+
+docs/env_setup.md
+docs/docker_setup.md
+docs/jupyter_usage.md
+docs/opencv_demo.md
+docs/pytorch_demo.md
+docs/face_detection_baseline.md
+
+outputs/reports/env_check_result.txt
+outputs/reports/docker_hello_result.txt
+outputs/reports/jupyter_demo_result.txt
+outputs/reports/pytorch_demo_result.txt
+outputs/reports/face_detection_baseline_result.txt
+```
+
+## 23. Repository
 
 GitHub repository:
 
@@ -626,8 +747,8 @@ GitHub repository:
 https://github.com/HungChien/face-ai-project
 ```
 
-## 23. License and Dataset Notice
+## 24. License and Dataset Notice
 
 This repository does not redistribute CelebA, LFW, MS-Celeb-1M, WIDER FACE, or other face datasets.
 
-Users are responsible for reviewing and complying with the license, access rules, privacy requirements, and usage restrictions of each dataset and pretrained model.
+Users are responsible for reviewing and complying with the license, access rules, privacy requirements, and usage restrictions of every dataset, pretrained model, and third-party framework.
