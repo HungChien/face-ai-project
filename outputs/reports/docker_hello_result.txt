@@ -1,0 +1,4 @@
+Hello from Docker!
+The face-ai-project container is running successfully.
+Python version: 3.10.20
+Platform: Linux x86_64

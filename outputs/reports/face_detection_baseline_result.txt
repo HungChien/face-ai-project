@@ -5,10 +5,10 @@ Output image: outputs\images\face_detect_opencv.jpg
 Number of detected faces: 7
 
 Detected face bounding boxes:
-Face 1: x=1305, y=1414, width=639, height=639
-Face 2: x=2218, y=2608, width=51, height=51
-Face 3: x=617, y=2272, width=75, height=75
+Face 1: x=2218, y=2608, width=51, height=51
+Face 2: x=678, y=1948, width=56, height=56
+Face 3: x=1305, y=1414, width=639, height=639
 Face 4: x=297, y=3158, width=69, height=69
-Face 5: x=678, y=1948, width=56, height=56
+Face 5: x=617, y=2272, width=75, height=75
 Face 6: x=1520, y=2882, width=92, height=92
 Face 7: x=1026, y=3168, width=135, height=135
