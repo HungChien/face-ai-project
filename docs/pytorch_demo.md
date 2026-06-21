@@ -43,7 +43,7 @@ Example:
 The PyTorch demo was executed in the configured Conda environment:
 
 ```text
-Environment name: face_ai
+Environment name: ml-gpu
 ```
 
 The local environment supports CUDA and uses the following GPU:
@@ -69,7 +69,7 @@ src/pytorch_demo.py
 Activate the Conda environment:
 
 ```bash
-conda activate face_ai
+conda activate ml-gpu
 ```
 
 Run the script from `<project-root>`:

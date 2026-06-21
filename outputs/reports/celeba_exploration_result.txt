@@ -1,0 +1,50 @@
+CelebA Dataset Exploration
+==================================================
+Data root: data\raw
+Image count: 202599
+Attribute count: 40
+
+Visualization tools:
+- Matplotlib: annotation examples and attribute distribution chart.
+- OpenCV: image-level landmark and face-box visualization.
+
+Annotation format:
+- bbox: [x, y, width, height]
+- landmarks: left eye, right eye, nose, left mouth, right mouth; each point is [x, y]
+- attributes: 40 binary labels, encoded as positive or negative facial attributes
+
+Coordinate-system note:
+- torchvision downloads img_align_celeba aligned images. The bbox annotation is kept for dataset-format study, but direct drawing can be offset if the bbox and the aligned image are not in the same coordinate system. The annotation grids therefore use landmark-derived face boxes for visualization.
+
+BBox summary:
+- Mean width: 194.754
+- Mean height: 268.922
+- Median width: 164.0
+- Median height: 227.0
+- Mean area: 80079.886
+
+Top 10 attributes by positive rate:
+- No_Beard: 169158 (0.8349)
+- Young: 156734 (0.7736)
+- Attractive: 103833 (0.5125)
+- Mouth_Slightly_Open: 97942 (0.4834)
+- Smiling: 97669 (0.4821)
+- Wearing_Lipstick: 95715 (0.4724)
+- High_Cheekbones: 92189 (0.455)
+- Male: 84434 (0.4168)
+- Heavy_Makeup: 78390 (0.3869)
+- Wavy_Hair: 64744 (0.3196)
+
+Preprocessing notes:
+- Detection task: use bbox only after confirming it matches the image coordinate system.
+- Landmark task: use five-point landmarks for face alignment.
+- Attribute task: resize images consistently and keep binary labels aligned with image filenames.
+- Recognition preprocessing: for img_align_celeba, prefer five-point landmarks for alignment/cropping visualization.
+- Keep original annotations unchanged; write processed crops to data/processed if needed.
+
+Matplotlib annotation examples: outputs\images\celeba_annotation_examples.jpg
+OpenCV annotation examples: outputs\images\celeba_opencv_annotation_examples.jpg
+Attribute distribution: outputs\images\celeba_attribute_distribution.jpg
+Elapsed seconds: 7.203
+
+Result: Successful

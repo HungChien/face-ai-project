@@ -70,7 +70,7 @@ The script performs the following image processing operations:
 Activate the Conda environment:
 
 ```bash
-conda activate face_ai
+conda activate ml-gpu
 ```
 
 Run the script from `<project-root>`:

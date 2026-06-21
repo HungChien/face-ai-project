@@ -1,0 +1,31 @@
+LFW Pretrained Face Recognition Verification
+==================================================
+Model library: InsightFace
+Model pack: buffalo_l
+Provider: CPUExecutionProvider
+Embedding mode: aligned
+Train pair file: pairsDevTrain.txt (1100)
+Test pair file: pairsDevTest.txt (500)
+Train pairs scored: 2200
+Test pairs scored: 1000
+Train pairs skipped: 0
+Test pairs skipped: 0
+Selected threshold: 0.2288
+Train accuracy at selected threshold: 0.9482
+Test accuracy: 0.9440
+Correct / total: 944 / 1000
+TP: 466
+TN: 478
+FP: 22
+FN: 34
+Unique embeddings cached: 4992
+Elapsed seconds: 108.812
+
+Preprocessing and evaluation:
+- Read LFW funneled images from the official pair files.
+- Use LFW funneled aligned crops directly for embedding by default.
+- Extract normalized embeddings using the pretrained recognition model.
+- Compute cosine similarity for each pair.
+- Select threshold on pairsDevTrain and report accuracy on pairsDevTest.
+
+Result: Successful

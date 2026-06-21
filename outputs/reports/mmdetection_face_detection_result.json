@@ -1,0 +1,31 @@
+{
+  "task": "MMDetection face detection",
+  "model": "grounding_dino_swin-t_pretrain_obj365_goldg",
+  "model_role": "MMDetection open-vocabulary detector with face text prompt",
+  "text_prompt": "face",
+  "device": "cpu",
+  "input_image": "data\\samples\\face_test.jpg",
+  "score_threshold": 0.25,
+  "elapsed_seconds": 6.308,
+  "detection_count": 1,
+  "detections": [
+    {
+      "bbox_xyxy": [
+        1374.41,
+        1470.22,
+        1906.27,
+        2084.53
+      ],
+      "score": 0.6711,
+      "label": 0,
+      "label_name": ""
+    }
+  ],
+  "visualization_path": "outputs\\mmdetection_face_detection\\vis\\face_test.jpg",
+  "prediction_path": "outputs\\mmdetection_face_detection\\preds\\face_test.json",
+  "wider_face_note": "MMDetection includes WIDER FACE configs, but the official config directory does not provide an indexed pretrained checkpoint. GroundingDINO is used here to complete MMDetection-based face detection on the provided image.",
+  "torch_version": "2.1.0+cu121",
+  "mmcv_version": "2.1.0",
+  "mmengine_version": "0.10.7",
+  "mmdet_version": "3.3.0"
+}

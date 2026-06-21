@@ -1,0 +1,144 @@
+{
+  "dataset": "CelebA",
+  "data_root": "data\\raw",
+  "image_count": 202599,
+  "attribute_count": 40,
+  "bbox_format": "[x, y, width, height]",
+  "bbox_note": "torchvision downloads img_align_celeba aligned images. The bbox annotation is kept for dataset-format study, but direct drawing can be offset if the bbox and the aligned image are not in the same coordinate system. The annotation grids therefore use landmark-derived face boxes for visualization.",
+  "landmark_format": "[left_eye_x, left_eye_y, right_eye_x, right_eye_y, nose_x, nose_y, left_mouth_x, left_mouth_y, right_mouth_x, right_mouth_y]",
+  "bbox_summary": {
+    "mean_width": 194.754,
+    "mean_height": 268.922,
+    "median_width": 164.0,
+    "median_height": 227.0,
+    "mean_area": 80079.886
+  },
+  "landmark_summary": {
+    "left_eye": {
+      "mean_x": 69.354,
+      "mean_y": 111.198
+    },
+    "right_eye": {
+      "mean_x": 107.644,
+      "mean_y": 111.162
+    },
+    "nose": {
+      "mean_x": 88.063,
+      "mean_y": 135.102
+    },
+    "left_mouth": {
+      "mean_x": 71.247,
+      "mean_y": 152.113
+    },
+    "right_mouth": {
+      "mean_x": 105.586,
+      "mean_y": 152.195
+    }
+  },
+  "top_20_attributes": [
+    {
+      "attribute": "No_Beard",
+      "positive_count": 169158,
+      "positive_rate": 0.8349
+    },
+    {
+      "attribute": "Young",
+      "positive_count": 156734,
+      "positive_rate": 0.7736
+    },
+    {
+      "attribute": "Attractive",
+      "positive_count": 103833,
+      "positive_rate": 0.5125
+    },
+    {
+      "attribute": "Mouth_Slightly_Open",
+      "positive_count": 97942,
+      "positive_rate": 0.4834
+    },
+    {
+      "attribute": "Smiling",
+      "positive_count": 97669,
+      "positive_rate": 0.4821
+    },
+    {
+      "attribute": "Wearing_Lipstick",
+      "positive_count": 95715,
+      "positive_rate": 0.4724
+    },
+    {
+      "attribute": "High_Cheekbones",
+      "positive_count": 92189,
+      "positive_rate": 0.455
+    },
+    {
+      "attribute": "Male",
+      "positive_count": 84434,
+      "positive_rate": 0.4168
+    },
+    {
+      "attribute": "Heavy_Makeup",
+      "positive_count": 78390,
+      "positive_rate": 0.3869
+    },
+    {
+      "attribute": "Wavy_Hair",
+      "positive_count": 64744,
+      "positive_rate": 0.3196
+    },
+    {
+      "attribute": "Oval_Face",
+      "positive_count": 57567,
+      "positive_rate": 0.2841
+    },
+    {
+      "attribute": "Pointy_Nose",
+      "positive_count": 56210,
+      "positive_rate": 0.2774
+    },
+    {
+      "attribute": "Arched_Eyebrows",
+      "positive_count": 54090,
+      "positive_rate": 0.267
+    },
+    {
+      "attribute": "Big_Lips",
+      "positive_count": 48785,
+      "positive_rate": 0.2408
+    },
+    {
+      "attribute": "Black_Hair",
+      "positive_count": 48472,
+      "positive_rate": 0.2393
+    },
+    {
+      "attribute": "Big_Nose",
+      "positive_count": 47516,
+      "positive_rate": 0.2345
+    },
+    {
+      "attribute": "Straight_Hair",
+      "positive_count": 42222,
+      "positive_rate": 0.2084
+    },
+    {
+      "attribute": "Brown_Hair",
+      "positive_count": 41572,
+      "positive_rate": 0.2052
+    },
+    {
+      "attribute": "Bags_Under_Eyes",
+      "positive_count": 41446,
+      "positive_rate": 0.2046
+    },
+    {
+      "attribute": "Wearing_Earrings",
+      "positive_count": 38276,
+      "positive_rate": 0.1889
+    }
+  ],
+  "matplotlib_annotation_grid": "outputs\\images\\celeba_annotation_examples.jpg",
+  "opencv_annotation_grid": "outputs\\images\\celeba_opencv_annotation_examples.jpg",
+  "matplotlib_attribute_distribution": "outputs\\images\\celeba_attribute_distribution.jpg",
+  "elapsed_seconds": 7.203
+}

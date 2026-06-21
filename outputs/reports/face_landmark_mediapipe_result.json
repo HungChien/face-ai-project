@@ -1,0 +1,56 @@
+{
+  "task": "Face landmark detection",
+  "model": "MediaPipe FaceLandmarker",
+  "model_path": "models\\checkpoints\\face_landmarker.task",
+  "input_image": "data\\samples\\face_test.jpg",
+  "mmdetection_predictions": "outputs\\mmdetection_face_detection\\preds\\face_test.json",
+  "score_threshold": 0.25,
+  "crop_margin": 0.18,
+  "detections_used": 1,
+  "successful_faces": 1,
+  "elapsed_seconds": 1.029,
+  "output_image": "outputs\\landmarks\\face_test_mediapipe_landmarks.jpg",
+  "results": [
+    {
+      "detection_index": 1,
+      "detection_score": 0.6711,
+      "bbox_xyxy": [
+        1374.41,
+        1470.22,
+        1906.27,
+        2084.53
+      ],
+      "crop_box_xyxy": [
+        1279,
+        1360,
+        2002,
+        2195
+      ],
+      "landmark_count": 478,
+      "five_point_landmarks": {
+        "left_eye": [
+          1472,
+          1687
+        ],
+        "right_eye": [
+          1790,
+          1648
+        ],
+        "nose_tip": [
+          1637,
+          1810
+        ],
+        "left_mouth": [
+          1564,
+          1922
+        ],
+        "right_mouth": [
+          1744,
+          1908
+        ]
+      },
+      "status": "successful"
+    }
+  ],
+  "note": "The MMDetection face box is used as the region of interest. MediaPipe FaceLandmarker predicts dense landmarks inside the crop, then coordinates are mapped back to the original image."
+}

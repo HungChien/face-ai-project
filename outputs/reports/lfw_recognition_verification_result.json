@@ -1,0 +1,35 @@
+{
+  "task": "LFW pretrained face recognition verification",
+  "model_library": "InsightFace",
+  "model_name": "buffalo_l",
+  "provider": "CPUExecutionProvider",
+  "embedding_mode": "aligned",
+  "train_pair_file": "pairsDevTrain.txt",
+  "train_pair_header": "1100",
+  "test_pair_file": "pairsDevTest.txt",
+  "test_pair_header": "500",
+  "threshold_selected_on_train": 0.2288,
+  "train_accuracy_at_selected_threshold": 0.9482,
+  "test_metrics": {
+    "accuracy": 0.944,
+    "correct": 944,
+    "total": 1000,
+    "true_positive": 466,
+    "true_negative": 478,
+    "false_positive": 22,
+    "false_negative": 34
+  },
+  "train_pairs_scored": 2200,
+  "test_pairs_scored": 1000,
+  "train_pairs_skipped": 0,
+  "test_pairs_skipped": 0,
+  "unique_embeddings_cached": 4992,
+  "elapsed_seconds": 108.812,
+  "preprocessing": [
+    "Read LFW funneled images from the official pair files.",
+    "Use LFW funneled aligned crops directly for embedding by default.",
+    "Use the pretrained recognition model to extract normalized embeddings.",
+    "Compute cosine similarity for each pair.",
+    "Select threshold on pairsDevTrain and report accuracy on pairsDevTest."
+  ]
+}

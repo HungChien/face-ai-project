@@ -1,0 +1,30 @@
+Face Landmark Detection Result
+==================================================
+Model: MediaPipe FaceLandmarker
+Model file: models\checkpoints\face_landmarker.task
+Input image: data\samples\face_test.jpg
+MMDetection prediction JSON: outputs\mmdetection_face_detection\preds\face_test.json
+Score threshold: 0.25
+Crop margin: 0.18
+Detections used: 1
+Successful faces: 1
+Elapsed seconds: 1.029
+Output image: outputs\landmarks\face_test_mediapipe_landmarks.jpg
+
+Five-point landmarks:
+- Detection #1: successful
+  - left_eye: [1472, 1687]
+  - right_eye: [1790, 1648]
+  - nose_tip: [1637, 1810]
+  - left_mouth: [1564, 1922]
+  - right_mouth: [1744, 1908]
+  - dense landmark count: 478
+
+Pipeline:
+- Load MMDetection face detection result.
+- Expand the face box and crop the region of interest.
+- Run MediaPipe FaceLandmarker on the crop.
+- Map crop-level landmarks back to original image coordinates.
+- Draw dense landmarks and five key points on the test image.
+
+Result: Successful

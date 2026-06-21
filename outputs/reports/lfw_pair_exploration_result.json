@@ -1,0 +1,33 @@
+{
+  "summaries": [
+    {
+      "file": "pairs.txt",
+      "header": "10\t300",
+      "pair_count": 6000,
+      "positive_pairs": 3000,
+      "negative_pairs": 3000,
+      "unique_identities": 4281,
+      "missing_image_pairs": 0
+    },
+    {
+      "file": "pairsDevTrain.txt",
+      "header": "1100",
+      "pair_count": 2200,
+      "positive_pairs": 1100,
+      "negative_pairs": 1100,
+      "unique_identities": 2132,
+      "missing_image_pairs": 0
+    },
+    {
+      "file": "pairsDevTest.txt",
+      "header": "500",
+      "pair_count": 1000,
+      "positive_pairs": 500,
+      "negative_pairs": 500,
+      "unique_identities": 963,
+      "missing_image_pairs": 0
+    }
+  ],
+  "matplotlib_pair_examples": "outputs\\images\\lfw_pair_examples.jpg",
+  "opencv_pair_examples": "outputs\\images\\lfw_opencv_pair_examples.jpg"
+}

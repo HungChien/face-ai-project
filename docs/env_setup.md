@@ -45,19 +45,19 @@ This project uses Conda to manage the Python environment.
 Environment name:
 
 ```text
-face_ai
+ml-gpu
 ```
 
 Create the environment:
 
 ```bash
-conda create -n face_ai python=3.10 -y
+conda create -n ml-gpu python=3.10 -y
 ```
 
 Activate the environment:
 
 ```bash
-conda activate face_ai
+conda activate ml-gpu
 ```
 
 ## 4. Python Dependencies
@@ -192,7 +192,7 @@ The result shows that GPU acceleration is available for later deep learning task
 If the environment needs to be used again, activate the Conda environment first:
 
 ```bash
-conda activate face_ai
+conda activate ml-gpu
 ```
 
 Then enter the project root directory:

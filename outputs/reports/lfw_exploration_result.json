@@ -1,0 +1,62 @@
+{
+  "dataset": "LFW people",
+  "data_home": "data\\raw\\sklearn",
+  "image_count": 13233,
+  "identity_count": 5749,
+  "image_shape": [
+    62,
+    47,
+    3
+  ],
+  "min_images_per_identity": 1,
+  "max_images_per_identity": 530,
+  "mean_images_per_identity": 2.302,
+  "median_images_per_identity": 1.0,
+  "identities_with_one_image": 4069,
+  "top_10_identities": [
+    {
+      "name": "George W Bush",
+      "image_count": 530
+    },
+    {
+      "name": "Colin Powell",
+      "image_count": 236
+    },
+    {
+      "name": "Tony Blair",
+      "image_count": 144
+    },
+    {
+      "name": "Donald Rumsfeld",
+      "image_count": 121
+    },
+    {
+      "name": "Gerhard Schroeder",
+      "image_count": 109
+    },
+    {
+      "name": "Ariel Sharon",
+      "image_count": 77
+    },
+    {
+      "name": "Hugo Chavez",
+      "image_count": 71
+    },
+    {
+      "name": "Junichiro Koizumi",
+      "image_count": 60
+    },
+    {
+      "name": "Jean Chretien",
+      "image_count": 55
+    },
+    {
+      "name": "John Ashcroft",
+      "image_count": 53
+    }
+  ],
+  "matplotlib_sample_grid": "outputs\\images\\lfw_sample_grid.jpg",
+  "opencv_sample_grid": "outputs\\images\\lfw_opencv_sample_grid.jpg",
+  "identity_distribution": "outputs\\images\\lfw_identity_distribution.jpg",
+  "elapsed_seconds": 1.234
+}

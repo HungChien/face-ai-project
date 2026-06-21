@@ -1,0 +1,40 @@
+LFW Dataset Exploration
+==================================================
+Data home: data\raw\sklearn
+Image count: 13233
+Identity count: 5749
+Image shape: (62, 47, 3)
+Min images per identity: 1
+Max images per identity: 530
+Mean images per identity: 2.302
+Median images per identity: 1.000
+Identities with one image: 4069
+
+Top 10 identities:
+- George W Bush: 530
+- Colin Powell: 236
+- Tony Blair: 144
+- Donald Rumsfeld: 121
+- Gerhard Schroeder: 109
+- Ariel Sharon: 77
+- Hugo Chavez: 71
+- Junichiro Koizumi: 60
+- Jean Chretien: 55
+- John Ashcroft: 53
+
+Visualization tools:
+- Matplotlib: sample grid and identity distribution chart.
+- OpenCV: image-level sample grid with text labels.
+
+Preprocessing notes:
+- LFW is identity-labeled and suitable for face verification tasks.
+- Images should be detected, aligned, resized, and normalized before recognition.
+- Pair-based evaluation should build positive pairs from the same identity and negative pairs from different identities.
+- Identities with only one image are useful for gallery statistics but cannot form positive verification pairs alone.
+
+Matplotlib sample grid: outputs\images\lfw_sample_grid.jpg
+OpenCV sample grid: outputs\images\lfw_opencv_sample_grid.jpg
+Identity distribution: outputs\images\lfw_identity_distribution.jpg
+Elapsed seconds: 1.234
+
+Result: Successful

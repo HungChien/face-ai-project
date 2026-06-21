@@ -1,0 +1,27 @@
+MMDetection Face Detection Result
+==================================================
+Model: grounding_dino_swin-t_pretrain_obj365_goldg
+Model role: MMDetection open-vocabulary detector with face prompt
+Text prompt: face
+Device: cpu
+Input image: data\samples\face_test.jpg
+Score threshold: 0.25
+Elapsed seconds: 6.308
+Detected faces above threshold: 1
+Visualization: outputs\mmdetection_face_detection\vis\face_test.jpg
+Prediction JSON: outputs\mmdetection_face_detection\preds\face_test.json
+
+Detections:
+- #1: bbox=[1374.41, 1470.22, 1906.27, 2084.53], score=0.6711, label=
+
+WIDER FACE config note:
+- MMDetection includes WIDER FACE face-detection configs.
+- The official config directory does not provide an indexed pretrained checkpoint.
+- This run uses GroundingDINO in MMDetection with prompt 'face' to complete image-level face detection.
+
+PyTorch version: 2.1.0+cu121
+MMCV version: 2.1.0
+MMEngine version: 0.10.7
+MMDetection version: 3.3.0
+
+Result: Successful

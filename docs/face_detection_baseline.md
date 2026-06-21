@@ -92,7 +92,7 @@ haarcascade_frontalface_default.xml
 Activate the Conda environment:
 
 ```bash
-conda activate face_ai
+conda activate ml-gpu
 ```
 
 Run the script from `<project-root>`:

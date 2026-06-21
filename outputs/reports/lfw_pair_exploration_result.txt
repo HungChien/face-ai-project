@@ -1,0 +1,54 @@
+LFW Pair Structure Exploration
+==================================================
+LFW home: data\raw\sklearn\lfw_home
+Image root: data\raw\sklearn\lfw_home\lfw_funneled
+
+Pair format:
+- Positive pair line: <name> <image_index_1> <image_index_2>
+- Negative pair line: <name_1> <image_index_1> <name_2> <image_index_2>
+- Image path rule: <name>/<name>_<4-digit-index>.jpg
+
+Pair files:
+- pairs.txt:
+  header: 10	300
+  pair count: 6000
+  positive pairs: 3000
+  negative pairs: 3000
+  unique identities: 4281
+  missing image pairs: 0
+- pairsDevTrain.txt:
+  header: 1100
+  pair count: 2200
+  positive pairs: 1100
+  negative pairs: 1100
+  unique identities: 2132
+  missing image pairs: 0
+- pairsDevTest.txt:
+  header: 500
+  pair count: 1000
+  positive pairs: 500
+  negative pairs: 500
+  unique identities: 963
+  missing image pairs: 0
+
+Visualization tools:
+- Matplotlib: pair image grid with titles.
+- OpenCV: pair image grid with positive/negative labels and separators.
+
+Annotation standard:
+- LFW does not provide dense landmark annotations in pairs.txt.
+- The pair files define a verification label: same identity or different identities.
+- Identity names are directory names; image indices map to zero-padded file names.
+
+Preprocessing method for face verification:
+- Detect face region if raw images are used.
+- Align faces using eye or five-point landmarks before embedding extraction.
+- Resize aligned crops to the recognition model input size, commonly 112x112.
+- Normalize pixel values according to the backbone model requirement.
+- Build positive pairs from the same identity and negative pairs from different identities.
+- Keep train/test pair files separate to avoid evaluation leakage.
+
+Matplotlib pair examples: outputs\images\lfw_pair_examples.jpg
+OpenCV pair examples: outputs\images\lfw_opencv_pair_examples.jpg
+
+Result: Successful

@@ -19,13 +19,13 @@ notebooks/01_environment_and_opencv_demo.ipynb
 The notebook uses the Conda environment:
 
 ```text
-face_ai
+ml-gpu
 ```
 
 The environment is registered as a Jupyter kernel with:
 
 ```bash
-python -m ipykernel install --user --name face_ai --display-name "Python (face_ai)"
+python -m ipykernel install --user --name ml-gpu --display-name "Python (ml-gpu)"
 ```
 
 ## 4. Start Jupyter Notebook
@@ -33,7 +33,7 @@ python -m ipykernel install --user --name face_ai --display-name "Python (face_a
 Activate the environment:
 
 ```bash
-conda activate face_ai
+conda activate ml-gpu
 ```
 
 Start Jupyter Notebook from the repository root:
@@ -45,7 +45,7 @@ jupyter notebook
 Select the following kernel:
 
 ```text
-Python (face_ai)
+Python (ml-gpu)
 ```
 
 ## 5. Experiment Workflow
