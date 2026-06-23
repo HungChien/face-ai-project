@@ -22,6 +22,7 @@ The repository is currently organized around Phase 1 deliverables: environment s
 | LFW pair + verification exploration | Completed | `src/datasets/explore_lfw_pairs.py`, `outputs/reports/lfw_pair_exploration_result.txt` |
 | LFW pretrained recognition accuracy | Completed | `outputs/reports/lfw_recognition_verification_result.txt` |
 | CelebA dataset exploration | Completed | `src/datasets/explore_celeba.py`, `outputs/reports/celeba_exploration_result.txt` |
+| CelebA 100-image evaluation | Completed | `src/evaluation/evaluate_celeba_100.py`, `outputs/reports/celeba_100_evaluation_result.txt` |
 | MS-Celeb-1M | Deferred | Not downloaded because of scale, licensing, and cleaning concerns |
 
 ## Environment Layout
@@ -104,6 +105,7 @@ python src\datasets\explore_lfw_pairs.py
 python src\datasets\explore_lfw_pairs.py --run-recognition --model-name buffalo_l
 python src\datasets\explore_celeba.py
 python src\landmarks\face_landmark_mediapipe.py
+python src\evaluation\evaluate_celeba_100.py --save-failure-grid
 ```
 
 Run MMDetection checks in `ml-mmdet`:
@@ -166,6 +168,17 @@ Test accuracy: 0.9440
 Correct / total: 944 / 1000
 ```
 
+CelebA 100-image evaluation:
+
+```text
+Sample: 100 random CelebA aligned images, seed 42
+Five-point derived box vs original bbox mean IoU: 0.0871
+IoU >= 0.5: 4 / 100
+OpenCV Haar detection failure rate: 0.05
+MediaPipe landmark failure rate: 0.01
+MediaPipe mean NME: 0.0440
+```
+
 ## Data And Model Policy
 
 Full face datasets and model weights are not committed to Git. They are kept locally under ignored folders such as `data/raw/` and `models/checkpoints/`.
@@ -184,3 +197,4 @@ The repository should track source code, lightweight documentation, small author
 ```text
 https://github.com/HungChien/face-ai-project
 ```
+

@@ -1,0 +1,45 @@
+CelebA 100-Image Detection And Landmark Evaluation
+============================================================
+Data root: data\raw
+Sample size: 100
+Random seed: 42
+
+Box consistency:
+- Reference: CelebA original bbox annotation.
+- Compared box: five-point landmark-derived face box.
+- Mean IoU: 0.0871
+- Median IoU: 0.0255
+- Min / P10 / P90: 0.0 / 0.0 / 0.2239
+- IoU >= 0.5: 4 / 100
+- IoU >= 0.3: 7 / 100
+
+OpenCV detection batch check:
+- Detector: haarcascade_frontalface_default.xml
+- Failure rule: best detection IoU against landmark-derived box < 0.3
+- Failure count: 5 / 100
+- Failure rate: 0.05
+- Mean best IoU: 0.6668
+- Median best IoU: 0.7089
+
+MediaPipe landmark check:
+- Model file: models\checkpoints\face_landmarker.task
+- Crop mode: full-image
+- Reference: CelebA five-point landmarks.
+- Error metric: NME normalized by inter-ocular distance.
+- Landmark failure count: 1 / 100
+- Landmark failure rate: 0.01
+- Mean NME: 0.044
+- Median NME: 0.0394
+- Min / P10 / P90: 0.0199 / 0.0252 / 0.0648
+- Dense landmark counts: [478]
+
+Interpretation notes:
+- LFW is not used for landmark error here because this project does not have LFW landmark ground truth.
+- CelebA is the better source for this check because it provides bbox and five-point landmarks.
+- The original CelebA bbox and img_align_celeba images can be coordinate-shifted; IoU should be treated as an annotation-consistency check, not a detector benchmark.
+- OpenCV Haar is a weak baseline. A production detector should be evaluated separately with RetinaFace, InsightFace detection, or MMDetection on the same sample protocol.
+
+JSON report: outputs\reports\celeba_100_evaluation_result.json
+Elapsed seconds: 11.915
+
+Result: Successful
