@@ -1,0 +1,31 @@
+LFW Pair Verification - ResNet ArcFace Checkpoint
+================================================================
+Checkpoint: models\checkpoints\resnet50_imagenet_arcface_celeba1000_e20_best.pt
+Device: cuda
+Backbone: resnet50
+Embedding dim: 256
+Checkpoint best epoch: 11
+Checkpoint best val acc: 0.7083077608270848
+Train pair file: pairsDevTrain.txt (1100)
+Test pair file: pairsDevTest.txt (500)
+Train pairs scored: 2200
+Test pairs scored: 1000
+Train pairs skipped: 0
+Test pairs skipped: 0
+Selected threshold: 0.1954
+Train accuracy at selected threshold: 0.7995
+Test accuracy: 0.8080
+Correct / total: 808 / 1000
+TP: 395
+TN: 413
+FP: 87
+FN: 105
+Train score summary: {'positive_mean': 0.3078, 'positive_std': 0.1564, 'negative_mean': 0.08, 'negative_std': 0.1083}
+Test score summary: {'positive_mean': 0.3235, 'positive_std': 0.1524, 'negative_mean': 0.0883, 'negative_std': 0.1078}
+Unique embeddings cached: 4992
+Elapsed seconds: 4.324
+
+Interpretation:
+- This evaluates the project-trained smoke checkpoint, not a pretrained recognition model.
+- Threshold is selected on pairsDevTrain and reported on pairsDevTest.
+- LFW funneled images are used directly as aligned inputs.

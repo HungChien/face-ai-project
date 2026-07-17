@@ -1,0 +1,95 @@
+{
+  "protocol": "LFW pairs.txt 6000 pairs / 10-fold",
+  "model": "facenet-pytorch InceptionResnetV1 pretrained=vggface2",
+  "num_pairs": 6000,
+  "num_folds": 10,
+  "mean_accuracy": 0.9676666666666668,
+  "std_accuracy": 0.007036062310661141,
+  "total_correct": 5806,
+  "fold_results": [
+    {
+      "fold": 1,
+      "threshold": 0.3752637744188547,
+      "train_accuracy": 0.9698148148148148,
+      "test_accuracy": 0.9583333333333334,
+      "correct": 575,
+      "total": 600
+    },
+    {
+      "fold": 2,
+      "threshold": 0.3752637744188547,
+      "train_accuracy": 0.9692592592592593,
+      "test_accuracy": 0.9633333333333334,
+      "correct": 578,
+      "total": 600
+    },
+    {
+      "fold": 3,
+      "threshold": 0.3752637744188547,
+      "train_accuracy": 0.9690740740740741,
+      "test_accuracy": 0.965,
+      "correct": 579,
+      "total": 600
+    },
+    {
+      "fold": 4,
+      "threshold": 0.3727968629296716,
+      "train_accuracy": 0.9692592592592593,
+      "test_accuracy": 0.965,
+      "correct": 579,
+      "total": 600
+    },
+    {
+      "fold": 5,
+      "threshold": 0.35034948381575737,
+      "train_accuracy": 0.9690740740740741,
+      "test_accuracy": 0.9616666666666667,
+      "correct": 577,
+      "total": 600
+    },
+    {
+      "fold": 6,
+      "threshold": 0.35181503032182193,
+      "train_accuracy": 0.9672222222222222,
+      "test_accuracy": 0.98,
+      "correct": 588,
+      "total": 600
+    },
+    {
+      "fold": 7,
+      "threshold": 0.35181503032182193,
+      "train_accuracy": 0.9685185185185186,
+      "test_accuracy": 0.9683333333333334,
+      "correct": 581,
+      "total": 600
+    },
+    {
+      "fold": 8,
+      "threshold": 0.3723326814067256,
+      "train_accuracy": 0.9688888888888889,
+      "test_accuracy": 0.965,
+      "correct": 579,
+      "total": 600
+    },
+    {
+      "fold": 9,
+      "threshold": 0.35283098397431556,
+      "train_accuracy": 0.9681481481481482,
+      "test_accuracy": 0.9716666666666667,
+      "correct": 583,
+      "total": 600
+    },
+    {
+      "fold": 10,
+      "threshold": 0.3752637744188547,
+      "train_accuracy": 0.9675925925925926,
+      "test_accuracy": 0.9783333333333334,
+      "correct": 587,
+      "total": 600
+    }
+  ],
+  "device": "cpu",
+  "batch_size": 64,
+  "embedding_cache": "outputs\\embeddings\\facenet_vggface2_lfw_embeddings.npz",
+  "lfw_home": "data\\raw\\sklearn\\lfw_home"
+}

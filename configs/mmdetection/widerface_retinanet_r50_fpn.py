@@ -1,0 +1,79 @@
+_base_ = [
+    'mmdet::_base_/models/retinanet_r50_fpn.py',
+    'mmdet::_base_/schedules/schedule_1x.py',
+    'mmdet::_base_/default_runtime.py',
+]
+
+dataset_type = 'WIDERFaceDataset'
+data_root = 'data/raw/WIDERFace/'
+backend_args = None
+
+img_scale = (640, 640)
+
+model = dict(
+    bbox_head=dict(num_classes=1),
+)
+
+train_pipeline = [
+    dict(type='LoadImageFromFile', backend_args=backend_args),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(type='Resize', scale=img_scale, keep_ratio=True),
+    dict(type='RandomFlip', prob=0.5),
+    dict(type='PackDetInputs'),
+]
+
+test_pipeline = [
+    dict(type='LoadImageFromFile', backend_args=backend_args),
+    dict(type='Resize', scale=img_scale, keep_ratio=True),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(
+        type='PackDetInputs',
+        meta_keys=('img_id', 'img_path', 'ori_shape', 'img_shape',
+                   'scale_factor')),
+]
+
+train_dataloader = dict(
+    batch_size=2,
+    num_workers=2,
+    persistent_workers=True,
+    drop_last=False,
+    sampler=dict(type='DefaultSampler', shuffle=True),
+    batch_sampler=dict(type='AspectRatioBatchSampler'),
+    dataset=dict(
+        type=dataset_type,
+        data_root=data_root,
+        ann_file='train.txt',
+        data_prefix=dict(img='WIDER_train'),
+        filter_cfg=dict(filter_empty_gt=True, bbox_min_size=17, min_size=32),
+        pipeline=train_pipeline),
+)
+
+val_dataloader = dict(
+    batch_size=1,
+    num_workers=2,
+    persistent_workers=True,
+    drop_last=False,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type=dataset_type,
+        data_root=data_root,
+        ann_file='val.txt',
+        data_prefix=dict(img='WIDER_val'),
+        test_mode=True,
+        pipeline=test_pipeline),
+)
+
+test_dataloader = val_dataloader
+
+val_evaluator = dict(
+    type='VOCMetric',
+    metric='mAP',
+    eval_mode='11points',
+)
+test_evaluator = val_evaluator
+
+optim_wrapper = dict(
+    optimizer=dict(type='SGD', lr=0.01, momentum=0.9, weight_decay=0.0001),
+)
+
+work_dir = 'outputs/mmdetection_widerface/retinanet_r50_fpn'

@@ -1,0 +1,20 @@
+{
+  "task": "prepare MS1M aligned 112x112 folder dataset",
+  "input_root": "data\\raw\\ms-celeb-1m-subset-5000",
+  "output_root": "data\\processed\\ms1m-aligned-112-5000",
+  "image_size": 112,
+  "input_identities": 5000,
+  "output_identities": 5000,
+  "output_images": 150000,
+  "copied_images": 150000,
+  "resized_images": 0,
+  "unreadable_images": 0,
+  "original_shapes": {
+    "112x112": 150000
+  },
+  "min_images_per_identity": 30,
+  "max_images_per_identity": 30,
+  "preview": "outputs\\images\\ms1m_aligned_112_5000_preview.jpg",
+  "preview_images": 32,
+  "elapsed_seconds": 107.247
+}

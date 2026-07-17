@@ -1,0 +1,42 @@
+{
+  "task": "LFW pair verification with trained ResNet ArcFace checkpoint",
+  "checkpoint": "models\\checkpoints\\resnet50_imagenet_arcface_celeba1000_e20_best.pt",
+  "device": "cuda",
+  "backbone": "resnet50",
+  "embedding_dim": 256,
+  "checkpoint_best_epoch": 11,
+  "checkpoint_best_val_acc": 0.7083077608270848,
+  "train_pair_file": "pairsDevTrain.txt",
+  "train_pair_header": "1100",
+  "test_pair_file": "pairsDevTest.txt",
+  "test_pair_header": "500",
+  "threshold_selected_on_train": 0.1954,
+  "train_accuracy_at_selected_threshold": 0.7995,
+  "test_metrics": {
+    "accuracy": 0.808,
+    "correct": 808,
+    "total": 1000,
+    "true_positive": 395,
+    "true_negative": 413,
+    "false_positive": 87,
+    "false_negative": 105
+  },
+  "train_score_summary": {
+    "positive_mean": 0.3078,
+    "positive_std": 0.1564,
+    "negative_mean": 0.08,
+    "negative_std": 0.1083
+  },
+  "test_score_summary": {
+    "positive_mean": 0.3235,
+    "positive_std": 0.1524,
+    "negative_mean": 0.0883,
+    "negative_std": 0.1078
+  },
+  "train_pairs_scored": 2200,
+  "test_pairs_scored": 1000,
+  "train_pairs_skipped": 0,
+  "test_pairs_skipped": 0,
+  "unique_embeddings_cached": 4992,
+  "elapsed_seconds": 4.324
+}

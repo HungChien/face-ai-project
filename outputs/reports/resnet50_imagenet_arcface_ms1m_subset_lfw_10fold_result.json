@@ -1,0 +1,96 @@
+{
+  "protocol": "LFW pairs.txt 6000 pairs / 10-fold",
+  "mean_accuracy": 0.6975000000000001,
+  "std_accuracy": 0.012819978621349246,
+  "total_correct": 4185,
+  "num_pairs": 6000,
+  "fold_results": [
+    {
+      "fold": 1,
+      "threshold": 0.19331928344818206,
+      "train_accuracy": 0.6972222222222222,
+      "test_accuracy": 0.705,
+      "correct": 423,
+      "total": 600
+    },
+    {
+      "fold": 2,
+      "threshold": 0.1943801847902743,
+      "train_accuracy": 0.6990740740740741,
+      "test_accuracy": 0.6866666666666666,
+      "correct": 412,
+      "total": 600
+    },
+    {
+      "fold": 3,
+      "threshold": 0.19393517758633882,
+      "train_accuracy": 0.6987037037037037,
+      "test_accuracy": 0.69,
+      "correct": 414,
+      "total": 600
+    },
+    {
+      "fold": 4,
+      "threshold": 0.19331928344818206,
+      "train_accuracy": 0.6974074074074074,
+      "test_accuracy": 0.7033333333333334,
+      "correct": 422,
+      "total": 600
+    },
+    {
+      "fold": 5,
+      "threshold": 0.19331928344818206,
+      "train_accuracy": 0.7007407407407408,
+      "test_accuracy": 0.6733333333333333,
+      "correct": 404,
+      "total": 600
+    },
+    {
+      "fold": 6,
+      "threshold": 0.19331928344818206,
+      "train_accuracy": 0.6964814814814815,
+      "test_accuracy": 0.7116666666666667,
+      "correct": 427,
+      "total": 600
+    },
+    {
+      "fold": 7,
+      "threshold": 0.19331928344818206,
+      "train_accuracy": 0.6966666666666667,
+      "test_accuracy": 0.71,
+      "correct": 426,
+      "total": 600
+    },
+    {
+      "fold": 8,
+      "threshold": 0.19331928344818206,
+      "train_accuracy": 0.6974074074074074,
+      "test_accuracy": 0.7033333333333334,
+      "correct": 422,
+      "total": 600
+    },
+    {
+      "fold": 9,
+      "threshold": 0.19291090097155295,
+      "train_accuracy": 0.6988888888888889,
+      "test_accuracy": 0.685,
+      "correct": 411,
+      "total": 600
+    },
+    {
+      "fold": 10,
+      "threshold": 0.19331928344818206,
+      "train_accuracy": 0.697037037037037,
+      "test_accuracy": 0.7066666666666667,
+      "correct": 424,
+      "total": 600
+    }
+  ],
+  "checkpoint": "models\\checkpoints\\resnet50_imagenet_arcface_ms1m_subset_best.pt",
+  "device": "cuda",
+  "backbone": "resnet50",
+  "embedding_dim": 256,
+  "checkpoint_best_epoch": 10,
+  "checkpoint_best_val_acc": 0.7664561170212766,
+  "dataset": "MS-Celeb-1M-subset"
+}

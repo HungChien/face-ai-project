@@ -1,0 +1,25 @@
+LFW 10-Fold Verification - ResNet ArcFace Checkpoint
+================================================================
+Checkpoint: models\checkpoints\iresnet50_arcface_smoke_best.pt
+Dataset: iresnet50-smoke
+Device: cuda
+Backbone: iresnet50
+Embedding dim: 512
+Checkpoint best epoch: 2
+Checkpoint best val acc: 0.5880208343267441
+Protocol: LFW pairs.txt 6000 pairs / 10-fold
+Mean accuracy: 0.6313
+Std accuracy: 0.0171
+Total correct: 3788/6000
+
+Fold results:
+  fold 01: acc=0.6700, train_acc=0.6298, threshold=0.2947, correct=402/600
+  fold 02: acc=0.6350, train_acc=0.6337, threshold=0.2947, correct=381/600
+  fold 03: acc=0.6400, train_acc=0.6331, threshold=0.2947, correct=384/600
+  fold 04: acc=0.6117, train_acc=0.6359, threshold=0.2942, correct=367/600
+  fold 05: acc=0.6233, train_acc=0.6339, threshold=0.2929, correct=374/600
+  fold 06: acc=0.6267, train_acc=0.6346, threshold=0.2947, correct=376/600
+  fold 07: acc=0.6350, train_acc=0.6337, threshold=0.2947, correct=381/600
+  fold 08: acc=0.6150, train_acc=0.6339, threshold=0.2825, correct=369/600
+  fold 09: acc=0.6167, train_acc=0.6357, threshold=0.2947, correct=370/600
+  fold 10: acc=0.6400, train_acc=0.6331, threshold=0.2947, correct=384/600

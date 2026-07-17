@@ -1,0 +1,30 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 16.57686710357666,
+      "train_acc": 0.5,
+      "val_loss": 13.599621772766113,
+      "val_acc": 0.5
+    }
+  ],
+  "best": {
+    "epoch": 1,
+    "train_loss": 16.57686710357666,
+    "train_acc": 0.5,
+    "val_loss": 13.599621772766113,
+    "val_acc": 0.5
+  },
+  "identity_counts": {
+    "George_W_Bush": {
+      "train": 2,
+      "val": 1,
+      "all": 3
+    },
+    "Colin_Powell": {
+      "train": 2,
+      "val": 1,
+      "all": 3
+    }
+  }
+}

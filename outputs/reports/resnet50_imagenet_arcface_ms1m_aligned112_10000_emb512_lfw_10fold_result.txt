@@ -1,0 +1,25 @@
+LFW 10-Fold Verification - ResNet ArcFace Checkpoint
+================================================================
+Checkpoint: models\checkpoints\resnet50_imagenet_arcface_ms1m_aligned112_10000_emb512_best.pt
+Dataset: MS1M-aligned-112-10000-emb512
+Device: cuda
+Backbone: resnet50
+Embedding dim: 512
+Checkpoint best epoch: 6
+Checkpoint best val acc: 0.9753464818763327
+Protocol: LFW pairs.txt 6000 pairs / 10-fold
+Mean accuracy: 0.7668
+Std accuracy: 0.0134
+Total correct: 4601/6000
+
+Fold results:
+  fold 01: acc=0.7683, train_acc=0.7683, threshold=0.4551, correct=461/600
+  fold 02: acc=0.7833, train_acc=0.7667, threshold=0.4606, correct=470/600
+  fold 03: acc=0.7767, train_acc=0.7681, threshold=0.4672, correct=466/600
+  fold 04: acc=0.7517, train_acc=0.7707, threshold=0.4674, correct=451/600
+  fold 05: acc=0.7417, train_acc=0.7720, threshold=0.4672, correct=445/600
+  fold 06: acc=0.7617, train_acc=0.7696, threshold=0.4661, correct=457/600
+  fold 07: acc=0.7633, train_acc=0.7696, threshold=0.4672, correct=458/600
+  fold 08: acc=0.7667, train_acc=0.7693, threshold=0.4672, correct=460/600
+  fold 09: acc=0.7700, train_acc=0.7696, threshold=0.4668, correct=462/600
+  fold 10: acc=0.7850, train_acc=0.7670, threshold=0.4661, correct=471/600

@@ -1,0 +1,9 @@
+WIDER FACE Stable CPU Full Training
+==================================
+Date: 2026-06-30
+PID: 21016
+Config: configs/mmdetection/widerface_retinanet_r50_fpn_cpu_full.py
+Fix: lr=0.001, clip_grad max_norm=10
+Stdout: F:\Internship\Bytedance\face-ai-project\outputs\reports\widerface_cpu_full_stable_train_20260630_174532_stdout.log
+Stderr: F:\Internship\Bytedance\face-ai-project\outputs\reports\widerface_cpu_full_stable_train_20260630_174532_stderr.log
+Precheck: 600 iterations passed without NaN; AP50/mAP around 0.100 on validation.

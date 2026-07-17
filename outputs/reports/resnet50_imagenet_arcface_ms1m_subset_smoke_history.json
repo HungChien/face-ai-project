@@ -1,0 +1,527 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 20.92276930809021,
+      "train_acc": 0.052734375,
+      "val_loss": 20.134084939956665,
+      "val_acc": 0.09795673098415136
+    },
+    {
+      "epoch": 2,
+      "train_loss": 16.666656494140625,
+      "train_acc": 0.49951171875,
+      "val_loss": 19.262175798416138,
+      "val_acc": 0.1831430308520794
+    }
+  ],
+  "best": {
+    "epoch": 2,
+    "train_loss": 16.666656494140625,
+    "train_acc": 0.49951171875,
+    "val_loss": 19.262175798416138,
+    "val_acc": 0.1831430308520794
+  },
+  "identity_counts": {
+    "identity_001339": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_001504": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_004704": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008064": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008754": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008757": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008758": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008761": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008765": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008770": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008774": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008775": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008779": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008782": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008784": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008785": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008786": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008787": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008788": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008799": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008804": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008805": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008806": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008807": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008808": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008810": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008813": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008814": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008817": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008818": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008819": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008820": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008824": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008825": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008837": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008839": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008842": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008847": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008849": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008850": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008852": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008854": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008855": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008856": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008857": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008858": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008861": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008864": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008865": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008871": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008875": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008876": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008879": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008880": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008884": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008893": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008894": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008897": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008899": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008902": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008903": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008904": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008905": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008910": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008912": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008913": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008914": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008915": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008918": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008926": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008927": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008931": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008939": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008940": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008941": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008942": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008943": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008945": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008947": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008954": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008957": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008960": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008964": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008965": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008974": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008975": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008976": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008978": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008983": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008986": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008987": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008988": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008989": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008990": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008991": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_008997": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_009000": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_009003": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_009006": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    },
+    "identity_009008": {
+      "train": 20,
+      "val": 5,
+      "all": 25
+    }
+  }
+}

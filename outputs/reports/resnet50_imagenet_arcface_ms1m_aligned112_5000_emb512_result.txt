@@ -1,0 +1,43 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: MS1M-aligned-112-5000-emb512
+Dataset format: folder
+Data root: data\processed\ms1m-aligned-112-5000
+Device: cuda
+Backbone: resnet50
+Pretrained: imagenet
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 512
+Identities: 5000
+Split mode: random
+Train/val images: 120000/30000
+Epochs: 20
+Batch size: 64
+Best epoch: 6
+Best val accuracy: 0.9497
+Checkpoint: models\checkpoints\resnet50_imagenet_arcface_ms1m_aligned112_5000_emb512_best.pt
+Curve: outputs\images\resnet50_imagenet_arcface_ms1m_aligned112_5000_emb512_curves.jpg
+History JSON: outputs\reports\resnet50_imagenet_arcface_ms1m_aligned112_5000_emb512_history.json
+Elapsed seconds: 2937.454
+
+History:
+- epoch 1: train_loss=20.5271, train_acc=0.2371, val_loss=16.5119, val_acc=0.5543
+- epoch 2: train_loss=12.7927, train_acc=0.8153, val_loss=10.3861, val_acc=0.8678
+- epoch 3: train_loss=8.0328, train_acc=0.9465, val_loss=7.6844, val_acc=0.9217
+- epoch 4: train_loss=5.6788, train_acc=0.9754, val_loss=6.3489, val_acc=0.9414
+- epoch 5: train_loss=4.1895, train_acc=0.9865, val_loss=5.4730, val_acc=0.9490
+- epoch 6: train_loss=3.0769, train_acc=0.9920, val_loss=4.8419, val_acc=0.9497 *best
+- epoch 7: train_loss=2.2540, train_acc=0.9954, val_loss=4.6460, val_acc=0.9496
+- epoch 8: train_loss=1.6721, train_acc=0.9971, val_loss=4.2321, val_acc=0.9469
+- epoch 9: train_loss=1.2519, train_acc=0.9983, val_loss=4.0491, val_acc=0.9456
+- epoch 10: train_loss=0.9628, train_acc=0.9988, val_loss=3.8769, val_acc=0.9434
+- epoch 11: train_loss=0.7521, train_acc=0.9991, val_loss=3.9731, val_acc=0.9362
+- epoch 12: train_loss=0.6370, train_acc=0.9993, val_loss=3.8138, val_acc=0.9367
+- epoch 13: train_loss=0.5475, train_acc=0.9994, val_loss=3.6181, val_acc=0.9373
+- epoch 14: train_loss=0.4680, train_acc=0.9995, val_loss=3.6432, val_acc=0.9348
+- epoch 15: train_loss=0.4296, train_acc=0.9996, val_loss=3.5964, val_acc=0.9336
+- epoch 16: train_loss=0.3708, train_acc=0.9996, val_loss=3.6837, val_acc=0.9290
+- epoch 17: train_loss=0.3583, train_acc=0.9995, val_loss=3.3890, val_acc=0.9353
+- epoch 18: train_loss=0.3316, train_acc=0.9996, val_loss=3.3419, val_acc=0.9341
+- epoch 19: train_loss=0.3038, train_acc=0.9996, val_loss=3.3886, val_acc=0.9286
+- epoch 20: train_loss=0.2863, train_acc=0.9995, val_loss=3.3708, val_acc=0.9298

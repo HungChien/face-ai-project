@@ -1,0 +1,8 @@
+WIDER FACE RetinaNet Evaluation
+==================================================
+Config: configs\mmdetection\widerface_retinanet_r50_fpn_cpu_full.py
+Checkpoint: outputs\mmdetection_widerface\retinanet_r50_fpn_cpu_full\epoch_1.pth
+
+Metrics:
+- pascal_voc/mAP: 0.3282665014266968
+- pascal_voc/AP50: 0.328

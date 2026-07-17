@@ -1,0 +1,33 @@
+WIDER FACE Dataset Check
+==================================================
+Expected root: data\raw\WIDERFace
+
+Expected MMDetection format:
+- train.txt and val.txt at dataset root
+- WIDER_train/Annotations/*.xml
+- WIDER_val/Annotations/*.xml
+- XML files in Pascal VOC style
+
+train split:
+- id file: data\raw\WIDERFace\train.txt
+- id file exists: True
+- data prefix: data\raw\WIDERFace\WIDER_train
+- data prefix exists: True
+- annotation dir exists: True
+- image id count: 12337
+- XML samples checked: 200
+- missing XML count in checked samples: 0
+- invalid XML count in checked samples: 0
+
+val split:
+- id file: data\raw\WIDERFace\val.txt
+- id file exists: True
+- data prefix: data\raw\WIDERFace\WIDER_val
+- data prefix exists: True
+- annotation dir exists: True
+- image id count: 3079
+- XML samples checked: 200
+- missing XML count in checked samples: 0
+- invalid XML count in checked samples: 0
+
+Result: Ready

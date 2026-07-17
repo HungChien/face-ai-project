@@ -1,0 +1,32 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: iresnet50-smoke
+Dataset format: folder
+Data root: data\processed\ms1m-aligned-112-10000
+Device: cuda
+Backbone: iresnet50
+Pretrained: none
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 512
+Identities: 100
+Split mode: random
+Train/val images: 2400/600
+Epochs: 2
+Batch size: 64
+Sampler: random
+Scheduler: none
+Warmup epochs: 0
+Base/min LR: 0.0003/1e-06
+Weight decay: 0.0001
+Strong augment: False
+Erase prob: 0.0
+Best epoch: 2
+Best val accuracy: 0.5880
+Checkpoint: models\checkpoints\iresnet50_arcface_smoke_best.pt
+Curve: outputs\images\iresnet50_arcface_smoke_curves.jpg
+History JSON: outputs\reports\iresnet50_arcface_smoke_history.json
+Elapsed seconds: 17.740
+
+History:
+- epoch 1: lr=0.0003, train_loss=19.4613, train_acc=0.1521, val_loss=17.9298, val_acc=0.3641
+- epoch 2: lr=0.0003, train_loss=16.0374, train_acc=0.6254, val_loss=15.5453, val_acc=0.5880 *best

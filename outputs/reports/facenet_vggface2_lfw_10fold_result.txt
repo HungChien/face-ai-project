@@ -1,0 +1,21 @@
+Facenet-pytorch VGGFace2 LFW 10-fold Verification
+========================================================
+Protocol: LFW pairs.txt 6000 pairs / 10-fold
+Model: facenet-pytorch InceptionResnetV1 pretrained=vggface2
+Device: cpu
+Pairs: 6000
+Mean accuracy: 0.9677
+Std accuracy: 0.0070
+Total correct: 5806/6000
+
+Fold results:
+  fold 01: acc=0.9583, train_acc=0.9698, threshold=0.3753, correct=575/600
+  fold 02: acc=0.9633, train_acc=0.9693, threshold=0.3753, correct=578/600
+  fold 03: acc=0.9650, train_acc=0.9691, threshold=0.3753, correct=579/600
+  fold 04: acc=0.9650, train_acc=0.9693, threshold=0.3728, correct=579/600
+  fold 05: acc=0.9617, train_acc=0.9691, threshold=0.3503, correct=577/600
+  fold 06: acc=0.9800, train_acc=0.9672, threshold=0.3518, correct=588/600
+  fold 07: acc=0.9683, train_acc=0.9685, threshold=0.3518, correct=581/600
+  fold 08: acc=0.9650, train_acc=0.9689, threshold=0.3723, correct=579/600
+  fold 09: acc=0.9717, train_acc=0.9681, threshold=0.3528, correct=583/600
+  fold 10: acc=0.9783, train_acc=0.9676, threshold=0.3753, correct=587/600

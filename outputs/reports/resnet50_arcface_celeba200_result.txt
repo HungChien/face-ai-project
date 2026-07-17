@@ -1,0 +1,30 @@
+ResNet ArcFace CelebA Subset Training
+==================================================
+CelebA root: data\raw\celeba
+Device: cuda
+Backbone: resnet50
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 256
+Identities: 200
+Split mode: random
+Train/val images: 4833/1205
+Epochs: 10
+Batch size: 64
+Best epoch: 10
+Best val accuracy: 0.1426
+Checkpoint: models\checkpoints\resnet50_arcface_celeba200_best.pt
+Curve: outputs\images\resnet50_arcface_celeba200_curves.jpg
+History JSON: outputs\reports\resnet50_arcface_celeba200_history.json
+Elapsed seconds: 87.525
+
+History:
+- epoch 1: train_loss=21.0311, train_acc=0.0066, val_loss=20.7170, val_acc=0.0090
+- epoch 2: train_loss=20.6162, train_acc=0.0113, val_loss=20.5743, val_acc=0.0148
+- epoch 3: train_loss=20.4783, train_acc=0.0179, val_loss=20.4382, val_acc=0.0125
+- epoch 4: train_loss=20.3135, train_acc=0.0226, val_loss=20.2832, val_acc=0.0189
+- epoch 5: train_loss=20.0943, train_acc=0.0343, val_loss=20.0470, val_acc=0.0319
+- epoch 6: train_loss=19.8090, train_acc=0.0565, val_loss=19.8519, val_acc=0.0565
+- epoch 7: train_loss=19.5028, train_acc=0.0726, val_loss=19.6380, val_acc=0.0615
+- epoch 8: train_loss=19.1743, train_acc=0.1104, val_loss=19.1724, val_acc=0.0989
+- epoch 9: train_loss=18.7409, train_acc=0.1659, val_loss=19.0418, val_acc=0.1088
+- epoch 10: train_loss=18.4183, train_acc=0.2043, val_loss=18.7820, val_acc=0.1426 *best

@@ -1,0 +1,31 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: MS1M-aligned-112-5000-iresnet50-emb512-epoch1-debug
+Dataset format: folder
+Data root: data\processed\ms1m-aligned-112-5000
+Device: cuda
+Backbone: iresnet50
+Pretrained: none
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 512
+Identities: 5000
+Split mode: random
+Train/val images: 120000/30000
+Epochs: 1
+Batch size: 64
+Sampler: random
+Scheduler: none
+Warmup epochs: 0
+Base/min LR: 0.0003/1e-06
+Weight decay: 0.0001
+Strong augment: False
+Erase prob: 0.0
+Best epoch: 1
+Best val accuracy: 0.3531
+Checkpoint: models\checkpoints\iresnet50_arcface_ms1m_aligned112_5000_emb512_epoch1_debug.pt
+Curve: outputs\images\iresnet50_arcface_ms1m_aligned112_5000_emb512_epoch1_debug_curves.jpg
+History JSON: outputs\reports\iresnet50_arcface_ms1m_aligned112_5000_emb512_epoch1_debug_history.json
+Elapsed seconds: 433.208
+
+History:
+- epoch 1: lr=0.0003, train_loss=22.0149, train_acc=0.1210, val_loss=18.9855, val_acc=0.3531 *best

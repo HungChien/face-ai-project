@@ -1,0 +1,18 @@
+300W Landmark Prediction Visualization
+==================================================
+Root: data\raw\300W
+Checkpoint: models\checkpoints\landmark_cnn_300w.pt
+Device: cuda
+Samples visualized: 8
+Mean visualized NME: 3.2995
+Output image: outputs\landmarks\landmark_cnn_300w_predictions.jpg
+
+Sample details:
+- indoor_026.png: NME=0.9867
+- indoor_105.png: NME=1.8575
+- indoor_115.png: NME=0.9208
+- indoor_143.png: NME=16.0928
+- indoor_229.png: NME=3.4252
+- indoor_251.png: NME=1.3801
+- indoor_282.png: NME=1.1786
+- outdoor_259.png: NME=0.5545

@@ -1,0 +1,43 @@
+WIDER FACE MMDetection CPU Debug Training
+========================================
+
+Date: 2026-06-30
+Environment: ml-mmdet
+Device: CPU
+Config: configs/mmdetection/widerface_retinanet_r50_fpn_debug.py
+Work dir: outputs/mmdetection_widerface/retinanet_r50_fpn_debug
+Dataset: WIDER FACE converted to MMDetection VOC-style format
+
+Purpose
+-------
+This debug run extends the 2-iteration smoke test to 20 iterations, verifying that the RetinaNet training loop can run for multiple optimizer steps on the converted WIDER FACE dataset.
+
+Run Settings
+------------
+- Model: RetinaNet + ResNet50-FPN
+- Input size: 320 x 320
+- Batch size: 1
+- Workers: 0
+- Max iterations: 20
+- Validation: disabled for this debug run
+- Backbone pretrained weights: disabled, to avoid extra downloads and keep the run self-contained
+
+Result
+------
+Status: Passed
+Completed iterations: 20 / 20
+Checkpoint: saved under outputs/mmdetection_widerface/retinanet_r50_fpn_debug
+Loss CSV: outputs/reports/widerface_debug_train_loss.csv
+Loss curve: outputs/images/widerface_debug_loss_curve.png
+
+Loss Summary
+------------
+- Iter 1 loss: 3.7169
+- Iter 20 loss: 4.0583
+- Min loss: 1.7305 at iter 3
+- First 5-iter average loss: 2.9995
+- Last 5-iter average loss: 2.3160
+
+Interpretation
+--------------
+The debug training run is healthy: the dataloader, annotations, model forward pass, loss computation, backward pass, optimizer step, logging, and checkpoint saving all work end-to-end. The loss is noisy because this CPU debug run uses batch size 1 and samples images with very different face counts and face scales. This run should not be interpreted as model quality or mAP; it is a training-pipeline validation before longer training.

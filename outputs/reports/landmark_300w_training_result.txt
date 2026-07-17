@@ -1,0 +1,15 @@
+300W Landmark CNN Training Result
+==================================================
+Root: data\raw\300W
+Samples: 600
+Train/val: 510/90
+Points: 68
+Device: cuda
+Checkpoint: models\checkpoints\landmark_cnn_300w.pt
+
+History:
+- epoch 1: train_loss=0.015698, val_loss=0.019298, val_nme=4.6076
+- epoch 2: train_loss=0.014594, val_loss=0.023580, val_nme=5.0794
+- epoch 3: train_loss=0.014347, val_loss=0.015117, val_nme=4.0686
+- epoch 4: train_loss=0.014222, val_loss=0.014547, val_nme=3.9919
+- epoch 5: train_loss=0.014087, val_loss=0.014506, val_nme=3.9317

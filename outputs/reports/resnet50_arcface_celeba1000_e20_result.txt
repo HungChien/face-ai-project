@@ -1,0 +1,40 @@
+ResNet ArcFace CelebA Subset Training
+==================================================
+CelebA root: data\raw\celeba
+Device: cuda
+Backbone: resnet50
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 256
+Identities: 1000
+Split mode: random
+Train/val images: 24033/6005
+Epochs: 20
+Batch size: 128
+Best epoch: 17
+Best val accuracy: 0.0185
+Checkpoint: models\checkpoints\resnet50_arcface_celeba1000_e20_best.pt
+Curve: outputs\images\resnet50_arcface_celeba1000_e20_curves.jpg
+History JSON: outputs\reports\resnet50_arcface_celeba1000_e20_history.json
+Elapsed seconds: 668.318
+
+History:
+- epoch 1: train_loss=22.4692, train_acc=0.0017, val_loss=22.1923, val_acc=0.0012
+- epoch 2: train_loss=21.9754, train_acc=0.0018, val_loss=21.6803, val_acc=0.0015
+- epoch 3: train_loss=21.2975, train_acc=0.0027, val_loss=20.8121, val_acc=0.0037
+- epoch 4: train_loss=20.2470, train_acc=0.0046, val_loss=19.5719, val_acc=0.0044
+- epoch 5: train_loss=18.8193, train_acc=0.0061, val_loss=17.9681, val_acc=0.0030
+- epoch 6: train_loss=16.8493, train_acc=0.0064, val_loss=15.5369, val_acc=0.0057
+- epoch 7: train_loss=14.1405, train_acc=0.0045, val_loss=12.3173, val_acc=0.0030
+- epoch 8: train_loss=13.2317, train_acc=0.0025, val_loss=13.5783, val_acc=0.0023
+- epoch 9: train_loss=14.0407, train_acc=0.0034, val_loss=15.1511, val_acc=0.0035
+- epoch 10: train_loss=13.8562, train_acc=0.0052, val_loss=13.8151, val_acc=0.0078
+- epoch 11: train_loss=13.6535, train_acc=0.0085, val_loss=13.4158, val_acc=0.0108
+- epoch 12: train_loss=13.7386, train_acc=0.0071, val_loss=13.9177, val_acc=0.0095
+- epoch 13: train_loss=13.4585, train_acc=0.0110, val_loss=13.5495, val_acc=0.0110
+- epoch 14: train_loss=13.3956, train_acc=0.0124, val_loss=13.7632, val_acc=0.0141
+- epoch 15: train_loss=13.4579, train_acc=0.0119, val_loss=13.8819, val_acc=0.0124
+- epoch 16: train_loss=13.3267, train_acc=0.0153, val_loss=13.3635, val_acc=0.0131
+- epoch 17: train_loss=13.2018, train_acc=0.0187, val_loss=13.2857, val_acc=0.0185 *best
+- epoch 18: train_loss=13.1917, train_acc=0.0198, val_loss=12.6875, val_acc=0.0155
+- epoch 19: train_loss=13.3597, train_acc=0.0153, val_loss=14.0133, val_acc=0.0112
+- epoch 20: train_loss=13.2427, train_acc=0.0195, val_loss=12.9524, val_acc=0.0173

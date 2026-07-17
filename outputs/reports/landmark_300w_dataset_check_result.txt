@@ -1,0 +1,9 @@
+300W Dataset Check
+==================================================
+Root: data\raw\300W
+Image files: 600
+PTS annotation files: 600
+Point-count distribution: {68: 600}
+Invalid/unexpected annotation count: 0
+
+Status: ready

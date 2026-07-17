@@ -1,0 +1,45 @@
+300W Landmark CNN Training Result
+==================================================
+Root: data\raw\300W
+Samples: 600
+Train/val: 510/90
+Points: 68
+Device: cuda
+Crop to landmarks: True
+Crop margin: 0.25
+Augment train set: True
+Best epoch: 29
+Best val NME: 0.1721
+Checkpoint: models\checkpoints\landmark_cnn_300w_aug30_best.pt
+
+History:
+- epoch 1: train_loss=0.007127, val_loss=0.004155, val_nme=0.2913
+- epoch 2: train_loss=0.003251, val_loss=0.002844, val_nme=0.2329
+- epoch 3: train_loss=0.002996, val_loss=0.002749, val_nme=0.2257
+- epoch 4: train_loss=0.002968, val_loss=0.002750, val_nme=0.2252
+- epoch 5: train_loss=0.003085, val_loss=0.002723, val_nme=0.2249
+- epoch 6: train_loss=0.002958, val_loss=0.002699, val_nme=0.2248
+- epoch 7: train_loss=0.002884, val_loss=0.002723, val_nme=0.2259
+- epoch 8: train_loss=0.002932, val_loss=0.002776, val_nme=0.2278
+- epoch 9: train_loss=0.002988, val_loss=0.002783, val_nme=0.2268
+- epoch 10: train_loss=0.002897, val_loss=0.002646, val_nme=0.2212
+- epoch 11: train_loss=0.002884, val_loss=0.002716, val_nme=0.2242
+- epoch 12: train_loss=0.002985, val_loss=0.002840, val_nme=0.2282
+- epoch 13: train_loss=0.002941, val_loss=0.002635, val_nme=0.2230
+- epoch 14: train_loss=0.002751, val_loss=0.002826, val_nme=0.2268
+- epoch 15: train_loss=0.002928, val_loss=0.002852, val_nme=0.2307
+- epoch 16: train_loss=0.002781, val_loss=0.002698, val_nme=0.2218
+- epoch 17: train_loss=0.002946, val_loss=0.002602, val_nme=0.2178
+- epoch 18: train_loss=0.002824, val_loss=0.002882, val_nme=0.2277
+- epoch 19: train_loss=0.002610, val_loss=0.002537, val_nme=0.2166
+- epoch 20: train_loss=0.002610, val_loss=0.002477, val_nme=0.2118
+- epoch 21: train_loss=0.002582, val_loss=0.002865, val_nme=0.2288
+- epoch 22: train_loss=0.002360, val_loss=0.002306, val_nme=0.2031
+- epoch 23: train_loss=0.002189, val_loss=0.002146, val_nme=0.1946
+- epoch 24: train_loss=0.002223, val_loss=0.003215, val_nme=0.2405
+- epoch 25: train_loss=0.002431, val_loss=0.002074, val_nme=0.1924
+- epoch 26: train_loss=0.002217, val_loss=0.002199, val_nme=0.2022
+- epoch 27: train_loss=0.002128, val_loss=0.002117, val_nme=0.1943
+- epoch 28: train_loss=0.001941, val_loss=0.001820, val_nme=0.1782
+- epoch 29: train_loss=0.001916, val_loss=0.001741, val_nme=0.1721 *best
+- epoch 30: train_loss=0.001810, val_loss=0.001988, val_nme=0.1857

@@ -1,0 +1,1483 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 21.031073394574616,
+      "train_acc": 0.00656648725271225,
+      "val_loss": 20.71700618141576,
+      "val_acc": 0.009046052631578948
+    },
+    {
+      "epoch": 2,
+      "train_loss": 20.616175852323835,
+      "train_acc": 0.011307565789473685,
+      "val_loss": 20.574300464830902,
+      "val_acc": 0.014802631578947368
+    },
+    {
+      "epoch": 3,
+      "train_loss": 20.47831984570152,
+      "train_acc": 0.017886513157894735,
+      "val_loss": 20.438179518047132,
+      "val_acc": 0.01250620656891873
+    },
+    {
+      "epoch": 4,
+      "train_loss": 20.313492925543535,
+      "train_acc": 0.02261513157894737,
+      "val_loss": 20.283232136776572,
+      "val_acc": 0.018914473684210526
+    },
+    {
+      "epoch": 5,
+      "train_loss": 20.09430496316207,
+      "train_acc": 0.034333881578947366,
+      "val_loss": 20.046953904001338,
+      "val_acc": 0.031932721012517026
+    },
+    {
+      "epoch": 6,
+      "train_loss": 19.808994067342656,
+      "train_acc": 0.056525368831659616,
+      "val_loss": 19.851871390091745,
+      "val_acc": 0.056464126235560366
+    },
+    {
+      "epoch": 7,
+      "train_loss": 19.502788995441637,
+      "train_acc": 0.07256155304218594,
+      "val_loss": 19.638018758673418,
+      "val_acc": 0.061537984170411765
+    },
+    {
+      "epoch": 8,
+      "train_loss": 19.174332894776995,
+      "train_acc": 0.11035312006348058,
+      "val_loss": 19.172359767713044,
+      "val_acc": 0.0988859236240387
+    },
+    {
+      "epoch": 9,
+      "train_loss": 18.74086096412257,
+      "train_acc": 0.1658629884845332,
+      "val_loss": 19.04178729810213,
+      "val_acc": 0.10875434467667028
+    },
+    {
+      "epoch": 10,
+      "train_loss": 18.418295132486445,
+      "train_acc": 0.20428379193732613,
+      "val_loss": 18.782046067087276,
+      "val_acc": 0.14264213019295743
+    }
+  ],
+  "best": {
+    "epoch": 10,
+    "train_loss": 18.418295132486445,
+    "train_acc": 0.20428379193732613,
+    "val_loss": 18.782046067087276,
+    "val_acc": 0.14264213019295743
+  },
+  "identity_counts": {
+    "2820": {
+      "train": 28,
+      "val": 7,
+      "all": 35,
+      "official_train": 35,
+      "official_val": 0
+    },
+    "3227": {
+      "train": 28,
+      "val": 7,
+      "all": 35,
+      "official_train": 0,
+      "official_val": 35
+    },
+    "3782": {
+      "train": 28,
+      "val": 7,
+      "all": 35,
+      "official_train": 0,
+      "official_val": 35
+    },
+    "3699": {
+      "train": 27,
+      "val": 7,
+      "all": 34,
+      "official_train": 34,
+      "official_val": 0
+    },
+    "3745": {
+      "train": 27,
+      "val": 7,
+      "all": 34,
+      "official_train": 34,
+      "official_val": 0
+    },
+    "8968": {
+      "train": 26,
+      "val": 6,
+      "all": 32,
+      "official_train": 32,
+      "official_val": 0
+    },
+    "9152": {
+      "train": 26,
+      "val": 6,
+      "all": 32,
+      "official_train": 32,
+      "official_val": 0
+    },
+    "9256": {
+      "train": 26,
+      "val": 6,
+      "all": 32,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "1757": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 31,
+      "official_val": 0
+    },
+    "2114": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 31,
+      "official_val": 0
+    },
+    "4126": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 31,
+      "official_val": 0
+    },
+    "4262": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 31,
+      "official_val": 0
+    },
+    "4740": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 0,
+      "official_val": 31
+    },
+    "4887": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 31,
+      "official_val": 0
+    },
+    "4978": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "6568": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 31,
+      "official_val": 0
+    },
+    "9840": {
+      "train": 25,
+      "val": 6,
+      "all": 31,
+      "official_train": 31,
+      "official_val": 0
+    },
+    "10000": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10001": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10003": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10006": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10008": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10010": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10014": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10015": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10016": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10021": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10023": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10025": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10028": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10029": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1003": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10032": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10033": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10036": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10042": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10044": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10047": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10050": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10055": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10059": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10060": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10062": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10070": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10071": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10073": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10077": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "1008": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10080": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10082": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10083": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10085": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10086": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10087": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10089": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10090": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10093": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10095": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10096": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10102": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10108": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "1011": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10111": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10117": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10127": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10130": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10132": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10134": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10135": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1014": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10143": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10144": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10149": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10156": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10157": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 0
+    },
+    "10159": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10160": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10163": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10167": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10173": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10174": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10175": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "10176": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1018": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1023": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1025": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1027": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1031": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1032": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1033": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1034": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1035": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1037": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1043": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1044": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1050": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1051": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1054": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1059": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1061": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1062": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1066": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1088": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1089": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1090": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1092": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1103": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1113": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1120": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1128": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1135": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1136": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1137": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "114": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1140": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1149": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1151": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1153": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1154": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1164": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1170": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1175": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1180": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1181": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1187": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1188": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1194": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1198": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1201": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1204": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1209": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1210": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1213": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1218": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "122": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1221": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1223": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1224": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1228": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1231": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1245": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1246": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1250": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1258": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1261": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1264": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1270": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1272": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1275": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1279": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1281": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1287": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1288": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1289": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1291": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1293": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1297": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1301": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1302": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1303": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1305": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1306": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1314": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1318": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1321": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1322": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1324": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1326": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1330": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1335": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1336": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1337": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1339": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1341": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1346": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1348": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1351": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1356": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1359": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1361": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1362": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1368": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1370": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1371": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1373": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1377": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1382": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1383": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1384": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1389": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1392": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1393": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1394": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1395": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "14": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1410": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1411": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "1415": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 0,
+      "official_val": 30
+    },
+    "142": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    },
+    "1420": {
+      "train": 24,
+      "val": 6,
+      "all": 30,
+      "official_train": 30,
+      "official_val": 0
+    }
+  }
+}

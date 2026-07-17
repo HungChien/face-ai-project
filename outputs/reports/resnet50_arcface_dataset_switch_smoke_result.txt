@@ -1,0 +1,24 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: celeba_gpu_smoke
+Dataset format: celeba
+Data root: data\raw\celeba
+Device: cuda
+Backbone: resnet50
+Pretrained: imagenet
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 256
+Identities: 2
+Split mode: random
+Train/val images: 6/2
+Epochs: 1
+Batch size: 2
+Best epoch: 1
+Best val accuracy: 1.0000
+Checkpoint: models\checkpoints\resnet50_arcface_dataset_switch_smoke.pt
+Curve: outputs\images\resnet50_arcface_dataset_switch_smoke_curves.jpg
+History JSON: outputs\reports\resnet50_arcface_dataset_switch_smoke_history.json
+Elapsed seconds: 18.206
+
+History:
+- epoch 1: train_loss=10.6420, train_acc=1.0000, val_loss=9.7833, val_acc=1.0000 *best

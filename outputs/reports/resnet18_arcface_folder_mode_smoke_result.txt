@@ -1,0 +1,24 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: folder_mode_gpu_smoke
+Dataset format: folder
+Data root: data\raw\sklearn\lfw_home\lfw_funneled
+Device: cuda
+Backbone: resnet18
+Pretrained: none
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 256
+Identities: 2
+Split mode: random
+Train/val images: 4/2
+Epochs: 1
+Batch size: 2
+Best epoch: 1
+Best val accuracy: 0.5000
+Checkpoint: models\checkpoints\resnet18_arcface_folder_mode_smoke.pt
+Curve: outputs\images\resnet18_arcface_folder_mode_smoke_curves.jpg
+History JSON: outputs\reports\resnet18_arcface_folder_mode_smoke_history.json
+Elapsed seconds: 10.216
+
+History:
+- epoch 1: train_loss=16.5769, train_acc=0.5000, val_loss=13.5996, val_acc=0.5000 *best

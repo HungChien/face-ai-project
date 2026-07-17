@@ -215,6 +215,7 @@ outputs/reports/*.pdf
 *.tflite
 
 # Large experiment logs
+outputs/mmdetection_widerface/
 runs/
 wandb/
 mlruns/
@@ -227,3 +228,5 @@ Thumbs.db
 # IDE settings
 .vscode/
 .idea/
+# Embedding caches
+outputs/embeddings/*.npz

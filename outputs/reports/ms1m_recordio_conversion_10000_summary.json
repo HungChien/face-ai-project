@@ -1,0 +1,55 @@
+{
+  "rec_root": "data\\raw\\ms1m-arcface-recordio\\faces_emore",
+  "output_root": "data\\raw\\ms-celeb-1m-subset-10000",
+  "total_images_in_recordio": 5822653,
+  "total_identities_in_recordio": 85742,
+  "selected_identities": 10000,
+  "min_images_per_identity": 5,
+  "max_images_per_identity": 30,
+  "max_identities": 10000,
+  "dry_run": false,
+  "top_10_identity_counts": [
+    [
+      10760,
+      602
+    ],
+    [
+      9828,
+      598
+    ],
+    [
+      8884,
+      586
+    ],
+    [
+      9775,
+      556
+    ],
+    [
+      10893,
+      556
+    ],
+    [
+      8818,
+      528
+    ],
+    [
+      10121,
+      526
+    ],
+    [
+      10524,
+      526
+    ],
+    [
+      10665,
+      521
+    ],
+    [
+      11041,
+      520
+    ]
+  ],
+  "exported_images": 300000,
+  "exported_identities": 10000
+}

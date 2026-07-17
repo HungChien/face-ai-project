@@ -1,0 +1,25 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: MS-Celeb-1M-subset-smoke
+Dataset format: folder
+Data root: data\raw\ms-celeb-1m-subset
+Device: cuda
+Backbone: resnet50
+Pretrained: imagenet
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 256
+Identities: 100
+Split mode: random
+Train/val images: 2000/500
+Epochs: 2
+Batch size: 64
+Best epoch: 2
+Best val accuracy: 0.1831
+Checkpoint: models\checkpoints\resnet50_imagenet_arcface_ms1m_subset_smoke_best.pt
+Curve: outputs\images\resnet50_imagenet_arcface_ms1m_subset_smoke_curves.jpg
+History JSON: outputs\reports\resnet50_imagenet_arcface_ms1m_subset_smoke_history.json
+Elapsed seconds: 5.402
+
+History:
+- epoch 1: train_loss=20.9228, train_acc=0.0527, val_loss=20.1341, val_acc=0.0980
+- epoch 2: train_loss=16.6667, train_acc=0.4995, val_loss=19.2622, val_acc=0.1831 *best

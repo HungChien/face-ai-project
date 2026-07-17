@@ -1,0 +1,51 @@
+ResNet18 + ArcFace LFW Smoke Baseline
+==================================================
+Root: data\raw\sklearn\lfw_home\lfw_funneled
+Device: cuda
+Backbone: ResNet18
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 128
+Identities: 10
+Train/val images: 160/40
+Epochs: 20
+Batch size: 16
+Best epoch: 13
+Best val accuracy: 0.7292
+Checkpoint: models\checkpoints\resnet18_arcface_lfw_smoke10_best.pt
+Curve: outputs\images\resnet18_arcface_lfw_smoke10_curves.jpg
+History JSON: outputs\reports\resnet18_arcface_lfw_smoke10_history.json
+Elapsed seconds: 7.254
+
+History:
+- epoch 1: train_loss=21.0569, train_acc=0.1375, val_loss=18.3932, val_acc=0.1458
+- epoch 2: train_loss=17.6486, train_acc=0.2062, val_loss=19.2199, val_acc=0.1667
+- epoch 3: train_loss=16.7322, train_acc=0.4000, val_loss=17.4319, val_acc=0.1875
+- epoch 4: train_loss=16.4528, train_acc=0.4562, val_loss=17.4509, val_acc=0.2292
+- epoch 5: train_loss=15.1038, train_acc=0.5437, val_loss=17.2805, val_acc=0.3125
+- epoch 6: train_loss=13.8833, train_acc=0.6188, val_loss=18.2434, val_acc=0.3750
+- epoch 7: train_loss=12.6629, train_acc=0.6750, val_loss=21.0216, val_acc=0.3125
+- epoch 8: train_loss=10.0719, train_acc=0.7250, val_loss=18.9806, val_acc=0.3542
+- epoch 9: train_loss=7.8273, train_acc=0.8438, val_loss=17.7457, val_acc=0.4792
+- epoch 10: train_loss=7.6752, train_acc=0.7688, val_loss=19.1526, val_acc=0.4583
+- epoch 11: train_loss=5.3153, train_acc=0.8938, val_loss=20.4515, val_acc=0.3958
+- epoch 12: train_loss=3.7304, train_acc=0.9437, val_loss=18.0093, val_acc=0.4583
+- epoch 13: train_loss=3.6268, train_acc=0.9250, val_loss=15.1220, val_acc=0.7292 *best
+- epoch 14: train_loss=2.8070, train_acc=0.9313, val_loss=17.9360, val_acc=0.4583
+- epoch 15: train_loss=1.7841, train_acc=0.9563, val_loss=17.9579, val_acc=0.5000
+- epoch 16: train_loss=1.3377, train_acc=1.0000, val_loss=14.3012, val_acc=0.5833
+- epoch 17: train_loss=1.2967, train_acc=0.9875, val_loss=16.0059, val_acc=0.4583
+- epoch 18: train_loss=1.4348, train_acc=0.9812, val_loss=15.8299, val_acc=0.4375
+- epoch 19: train_loss=0.9431, train_acc=0.9812, val_loss=12.7062, val_acc=0.6042
+- epoch 20: train_loss=0.8811, train_acc=0.9938, val_loss=10.9174, val_acc=0.6667
+
+Selected identities:
+- George_W_Bush: 20 images used
+- Colin_Powell: 20 images used
+- Tony_Blair: 20 images used
+- Donald_Rumsfeld: 20 images used
+- Gerhard_Schroeder: 20 images used
+- Ariel_Sharon: 20 images used
+- Hugo_Chavez: 20 images used
+- Junichiro_Koizumi: 20 images used
+- Jean_Chretien: 20 images used
+- John_Ashcroft: 20 images used

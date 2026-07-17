@@ -1,0 +1,14 @@
+MS1M Aligned 112x112 Preprocess Result
+========================================================
+Input root: data\raw\ms-celeb-1m-subset
+Output root: data\processed\ms1m-aligned-112
+Input identities: 1000
+Output identities: 1000
+Output images: 30000
+Copied images: 30000
+Resized images: 0
+Unreadable images: 0
+Original shapes: {'112x112': 30000}
+Images per identity: min=30, max=30
+Preview: outputs\images\ms1m_aligned_112_preview.jpg
+Elapsed seconds: 18.571

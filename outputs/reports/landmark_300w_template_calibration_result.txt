@@ -1,0 +1,44 @@
+300W Five-Point Template Calibration Result
+========================================================
+Root: data\raw\300W
+Checkpoint split source: models\checkpoints\landmark_cnn_300w_aug30_best.pt
+Train shapes: 510
+Val shapes: 90
+Iterations: 20
+Template JSON: outputs\reports\landmark_300w_calibrated_template.json
+Template plot: outputs\landmarks\calibrated_template_300w\template_comparison.jpg
+Grid image: outputs\landmarks\calibrated_template_300w\arcface_vs_300w_template_alignment.jpg
+
+Mean residual px after similarity fit:
+- train ArcFace: 3.9828
+- train 300W calibrated: 3.7443
+- train improvement: 0.2385
+- val ArcFace: 3.9948
+- val 300W calibrated: 3.7051
+- val improvement: 0.2897
+
+ArcFace template:
+[[38.29460144042969, 51.6963005065918], [73.53179931640625, 51.501399993896484], [56.02519989013672, 71.73660278320312], [41.54930114746094, 92.3655014038086], [70.72989654541016, 92.2041015625]]
+
+300W calibrated template:
+[[38.3672981262207, 52.71739959716797], [73.43099975585938, 52.579200744628906], [56.184898376464844, 70.92549896240234], [39.438899993896484, 91.82669830322266], [72.70870208740234, 91.4551010131836]]
+
+Sample details:
+- indoor_016.png: arcface_res=2.3530px, calibrated_res=2.1031px
+  arcface_aligned=outputs\landmarks\calibrated_template_300w\indoor_016_arcface_aligned_112.jpg
+  calibrated_aligned=outputs\landmarks\calibrated_template_300w\indoor_016_300w_template_aligned_112.jpg
+- indoor_107.png: arcface_res=4.4390px, calibrated_res=5.0216px
+  arcface_aligned=outputs\landmarks\calibrated_template_300w\indoor_107_arcface_aligned_112.jpg
+  calibrated_aligned=outputs\landmarks\calibrated_template_300w\indoor_107_300w_template_aligned_112.jpg
+- outdoor_004.png: arcface_res=3.3894px, calibrated_res=3.4989px
+  arcface_aligned=outputs\landmarks\calibrated_template_300w\outdoor_004_arcface_aligned_112.jpg
+  calibrated_aligned=outputs\landmarks\calibrated_template_300w\outdoor_004_300w_template_aligned_112.jpg
+- outdoor_008.png: arcface_res=1.4612px, calibrated_res=1.5705px
+  arcface_aligned=outputs\landmarks\calibrated_template_300w\outdoor_008_arcface_aligned_112.jpg
+  calibrated_aligned=outputs\landmarks\calibrated_template_300w\outdoor_008_300w_template_aligned_112.jpg
+- outdoor_097.png: arcface_res=3.5776px, calibrated_res=4.5685px
+  arcface_aligned=outputs\landmarks\calibrated_template_300w\outdoor_097_arcface_aligned_112.jpg
+  calibrated_aligned=outputs\landmarks\calibrated_template_300w\outdoor_097_300w_template_aligned_112.jpg
+- outdoor_205.png: arcface_res=6.8840px, calibrated_res=5.9136px
+  arcface_aligned=outputs\landmarks\calibrated_template_300w\outdoor_205_arcface_aligned_112.jpg
+  calibrated_aligned=outputs\landmarks\calibrated_template_300w\outdoor_205_300w_template_aligned_112.jpg

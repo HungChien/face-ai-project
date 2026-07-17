@@ -1,0 +1,31 @@
+WIDER FACE Full CPU Training Status
+==================================
+
+Date: 2026-06-30
+Status: Running in background
+Environment: ml-mmdet
+Device: CPU
+Config: configs/mmdetection/widerface_retinanet_r50_fpn_cpu_full.py
+Work dir: outputs/mmdetection_widerface/retinanet_r50_fpn_cpu_full
+Stdout log: outputs/reports/widerface_cpu_full_train_stdout.log
+Stderr log: outputs/reports/widerface_cpu_full_train_stderr.log
+
+Training setup
+--------------
+- Dataset: full converted WIDER FACE train split
+- Train images: 12,337
+- Batch size: 2
+- Iterations per epoch: 6,169
+- Schedule: inherited MMDetection 1x schedule, 12 epochs
+- Backbone: ResNet50 pretrained weights loaded from torchvision://resnet50
+- Checkpoint interval: every epoch
+
+Initial log evidence
+--------------------
+- Epoch 1 iter 50/6169: loss = 1.9435, loss_cls = 1.1255, loss_bbox = 0.8180
+- Epoch 1 iter 100/6169: loss = 1.7931, loss_cls = 1.0799, loss_bbox = 0.7132
+- Estimated remaining time from early log: about 19h 42m
+
+Notes
+-----
+This is a real full-data training run, not a smoke/debug run. It is running on CPU because the current MMDetection/MMCV environment is not compatible with RTX 5080 GPU training. The process can be monitored through the stdout log and resumed from checkpoints if interrupted.

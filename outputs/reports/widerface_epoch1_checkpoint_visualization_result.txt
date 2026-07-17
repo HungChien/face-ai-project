@@ -1,0 +1,33 @@
+WIDER FACE Debug Checkpoint Visualization
+==================================================
+Config: configs\mmdetection\widerface_retinanet_r50_fpn_cpu_full.py
+Checkpoint: outputs\mmdetection_widerface\retinanet_r50_fpn_cpu_full\epoch_1.pth
+Device: cpu
+Score threshold: 0.05
+Max visualized detections per image: 20
+Output dir: outputs\images\widerface_epoch1_checkpoint
+JSON report: outputs\reports\widerface_epoch1_checkpoint_visualization_result.json
+
+Images:
+- data\samples\face_test.jpg -> outputs\images\widerface_epoch1_checkpoint\face_test_debug_det.jpg (100 detections, 20 drawn)
+  #1: bbox=[1376.08, 1376.51, 1918.02, 2096.32], score=0.9898
+  #2: bbox=[2357.08, 2015.4, 2466.0, 2152.0], score=0.2008
+  #3: bbox=[143.21, 1986.32, 210.39, 2067.54], score=0.1449
+  #4: bbox=[102.33, 2024.23, 171.89, 2108.98], score=0.1341
+  #5: bbox=[124.39, 1998.84, 192.87, 2082.33], score=0.1306
+  #6: bbox=[154.07, 1956.91, 221.23, 2037.3], score=0.1301
+  #7: bbox=[384.33, 2408.36, 453.72, 2491.86], score=0.1273
+  #8: bbox=[2353.94, 2063.47, 2460.33, 2205.3], score=0.1199
+  #9: bbox=[74.66, 2036.59, 145.24, 2123.22], score=0.1199
+  #10: bbox=[456.56, 3088.88, 549.04, 3200.75], score=0.1192
+- data\raw\WIDERFace\WIDER_val\images\0--Parade\0_Parade_marchingband_1_1004.jpg -> outputs\images\widerface_epoch1_checkpoint\0_Parade_marchingband_1_1004_debug_det.jpg (100 detections, 20 drawn)
+  #1: bbox=[648.14, 185.9, 689.24, 238.04], score=0.8099
+  #2: bbox=[158.82, 405.58, 199.26, 455.97], score=0.7453
+  #3: bbox=[812.95, 221.51, 844.61, 261.06], score=0.6719
+  #4: bbox=[121.77, 210.47, 158.11, 255.41], score=0.6408
+  #5: bbox=[432.29, 224.45, 461.56, 259.86], score=0.409
+  #6: bbox=[330.78, 425.11, 361.98, 463.16], score=0.4083
+  #7: bbox=[764.61, 208.35, 794.51, 245.3], score=0.3955
+  #8: bbox=[704.19, 215.06, 731.02, 247.72], score=0.2997
+  #9: bbox=[324.09, 421.96, 352.2, 457.64], score=0.2525
+  #10: bbox=[772.58, 213.72, 802.87, 245.95], score=0.2382

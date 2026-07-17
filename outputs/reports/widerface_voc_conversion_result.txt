@@ -1,0 +1,17 @@
+WIDER FACE VOC Conversion
+==================================================
+Source root: data\raw\WIDER_FACE_OFFICIAL
+Output root: data\raw\WIDERFace
+Copy images: True
+
+Train:
+- annotation_items: 12880
+- converted_images: 12337
+- skipped_missing_images: 0
+- skipped_empty_annotations: 543
+
+Val:
+- annotation_items: 3226
+- converted_images: 3079
+- skipped_missing_images: 0
+- skipped_empty_annotations: 147

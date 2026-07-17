@@ -1,0 +1,42 @@
+{
+  "task": "LFW pair verification with trained ResNet18 ArcFace smoke checkpoint",
+  "checkpoint": "models\\checkpoints\\resnet18_arcface_lfw_smoke10_best.pt",
+  "device": "cuda",
+  "backbone": "resnet18",
+  "embedding_dim": 128,
+  "checkpoint_best_epoch": 13,
+  "checkpoint_best_val_acc": 0.7291666666666666,
+  "train_pair_file": "pairsDevTrain.txt",
+  "train_pair_header": "1100",
+  "test_pair_file": "pairsDevTest.txt",
+  "test_pair_header": "500",
+  "threshold_selected_on_train": 0.3325,
+  "train_accuracy_at_selected_threshold": 0.6436,
+  "test_metrics": {
+    "accuracy": 0.62,
+    "correct": 620,
+    "total": 1000,
+    "true_positive": 302,
+    "true_negative": 318,
+    "false_positive": 182,
+    "false_negative": 198
+  },
+  "train_score_summary": {
+    "positive_mean": 0.4208,
+    "positive_std": 0.3249,
+    "negative_mean": 0.2061,
+    "negative_std": 0.3398
+  },
+  "test_score_summary": {
+    "positive_mean": 0.3898,
+    "positive_std": 0.3257,
+    "negative_mean": 0.1793,
+    "negative_std": 0.3454
+  },
+  "train_pairs_scored": 2200,
+  "test_pairs_scored": 1000,
+  "train_pairs_skipped": 0,
+  "test_pairs_skipped": 0,
+  "unique_embeddings_cached": 4992,
+  "elapsed_seconds": 6.186
+}

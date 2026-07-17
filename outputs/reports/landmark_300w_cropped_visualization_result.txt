@@ -1,0 +1,20 @@
+300W Landmark Prediction Visualization
+==================================================
+Root: data\raw\300W
+Checkpoint: models\checkpoints\landmark_cnn_300w_cropped.pt
+Device: cuda
+Crop to landmarks: True
+Crop margin: 0.25
+Samples visualized: 8
+Mean visualized NME: 0.1894
+Output image: outputs\landmarks\landmark_cnn_300w_cropped_predictions.jpg
+
+Sample details:
+- indoor_026.png: NME=0.1972
+- indoor_105.png: NME=0.1105
+- indoor_115.png: NME=0.0856
+- indoor_143.png: NME=0.2937
+- indoor_229.png: NME=0.4197
+- indoor_251.png: NME=0.2196
+- indoor_282.png: NME=0.1068
+- outdoor_259.png: NME=0.0825

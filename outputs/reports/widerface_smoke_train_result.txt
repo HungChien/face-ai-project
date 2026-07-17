@@ -1,0 +1,38 @@
+WIDER FACE MMDetection Training Smoke Test
+========================================
+
+Date: 2026-06-29
+Environment: ml-mmdet
+Device: CPU
+Config: configs/mmdetection/widerface_retinanet_r50_fpn_smoke.py
+Work dir: outputs/mmdetection_widerface/retinanet_r50_fpn_smoke
+
+Purpose
+-------
+This smoke test verifies that the WIDER FACE data conversion, MMDetection config, model construction, dataloader, loss computation, optimizer step, logging, and checkpoint writing can run end-to-end before starting a long training job.
+
+Dataset Status
+--------------
+Converted WIDER FACE VOC-style dataset:
+- Train images: 12,337
+- Val images: 3,079
+- Checked XML samples: first 200 train + first 200 val, missing/invalid = 0
+
+Command
+-------
+$env:PYTHONUTF8='1'
+python src\mmdetection\train_widerface.py --config configs\mmdetection\widerface_retinanet_r50_fpn_smoke.py --work-dir outputs\mmdetection_widerface\retinanet_r50_fpn_smoke --device cpu
+
+Result
+------
+Status: Passed
+Training loop: 2 iterations completed
+Checkpoint: saved under outputs/mmdetection_widerface/retinanet_r50_fpn_smoke
+
+Observed training log:
+- Iter 1/2: loss = 1.7937, loss_cls = 1.1285, loss_bbox = 0.6652
+- Iter 2/2: loss = 1.7428, loss_cls = 1.1286, loss_bbox = 0.6142
+
+Notes
+-----
+The current ml-mmdet environment is suitable for MMDetection/MMCV CPU smoke tests. GPU training is not used here because the installed PyTorch/MMCV stack does not support the RTX 5080 CUDA architecture in this environment. For full WIDER FACE training, use a compatible GPU environment or run a much smaller CPU debug subset first.

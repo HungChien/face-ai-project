@@ -1,0 +1,74 @@
+{
+  "task": "five-point face alignment",
+  "image": "data\\samples\\face_test.jpg",
+  "landmarks_json": "outputs\\reports\\face_landmark_mediapipe_result.json",
+  "point_order": [
+    "left_eye",
+    "right_eye",
+    "nose_tip",
+    "left_mouth",
+    "right_mouth"
+  ],
+  "source_points": [
+    [
+      1472.0,
+      1687.0
+    ],
+    [
+      1790.0,
+      1648.0
+    ],
+    [
+      1637.0,
+      1810.0
+    ],
+    [
+      1564.0,
+      1922.0
+    ],
+    [
+      1744.0,
+      1908.0
+    ]
+  ],
+  "template_points": [
+    [
+      38.290000915527344,
+      51.70000076293945
+    ],
+    [
+      73.52999877929688,
+      51.5
+    ],
+    [
+      56.029998779296875,
+      71.73999786376953
+    ],
+    [
+      41.54999923706055,
+      92.37000274658203
+    ],
+    [
+      70.7300033569336,
+      92.19999694824219
+    ]
+  ],
+  "affine_matrix": [
+    [
+      0.14112700521945953,
+      -0.013310999609529972,
+      -151.727783203125
+    ],
+    [
+      0.013310999609529972,
+      0.14112700521945953,
+      -203.27099609375
+    ]
+  ],
+  "output_size": [
+    112,
+    112
+  ],
+  "aligned_image": "outputs\\landmarks\\alignment\\face_test_aligned_112.jpg",
+  "comparison_image": "outputs\\landmarks\\alignment\\face_test_alignment_comparison.jpg"
+}

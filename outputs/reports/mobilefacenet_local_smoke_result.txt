@@ -1,0 +1,32 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: mobilefacenet-local-smoke
+Dataset format: folder
+Data root: data\processed\ms1m-aligned-112-5000
+Device: cuda
+Backbone: mobilefacenet
+Pretrained: none
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 256
+Identities: 100
+Split mode: random
+Train/val images: 1000/300
+Epochs: 1
+Batch size: 32
+Sampler: random
+Scheduler: none
+Warmup epochs: 0
+Base/min LR: 0.0005/1e-06
+Weight decay: 0.0001
+Strong augment: False
+Erase prob: 0.0
+Epoch cooldown seconds: 1.0
+Best epoch: 1
+Best val accuracy: 0.0094
+Checkpoint: models\checkpoints\mobilefacenet_local_smoke.pt
+Curve: outputs\images\mobilefacenet_local_smoke_curves.jpg
+History JSON: outputs\reports\mobilefacenet_local_smoke_history.json
+Elapsed seconds: 1.754
+
+History:
+- epoch 1: lr=0.0005, train_loss=20.6069, train_acc=0.0400, val_loss=20.3134, val_acc=0.0094 *best

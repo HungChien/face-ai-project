@@ -1,0 +1,56 @@
+ResNet18 + ArcFace LFW Smoke Baseline
+==================================================
+Root: data\raw\sklearn\lfw_home\lfw_funneled
+Device: cuda
+Backbone: ResNet18
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 128
+Identities: 30
+Train/val images: 480/120
+Epochs: 5
+Batch size: 32
+Best epoch: 1
+Best val accuracy: 0.0000
+Checkpoint: models\checkpoints\resnet18_arcface_lfw_smoke_best.pt
+Curve: outputs\images\resnet18_arcface_lfw_smoke_curves.jpg
+History JSON: outputs\reports\resnet18_arcface_lfw_smoke_history.json
+Elapsed seconds: 5.075
+
+History:
+- epoch 1: train_loss=20.8797, train_acc=0.0000, val_loss=20.0214, val_acc=0.0000 *best
+- epoch 2: train_loss=18.5444, train_acc=0.0000, val_loss=18.9487, val_acc=0.0000
+- epoch 3: train_loss=17.8930, train_acc=0.0021, val_loss=18.4422, val_acc=0.0000
+- epoch 4: train_loss=16.9471, train_acc=0.0104, val_loss=18.7211, val_acc=0.0000
+- epoch 5: train_loss=15.6714, train_acc=0.0167, val_loss=19.3605, val_acc=0.0000
+
+Selected identities:
+- George_W_Bush: 20 images used
+- Colin_Powell: 20 images used
+- Tony_Blair: 20 images used
+- Donald_Rumsfeld: 20 images used
+- Gerhard_Schroeder: 20 images used
+- Ariel_Sharon: 20 images used
+- Hugo_Chavez: 20 images used
+- Junichiro_Koizumi: 20 images used
+- Jean_Chretien: 20 images used
+- John_Ashcroft: 20 images used
+- Jacques_Chirac: 20 images used
+- Serena_Williams: 20 images used
+- Vladimir_Putin: 20 images used
+- Luiz_Inacio_Lula_da_Silva: 20 images used
+- Gloria_Macapagal_Arroyo: 20 images used
+- Arnold_Schwarzenegger: 20 images used
+- Jennifer_Capriati: 20 images used
+- Laura_Bush: 20 images used
+- Lleyton_Hewitt: 20 images used
+- Alejandro_Toledo: 20 images used
+- Hans_Blix: 20 images used
+- Nestor_Kirchner: 20 images used
+- Andre_Agassi: 20 images used
+- Alvaro_Uribe: 20 images used
+- Megawati_Sukarnoputri: 20 images used
+- Silvio_Berlusconi: 20 images used
+- Tom_Ridge: 20 images used
+- Kofi_Annan: 20 images used
+- Roh_Moo-hyun: 20 images used
+- Vicente_Fox: 20 images used
