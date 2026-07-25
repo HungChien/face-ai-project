@@ -55,9 +55,13 @@ def resolve_celeba_paths(root: Path, image_dir: Path | None, attr_path: Path | N
 
     image_candidates = [
         root / "img_align_celeba",
+        root / "img_align_celeba_png",
         root / "Img" / "img_align_celeba",
+        root / "Img" / "img_align_celeba_png",
         root / "CelebA" / "img_align_celeba",
+        root / "CelebA" / "img_align_celeba_png",
         root / "celeba" / "img_align_celeba",
+        root / "celeba" / "img_align_celeba_png",
         root / "images",
     ]
     attr_candidates = [
@@ -81,7 +85,7 @@ def resolve_celeba_paths(root: Path, image_dir: Path | None, attr_path: Path | N
                 break
 
     if resolved_image_dir is None:
-        found = sorted(root.rglob("img_align_celeba"))
+        found = sorted(root.rglob("img_align_celeba")) or sorted(root.rglob("img_align_celeba_png"))
         if found:
             resolved_image_dir = found[0]
     if resolved_attr_path is None:
@@ -130,12 +134,23 @@ class CelebAStarGANDataset(Dataset):
             parts = line.split()
             filename = parts[0]
             values = [1.0 if int(parts[index + 1]) == 1 else 0.0 for index in selected_indices]
-            image_path = image_dir / filename
+            image_path = self.resolve_image_path(filename)
             if image_path.exists():
-                self.records.append((filename, values))
+                self.records.append((image_path.name, values))
 
         if not self.records:
             raise RuntimeError(f"No CelebA images matched attr file in {image_dir}")
+
+    def resolve_image_path(self, filename: str) -> Path:
+        image_path = self.image_dir / filename
+        if image_path.exists():
+            return image_path
+        stem = Path(filename).stem
+        for suffix in [".png", ".jpg", ".jpeg", ".webp"]:
+            candidate = self.image_dir / f"{stem}{suffix}"
+            if candidate.exists():
+                return candidate
+        return image_path
 
     def __len__(self) -> int:
         return len(self.records)
@@ -474,4 +489,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
 
