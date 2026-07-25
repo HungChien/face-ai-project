@@ -1,4 +1,4 @@
-# CelebA StarGAN Training
+﻿# CelebA StarGAN Training
 
 This note records the server-side commands for task 7.2: training a StarGAN baseline on CelebA for facial attribute editing.
 
@@ -106,3 +106,32 @@ Black_Hair, Blond_Hair, Brown_Hair, Male, Young
 ```
 
 These cover the requested hair color, gender, and age editing directions.
+
+## Continued Quality Run
+
+If the baseline already produced a usable checkpoint but the edited images are still blurry or contain artifacts, continue from the best checkpoint with a larger random subset and more epochs:
+
+```bash
+python -u src/stargan/train_stargan_celeba.py \
+  --image-dir /root/autodl-tmp/celeba/img_align_celeba_png \
+  --attr-path /root/autodl-pub/CelebA/Anno/list_attr_celeba.txt \
+  --selected-attrs Black_Hair Blond_Hair Brown_Hair Male Young \
+  --image-size 128 \
+  --max-images 100000 \
+  --num-epochs 20 \
+  --batch-size 32 \
+  --num-workers 8 \
+  --device cuda \
+  --sample-every 500 \
+  --checkpoint-every 1 \
+  --g-lr 5e-5 \
+  --d-lr 5e-5 \
+  --lr-decay-start-epoch 20 \
+  --min-lr 1e-6 \
+  --resume models/checkpoints/stargan/stargan_celeba_attr5_baseline_latest.pt \
+  --run-name stargan_celeba_attr5_refine \
+  2>&1 | tee outputs/reports/stargan_celeba_attr5_refine_console.log
+```
+
+This run keeps the aligned PNG dataset, resumes the generator/discriminator weights, samples a broader random subset, uses mutually exclusive hair-color targets, and decays the learning rate late in training.
+

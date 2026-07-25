@@ -28,11 +28,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--selected-attrs", nargs="+", default=DEFAULT_ATTRS)
     parser.add_argument("--image-size", type=int, default=128)
     parser.add_argument("--max-images", type=int, default=20000)
-    parser.add_argument("--num-epochs", type=int, default=5)
+    parser.add_argument("--sequential-subset", action="store_true", help="Use the first max-images samples instead of a seeded random subset.")
+    parser.add_argument("--num-epochs", type=int, default=5, help="Number of epochs to run in this invocation. With --resume, this means additional epochs.")
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--num-workers", type=int, default=4)
     parser.add_argument("--g-lr", type=float, default=1e-4)
     parser.add_argument("--d-lr", type=float, default=1e-4)
+    parser.add_argument("--lr-decay-start-epoch", type=int, default=0, help="Start linear LR decay after this absolute epoch; 0 disables decay.")
+    parser.add_argument("--min-lr", type=float, default=1e-6)
     parser.add_argument("--beta1", type=float, default=0.5)
     parser.add_argument("--beta2", type=float, default=0.999)
     parser.add_argument("--lambda-cls", type=float, default=1.0)
@@ -46,6 +49,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, default=Path("outputs/stargan"))
     parser.add_argument("--checkpoint-dir", type=Path, default=Path("models/checkpoints/stargan"))
     parser.add_argument("--run-name", default="stargan_celeba_baseline")
+    parser.add_argument("--resume", type=Path, default=None, help="Resume generator/discriminator and optimizer states from a checkpoint.")
     return parser.parse_args()
 
 
@@ -243,12 +247,37 @@ def denorm(x: torch.Tensor) -> torch.Tensor:
     return (x + 1.0) / 2.0
 
 
-def make_target_attrs(source_attr: torch.Tensor) -> torch.Tensor:
+def make_target_attrs(source_attr: torch.Tensor, selected_attrs: list[str]) -> torch.Tensor:
     target = source_attr.clone()
+    hair_indices = [
+        index
+        for index, name in enumerate(selected_attrs)
+        if name in {"Black_Hair", "Blond_Hair", "Brown_Hair", "Gray_Hair"}
+    ]
+    non_hair_indices = [index for index in range(target.size(1)) if index not in hair_indices]
+
     for row in target:
-        attr_index = random.randrange(row.numel())
-        row[attr_index] = 1.0 - row[attr_index]
+        edit_hair = hair_indices and (not non_hair_indices or random.random() < 0.5)
+        if edit_hair:
+            chosen = random.choice(hair_indices)
+            row[hair_indices] = 0.0
+            row[chosen] = 1.0
+        else:
+            attr_index = random.choice(non_hair_indices or list(range(row.numel())))
+            row[attr_index] = 1.0 - row[attr_index]
     return target
+
+
+def adjust_learning_rate(optimizer: torch.optim.Optimizer, initial_lr: float, epoch: int, end_epoch: int, decay_start_epoch: int, min_lr: float) -> float:
+    if decay_start_epoch <= 0 or epoch < decay_start_epoch or end_epoch <= decay_start_epoch:
+        lr = initial_lr
+    else:
+        progress = min(1.0, (epoch - decay_start_epoch) / max(1, end_epoch - decay_start_epoch))
+        lr = initial_lr - progress * (initial_lr - min_lr)
+    lr = max(lr, min_lr)
+    for group in optimizer.param_groups:
+        group["lr"] = lr
+    return lr
 
 
 def classification_loss(logits: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
@@ -317,7 +346,11 @@ def main() -> None:
     image_dir, attr_path = resolve_celeba_paths(args.celeba_root, args.image_dir, args.attr_path)
     dataset = CelebAStarGANDataset(image_dir, attr_path, args.selected_attrs, args.image_size)
     if args.max_images and args.max_images < len(dataset):
-        indices = list(range(args.max_images))
+        if args.sequential_subset:
+            indices = list(range(args.max_images))
+        else:
+            rng = np.random.default_rng(args.seed)
+            indices = rng.permutation(len(dataset))[: args.max_images].tolist()
         dataset_for_loader: Dataset = Subset(dataset, indices)
     else:
         dataset_for_loader = dataset
@@ -349,15 +382,31 @@ def main() -> None:
     started = time.perf_counter()
     total_steps = 0
     best_g_loss = float("inf")
+    start_epoch = 1
+    if args.resume is not None:
+        resume_checkpoint = torch.load(args.resume, map_location=device)
+        generator.load_state_dict(resume_checkpoint["generator"])
+        discriminator.load_state_dict(resume_checkpoint["discriminator"])
+        if "g_optimizer" in resume_checkpoint:
+            g_optimizer.load_state_dict(resume_checkpoint["g_optimizer"])
+        if "d_optimizer" in resume_checkpoint:
+            d_optimizer.load_state_dict(resume_checkpoint["d_optimizer"])
+        total_steps = int(resume_checkpoint.get("step", 0))
+        start_epoch = int(resume_checkpoint.get("epoch", 0)) + 1
+        best_g_loss = float(resume_checkpoint.get("best_g_loss", best_g_loss))
+        print(f"Resumed from {args.resume}: start_epoch={start_epoch}, total_steps={total_steps}", flush=True)
     latest_checkpoint = args.checkpoint_dir / f"{args.run_name}_latest.pt"
     best_checkpoint = args.checkpoint_dir / f"{args.run_name}_best.pt"
 
-    for epoch in range(1, args.num_epochs + 1):
+    end_epoch = start_epoch + args.num_epochs - 1
+    for epoch in range(start_epoch, end_epoch + 1):
+        current_g_lr = adjust_learning_rate(g_optimizer, args.g_lr, epoch, end_epoch, args.lr_decay_start_epoch, args.min_lr)
+        current_d_lr = adjust_learning_rate(d_optimizer, args.d_lr, epoch, end_epoch, args.lr_decay_start_epoch, args.min_lr)
         for real_images, real_attrs, _filenames in loader:
             total_steps += 1
             real_images = real_images.to(device, non_blocking=True)
             real_attrs = real_attrs.to(device, non_blocking=True)
-            target_attrs = make_target_attrs(real_attrs).to(device)
+            target_attrs = make_target_attrs(real_attrs, args.selected_attrs).to(device)
 
             out_src, out_cls = discriminator(real_images)
             d_loss_real = -out_src.mean()
@@ -401,6 +450,8 @@ def main() -> None:
                     "g_fake": float(g_loss_fake.item()),
                     "g_cls": float(g_loss_cls.item()),
                     "g_rec": float(g_loss_rec.item()),
+                    "g_lr": float(current_g_lr),
+                    "d_lr": float(current_d_lr),
                 }
                 history.append(record)
                 print(record, flush=True)
@@ -422,7 +473,10 @@ def main() -> None:
             "selected_attrs": args.selected_attrs,
             "image_size": args.image_size,
             "run_name": args.run_name,
-            "args": vars(args),
+            "args": {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
+            "g_optimizer": g_optimizer.state_dict(),
+            "d_optimizer": d_optimizer.state_dict(),
+            "best_g_loss": best_g_loss,
         }
         torch.save(checkpoint, latest_checkpoint)
         if history and history[-1]["g_loss"] < best_g_loss:
@@ -448,7 +502,10 @@ def main() -> None:
         "dataset_images_total": len(dataset),
         "dataset_images_used": len(dataset_for_loader),
         "image_size": args.image_size,
-        "epochs": args.num_epochs,
+        "epochs_this_run": args.num_epochs,
+        "start_epoch": start_epoch,
+        "end_epoch": end_epoch,
+        "resume": str(args.resume) if args.resume else None,
         "batch_size": args.batch_size,
         "device": str(device),
         "total_steps": total_steps,
@@ -469,7 +526,9 @@ def main() -> None:
         f"Attr path: {attr_path}",
         f"Selected attrs: {', '.join(args.selected_attrs)}",
         f"Images used: {len(dataset_for_loader)} / {len(dataset)}",
-        f"Epochs: {args.num_epochs}",
+        f"Epochs this run: {args.num_epochs}",
+        f"Epoch range: {start_epoch}-{end_epoch}",
+        f"Resume: {args.resume if args.resume else 'none'}",
         f"Batch size: {args.batch_size}",
         f"Device: {device}",
         f"Total steps: {total_steps}",
