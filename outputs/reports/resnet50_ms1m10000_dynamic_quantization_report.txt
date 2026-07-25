@@ -1,0 +1,23 @@
+ArcFace Dynamic Quantization Report
+================================================
+Source checkpoint: models\checkpoints\resnet50_ms1m10000_reproduce_server_best.pt
+Quantized model: models\checkpoints\resnet50_ms1m10000_reproduce_server_dynamic_quantized.pt
+Backbone: resnet50
+Embedding dim: 512
+Image size: 112
+Batch size: 8
+
+Model size:
+  FP32 checkpoint: 114.09 MB
+  Dynamic quantized: 91.03 MB
+  Size reduction: 20.21%
+
+CPU inference benchmark:
+  FP32: 4.8014 ms/image (38.4110 ms/batch)
+  Dynamic quantized: 4.0888 ms/image (32.7103 ms/batch)
+  Speedup: 1.174x
+
+Output consistency on random input:
+  Mean cosine similarity: 0.999670
+  Mean abs diff: 0.000909
+  Max abs diff: 0.004311

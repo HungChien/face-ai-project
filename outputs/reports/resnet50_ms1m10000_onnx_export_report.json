@@ -1,0 +1,27 @@
+{
+  "source_checkpoint": "models\\checkpoints\\resnet50_ms1m10000_reproduce_server_best.pt",
+  "onnx_model": "models\\exported\\resnet50_ms1m10000_reproduce_server.onnx",
+  "backbone": "resnet50",
+  "embedding_dim": 512,
+  "image_size": 112,
+  "batch_size": 8,
+  "opset": 17,
+  "onnx_size_mb": 93.61384582519531,
+  "torch_speed": {
+    "elapsed_seconds": 0.3901093000004039,
+    "per_batch_ms": 39.01093000004039,
+    "per_image_ms": 4.876366250005049
+  },
+  "onnx_speed": {
+    "elapsed_seconds": 0.33352089999971213,
+    "per_batch_ms": 33.35208999997121,
+    "per_image_ms": 4.169011249996402
+  },
+  "speedup": 1.1696697268469252,
+  "max_abs_diff": 1.2665987014770508e-07,
+  "mean_abs_diff": 2.5691747396194842e-08,
+  "mean_cosine_similarity": 1.0,
+  "providers": [
+    "CPUExecutionProvider"
+  ]
+}

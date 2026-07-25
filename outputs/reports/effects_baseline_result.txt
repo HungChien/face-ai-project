@@ -1,0 +1,21 @@
+Landmark-driven Traditional Face Effects Baseline
+==========================================================
+Input image: data\raw\300W\300W\01_Indoor\indoor_016.png
+Checkpoint: models\checkpoints\landmark_cnn_300w_aug30_best.pt
+Device: cuda
+Elapsed seconds: 1.643
+Landmark crop source: sidecar_pts_for_crop
+Crop box: [346, 406, 925, 999]
+
+Implemented effects:
+- Beauty: bilateral smoothing + face mask brightening.
+- Makeup: lipstick, cheek blush, and eye shadow using 68-point regions.
+- AR sticker: glasses and forehead badge anchored to eye/brow landmarks.
+
+Output files:
+- original: outputs\effects\images\indoor_016_original.jpg
+- landmarks: outputs\effects\images\indoor_016_landmarks.jpg
+- beauty: outputs\effects\images\indoor_016_beauty.jpg
+- makeup: outputs\effects\images\indoor_016_makeup.jpg
+- ar_sticker: outputs\effects\images\indoor_016_ar_sticker.jpg
+- grid: outputs\effects\images\indoor_016_effects_grid.jpg

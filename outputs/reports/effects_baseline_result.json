@@ -1,0 +1,31 @@
+{
+  "input_image": "data\\raw\\300W\\300W\\01_Indoor\\indoor_016.png",
+  "device": "cuda",
+  "elapsed_seconds": 1.6427009000035468,
+  "landmark_meta": {
+    "checkpoint": "models\\checkpoints\\landmark_cnn_300w_aug30_best.pt",
+    "image_size": 128,
+    "num_points": 68,
+    "crop_source": "sidecar_pts_for_crop",
+    "crop_box": [
+      346,
+      406,
+      925,
+      999
+    ],
+    "has_sidecar_pts": true
+  },
+  "effects": {
+    "beauty": "bilateral smoothing, face-mask blending, mild brightening",
+    "makeup": "landmark polygons for lips/eyes plus cheek color masks",
+    "ar_sticker": "eye-center glasses and forehead badge anchored by 68 landmarks"
+  },
+  "outputs": {
+    "original": "outputs\\effects\\images\\indoor_016_original.jpg",
+    "landmarks": "outputs\\effects\\images\\indoor_016_landmarks.jpg",
+    "beauty": "outputs\\effects\\images\\indoor_016_beauty.jpg",
+    "makeup": "outputs\\effects\\images\\indoor_016_makeup.jpg",
+    "ar_sticker": "outputs\\effects\\images\\indoor_016_ar_sticker.jpg",
+    "grid": "outputs\\effects\\images\\indoor_016_effects_grid.jpg"
+  }
+}

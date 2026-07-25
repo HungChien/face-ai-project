@@ -1,0 +1,27 @@
+{
+  "source_checkpoint": "models\\checkpoints\\resnet50_ms1m10000_reproduce_server_best.pt",
+  "quantized_model": "models\\checkpoints\\resnet50_ms1m10000_reproduce_server_dynamic_quantized.pt",
+  "backbone": "resnet50",
+  "embedding_dim": 512,
+  "image_size": 112,
+  "batch_size": 8,
+  "warmup_iters": 3,
+  "benchmark_iters": 10,
+  "fp32_size_mb": 114.09063625335693,
+  "quantized_size_mb": 91.02842617034912,
+  "size_reduction": 0.20213937655492076,
+  "fp32_speed": {
+    "elapsed_seconds": 0.38410970000040834,
+    "per_batch_ms": 38.410970000040834,
+    "per_image_ms": 4.801371250005104
+  },
+  "quantized_speed": {
+    "elapsed_seconds": 0.32710320000023785,
+    "per_batch_ms": 32.710320000023785,
+    "per_image_ms": 4.088790000002973
+  },
+  "speedup": 1.1742768031622102,
+  "max_abs_diff": 0.004311237018555403,
+  "mean_abs_diff": 0.000909407390281558,
+  "mean_cosine_similarity": 0.9996695518493652
+}

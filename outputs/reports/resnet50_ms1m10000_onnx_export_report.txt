@@ -1,0 +1,20 @@
+ArcFace ONNX Export Report
+================================================
+Source checkpoint: models\checkpoints\resnet50_ms1m10000_reproduce_server_best.pt
+ONNX model: models\exported\resnet50_ms1m10000_reproduce_server.onnx
+Backbone: resnet50
+Embedding dim: 512
+Image size: 112
+Batch size: 8
+Opset: 17
+ONNX size: 93.61 MB
+
+CPU inference benchmark:
+  PyTorch: 4.8764 ms/image (39.0109 ms/batch)
+  ONNXRuntime: 4.1690 ms/image (33.3521 ms/batch)
+  Speedup: 1.170x
+
+Output consistency on random input:
+  Mean cosine similarity: 1.000000
+  Mean abs diff: 0.000000
+  Max abs diff: 0.000000

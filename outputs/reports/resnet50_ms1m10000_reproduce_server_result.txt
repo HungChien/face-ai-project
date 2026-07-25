@@ -1,0 +1,51 @@
+ResNet ArcFace Face Identity Training
+==================================================
+Dataset: MS1M-aligned-112-10000-reproduce-server
+Dataset format: folder
+Data root: data/processed/ms1m-aligned-112-10000
+Device: cuda
+Backbone: resnet50
+Pretrained: imagenet
+Loss/head: ArcFace scale=32 margin=0.5
+Embedding dim: 512
+Identities: 10000
+Split mode: random
+Train/val images: 240000/60000
+Epochs: 20
+Batch size: 64
+Sampler: random
+Scheduler: none
+Warmup epochs: 0
+Base/min LR: 0.0003/1e-06
+Weight decay: 0.0001
+Strong augment: False
+Erase prob: 0.0
+Epoch cooldown seconds: 0.0
+Best epoch: 8
+Best val accuracy: 0.9794
+Checkpoint: models/checkpoints/resnet50_ms1m10000_reproduce_server_best.pt
+Curve: outputs/images/resnet50_ms1m10000_reproduce_server_curves.jpg
+History JSON: outputs/reports/resnet50_ms1m10000_reproduce_server_history.json
+Elapsed seconds: 3389.771
+
+History:
+- epoch 1: lr=0.0003, train_loss=19.3336, train_acc=0.3782, val_loss=13.2212, val_acc=0.7909
+- epoch 2: lr=0.0003, train_loss=9.9517, train_acc=0.9237, val_loss=8.0453, val_acc=0.9441
+- epoch 3: lr=0.0003, train_loss=6.7148, train_acc=0.9760, val_loss=6.4333, val_acc=0.9666
+- epoch 4: lr=0.0003, train_loss=5.2872, train_acc=0.9879, val_loss=5.5115, val_acc=0.9755
+- epoch 5: lr=0.0003, train_loss=4.2965, train_acc=0.9930, val_loss=5.0564, val_acc=0.9770
+- epoch 6: lr=0.0003, train_loss=3.4872, train_acc=0.9957, val_loss=4.4613, val_acc=0.9793
+- epoch 7: lr=0.0003, train_loss=2.8266, train_acc=0.9973, val_loss=4.1544, val_acc=0.9792
+- epoch 8: lr=0.0003, train_loss=2.2781, train_acc=0.9983, val_loss=3.8371, val_acc=0.9794 *best
+- epoch 9: lr=0.0003, train_loss=1.8462, train_acc=0.9989, val_loss=3.6334, val_acc=0.9787
+- epoch 10: lr=0.0003, train_loss=1.4915, train_acc=0.9992, val_loss=3.4576, val_acc=0.9779
+- epoch 11: lr=0.0003, train_loss=1.2134, train_acc=0.9994, val_loss=3.3566, val_acc=0.9768
+- epoch 12: lr=0.0003, train_loss=0.9987, train_acc=0.9996, val_loss=3.3282, val_acc=0.9742
+- epoch 13: lr=0.0003, train_loss=0.8330, train_acc=0.9997, val_loss=3.1562, val_acc=0.9742
+- epoch 14: lr=0.0003, train_loss=0.6970, train_acc=0.9998, val_loss=3.0789, val_acc=0.9745
+- epoch 15: lr=0.0003, train_loss=0.5930, train_acc=0.9998, val_loss=3.0051, val_acc=0.9725
+- epoch 16: lr=0.0003, train_loss=0.5138, train_acc=0.9999, val_loss=3.0813, val_acc=0.9706
+- epoch 17: lr=0.0003, train_loss=0.4483, train_acc=0.9998, val_loss=2.9161, val_acc=0.9707
+- epoch 18: lr=0.0003, train_loss=0.3961, train_acc=0.9999, val_loss=2.8634, val_acc=0.9705
+- epoch 19: lr=0.0003, train_loss=0.3590, train_acc=0.9999, val_loss=2.8487, val_acc=0.9705
+- epoch 20: lr=0.0003, train_loss=0.3214, train_acc=0.9999, val_loss=2.7885, val_acc=0.9693
