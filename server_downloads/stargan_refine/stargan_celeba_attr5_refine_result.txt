@@ -1,0 +1,21 @@
+CelebA StarGAN Attribute Editing Baseline
+============================================================
+Run name: stargan_celeba_attr5_refine
+Image dir: /root/autodl-tmp/celeba/img_align_celeba_png
+Attr path: /root/autodl-pub/CelebA/Anno/list_attr_celeba.txt
+Selected attrs: Black_Hair, Blond_Hair, Brown_Hair, Male, Young
+Images used: 100000 / 202599
+Epochs this run: 20
+Epoch range: 11-30
+Resume: models/checkpoints/stargan/stargan_celeba_attr5_baseline_latest.pt
+Batch size: 32
+Device: cuda
+Total steps: 78120
+Elapsed seconds: 5061.594
+
+Outputs:
+- Latest checkpoint: models/checkpoints/stargan/stargan_celeba_attr5_refine_latest.pt
+- Best checkpoint: models/checkpoints/stargan/stargan_celeba_attr5_refine_best.pt
+- Samples: outputs/stargan/images/stargan_celeba_attr5_refine
+- Curves: outputs/stargan/curves/stargan_celeba_attr5_refine_loss_curves.jpg
+- History JSON: outputs/reports/stargan_celeba_attr5_refine_history.json

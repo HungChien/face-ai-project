@@ -384,7 +384,7 @@ def main() -> None:
     best_g_loss = float("inf")
     start_epoch = 1
     if args.resume is not None:
-        resume_checkpoint = torch.load(args.resume, map_location=device)
+        resume_checkpoint = torch.load(args.resume, map_location=device, weights_only=False)
         generator.load_state_dict(resume_checkpoint["generator"])
         discriminator.load_state_dict(resume_checkpoint["discriminator"])
         if "g_optimizer" in resume_checkpoint:
@@ -548,6 +548,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
 

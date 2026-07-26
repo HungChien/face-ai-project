@@ -1,0 +1,18 @@
+StarGAN Generated Image Quality Evaluation
+============================================================
+Grid: server_downloads\stargan_refine\stargan_celeba_attr5_refine\epoch_030.jpg
+Device: cuda
+Real images: 8
+Generated images: 40
+FID: 66.40386997279816
+Inception Score: 2.177615213394165
+Inception Score std: 0.13916199391314643
+
+Auxiliary metrics:
+- mean_l1_to_source: 0.044820
+- mean_rmse_to_source: 0.059750
+- pixel_diversity_std: 0.249255
+
+Metric note: FID/IS computed with torchvision InceptionV3 ImageNet weights. The real set is the source row from the StarGAN sample grid; generated set is all edited rows.
+JSON report: outputs\reports\stargan_celeba_attr5_refine_quality_eval.json
+Plot: outputs\stargan\curves\stargan_celeba_attr5_refine_quality_summary.jpg

@@ -1,0 +1,28 @@
+{
+  "task": "StarGAN generated image quality evaluation",
+  "grid": "server_downloads\\stargan_refine\\stargan_celeba_attr5_refine\\epoch_030.jpg",
+  "device": "cuda",
+  "grid_meta": {
+    "grid_size": [
+      1042,
+      782
+    ],
+    "ncols": 8,
+    "nrows": 6,
+    "tile_size": [
+      128,
+      128
+    ],
+    "real_count": 8,
+    "generated_count": 40
+  },
+  "fid": 66.40386997279816,
+  "inception_score_mean": 2.177615213394165,
+  "inception_score_std": 0.13916199391314643,
+  "metric_note": "FID/IS computed with torchvision InceptionV3 ImageNet weights. The real set is the source row from the StarGAN sample grid; generated set is all edited rows.",
+  "auxiliary_metrics": {
+    "mean_l1_to_source": 0.044819880928844216,
+    "mean_rmse_to_source": 0.059750191494822504,
+    "pixel_diversity_std": 0.24925512075424194
+  }
+}
