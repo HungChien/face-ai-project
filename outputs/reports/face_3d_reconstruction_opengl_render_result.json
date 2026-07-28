@@ -1,0 +1,29 @@
+{
+  "method": "OpenGL offscreen rendering with pyrender",
+  "mesh": "outputs\\3d_reconstruction\\3ddfa_v2\\meshes\\indoor_016_original_3ddfa_v2.obj",
+  "vertices": 38365,
+  "faces": 76073,
+  "viewport": [
+    900,
+    900
+  ],
+  "views": [
+    "front",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "three_quarter"
+  ],
+  "outputs": {
+    "views": {
+      "front": "outputs\\3d_reconstruction\\3ddfa_v2\\opengl\\indoor_016_original_3ddfa_v2_opengl_front.jpg",
+      "left": "outputs\\3d_reconstruction\\3ddfa_v2\\opengl\\indoor_016_original_3ddfa_v2_opengl_left.jpg",
+      "right": "outputs\\3d_reconstruction\\3ddfa_v2\\opengl\\indoor_016_original_3ddfa_v2_opengl_right.jpg",
+      "top": "outputs\\3d_reconstruction\\3ddfa_v2\\opengl\\indoor_016_original_3ddfa_v2_opengl_top.jpg",
+      "bottom": "outputs\\3d_reconstruction\\3ddfa_v2\\opengl\\indoor_016_original_3ddfa_v2_opengl_bottom.jpg",
+      "three_quarter": "outputs\\3d_reconstruction\\3ddfa_v2\\opengl\\indoor_016_original_3ddfa_v2_opengl_three_quarter.jpg"
+    },
+    "grid": "outputs\\3d_reconstruction\\3ddfa_v2\\opengl\\indoor_016_original_3ddfa_v2_opengl_multiview_grid.jpg"
+  }
+}

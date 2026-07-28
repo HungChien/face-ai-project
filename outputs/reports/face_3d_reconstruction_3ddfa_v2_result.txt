@@ -1,0 +1,18 @@
+3DDFA_V2 3D Face Reconstruction
+========================================
+Input image: outputs\effects\images\indoor_016_original.jpg
+3DDFA_V2 repo: F:\Internship\Bytedance\face-ai-project\third_party\3DDFA_V2
+Config: F:\Internship\Bytedance\face-ai-project\third_party\3DDFA_V2\configs\mb1_120x120.yml
+Device: cpu
+Dense reconstruction: True
+Detected faces: 1
+Vertices: 38365
+Triangles: 76073
+Visualization: OpenCV/Matplotlib fallback, official 3DDFA_V2 TDDFA reconstruction core
+
+Outputs:
+- projected_mesh: outputs\3d_reconstruction\3ddfa_v2\images\indoor_016_original_3ddfa_v2_projected_mesh.jpg
+- pose_proxy: outputs\3d_reconstruction\3ddfa_v2\images\indoor_016_original_3ddfa_v2_pose_proxy.jpg
+- multiview: outputs\3d_reconstruction\3ddfa_v2\images\indoor_016_original_3ddfa_v2_multiview.jpg
+- obj_mesh: outputs\3d_reconstruction\3ddfa_v2\meshes\indoor_016_original_3ddfa_v2.obj
+- ply_mesh: outputs\3d_reconstruction\3ddfa_v2\meshes\indoor_016_original_3ddfa_v2.ply

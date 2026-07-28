@@ -1,0 +1,19 @@
+{
+  "method": "3DDFA_V2 single-image 3D face reconstruction",
+  "repo_root": "F:\\Internship\\Bytedance\\face-ai-project\\third_party\\3DDFA_V2",
+  "config": "F:\\Internship\\Bytedance\\face-ai-project\\third_party\\3DDFA_V2\\configs\\mb1_120x120.yml",
+  "input_image": "outputs\\effects\\images\\indoor_016_original.jpg",
+  "device": "cpu",
+  "dense": true,
+  "detected_faces": 1,
+  "vertices": 38365,
+  "triangles": 76073,
+  "visualization_backend": "OpenCV/Matplotlib fallback visualization; official TDDFA reconstruction is used",
+  "outputs": {
+    "projected_mesh": "outputs\\3d_reconstruction\\3ddfa_v2\\images\\indoor_016_original_3ddfa_v2_projected_mesh.jpg",
+    "pose_proxy": "outputs\\3d_reconstruction\\3ddfa_v2\\images\\indoor_016_original_3ddfa_v2_pose_proxy.jpg",
+    "multiview": "outputs\\3d_reconstruction\\3ddfa_v2\\images\\indoor_016_original_3ddfa_v2_multiview.jpg",
+    "obj_mesh": "outputs\\3d_reconstruction\\3ddfa_v2\\meshes\\indoor_016_original_3ddfa_v2.obj",
+    "ply_mesh": "outputs\\3d_reconstruction\\3ddfa_v2\\meshes\\indoor_016_original_3ddfa_v2.ply"
+  }
+}

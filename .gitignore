@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+﻿# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -230,3 +230,11 @@ Thumbs.db
 .idea/
 # Embedding caches
 outputs/embeddings/*.npz
+
+# Local transfer and build scratch space
+server_downloads/
+tmp/
+
+# External repositories and downloaded pretrained assets
+third_party/*
+!third_party/README.md

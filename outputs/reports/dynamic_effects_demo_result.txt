@@ -1,0 +1,25 @@
+Dynamic Face Effects Demo
+================================
+Source: outputs\effects\images\indoor_016_original.jpg
+Landmarker: models\checkpoints\face_landmarker.task
+Frames: 96
+Video FPS: 24.00
+Frame width: 360
+Detection width: 180
+Detect every: 4 frame(s)
+Processing seconds: 14.423
+Processing FPS: 6.66
+Detected frames: 24 / 96
+Detection rate: 0.2500
+Reused previous landmarks: 72
+
+Implemented dynamic effects:
+- Real-time dense landmark tracking with EMA smoothing.
+- Dynamic AR glasses with animated lens highlight.
+- Animated hat anchored to forehead/face width.
+- Beauty: bilateral smoothing and mild brightening inside face mask.
+- Makeup: lipstick and cheek blush driven by facial landmarks.
+
+Outputs:
+- video: outputs\effects\videos\dynamic_face_effects_demo.mp4
+- contact_sheet: outputs\effects\videos\dynamic_face_effects_contact_sheet.jpg

@@ -1,0 +1,219 @@
+{
+  "project_root": "F:\\Internship\\Bytedance\\face-ai-project",
+  "modules": [
+    {
+      "key": "datasets",
+      "title": "Dataset exploration",
+      "stage": "Phase 1",
+      "status": "complete",
+      "summary": "LFW and CelebA formats, annotations, distributions, pairs, and preprocessing were inspected with OpenCV and Matplotlib.",
+      "metrics": [
+        "LFW: 13,233 images / 5,749 identities",
+        "CelebA: 202,599 images / 40 attributes"
+      ],
+      "media": [
+        "outputs/images/lfw_opencv_pair_examples.jpg",
+        "outputs/images/celeba_opencv_annotation_examples.jpg"
+      ],
+      "reports": [
+        "outputs/reports/lfw_exploration_result.txt",
+        "outputs/reports/celeba_exploration_result.txt"
+      ],
+      "entrypoints": [
+        "src/datasets/explore_lfw.py",
+        "src/datasets/explore_lfw_pairs.py",
+        "src/datasets/explore_celeba.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    },
+    {
+      "key": "detection",
+      "title": "Face detection",
+      "stage": "Phases 1-2",
+      "status": "partial",
+      "summary": "MMDetection inference and a RetinaNet WIDER FACE training pipeline were completed; the formal run was limited to one CPU epoch.",
+      "metrics": [
+        "WIDER FACE epoch-1 mAP/AP50: 0.3283",
+        "MMDetection test image: 1 face"
+      ],
+      "media": [
+        "outputs/mmdetection_face_detection/vis/face_test.jpg",
+        "outputs/images/widerface_epoch1_checkpoint/face_test_debug_det.jpg"
+      ],
+      "reports": [
+        "outputs/reports/mmdetection_face_detection_result.txt",
+        "outputs/reports/widerface_epoch1_eval_result.txt"
+      ],
+      "entrypoints": [
+        "src/mmdetection/run_face_detection_mmdet.py",
+        "src/mmdetection/train_widerface.py",
+        "src/mmdetection/evaluate_widerface.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    },
+    {
+      "key": "landmarks",
+      "title": "Landmarks and alignment",
+      "stage": "Phase 2",
+      "status": "complete",
+      "summary": "A 68-point 300W regressor, five-point extraction, calibrated alignment template, and GT-versus-prediction comparison were implemented.",
+      "metrics": [
+        "Best validation NME: 0.1721",
+        "Best checkpoint epoch: 29 / 30"
+      ],
+      "media": [
+        "outputs/landmarks/landmark_cnn_300w_aug30_predictions.jpg",
+        "outputs/landmarks/alignment_compare_300w/gt_vs_pred_alignment_grid.jpg"
+      ],
+      "reports": [
+        "outputs/reports/landmark_300w_aug30_training_result.txt",
+        "outputs/reports/landmark_300w_alignment_compare_result.txt"
+      ],
+      "entrypoints": [
+        "src/landmarks/train_landmark_regressor.py",
+        "src/landmarks/align_with_landmark_model.py",
+        "src/landmarks/compare_gt_pred_alignment.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    },
+    {
+      "key": "recognition",
+      "title": "Face recognition",
+      "stage": "Phase 2",
+      "status": "partial",
+      "summary": "ResNet50 + ArcFace was trained on a 10,000-identity aligned MS1M subset and evaluated with the official LFW 6,000-pair 10-fold protocol.",
+      "metrics": [
+        "Closed-set validation accuracy: 97.94%",
+        "Self-trained LFW accuracy: 76.98%",
+        "Face-pretrained reference: 96.77%"
+      ],
+      "media": [
+        "outputs/images/resnet50_ms1m10000_reproduce_server_curves.jpg"
+      ],
+      "reports": [
+        "outputs/reports/resnet50_ms1m10000_reproduce_server_result.txt",
+        "outputs/reports/resnet50_ms1m10000_reproduce_server_lfw_10fold_result.txt",
+        "outputs/reports/facenet_vggface2_lfw_10fold_result.txt"
+      ],
+      "entrypoints": [
+        "src/recognition/train_arcface_celeba_subset.py",
+        "src/recognition/evaluate_lfw_10fold_resnet_arcface.py",
+        "src/recognition/evaluate_lfw_10fold_facenet.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    },
+    {
+      "key": "optimization",
+      "title": "Optimization and deployment",
+      "stage": "Phase 2",
+      "status": "complete",
+      "summary": "The final ArcFace model was dynamically quantized, exported to ONNX, and benchmarked with output-consistency checks.",
+      "metrics": [
+        "Quantized: -20.21% size / 1.174x CPU speedup",
+        "ONNXRuntime: 1.170x CPU speedup"
+      ],
+      "media": [],
+      "reports": [
+        "outputs/reports/resnet50_ms1m10000_dynamic_quantization_report.txt",
+        "outputs/reports/resnet50_ms1m10000_onnx_export_report.txt"
+      ],
+      "entrypoints": [
+        "src/optimization/quantize_arcface_model.py",
+        "src/optimization/export_arcface_onnx.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    },
+    {
+      "key": "stargan",
+      "title": "Face attribute editing",
+      "stage": "Phase 3",
+      "status": "complete",
+      "summary": "StarGAN was trained on aligned CelebA for hair color, gender, and age-related editing, then refined to 30 epochs.",
+      "metrics": [
+        "Training images: 100,000",
+        "FID: 66.40",
+        "Inception Score: 2.178"
+      ],
+      "media": [
+        "outputs/stargan/images/stargan_celeba_attr5_refine/epoch_030.jpg",
+        "outputs/stargan/curves/stargan_celeba_attr5_refine_quality_summary.jpg"
+      ],
+      "reports": [
+        "outputs/reports/stargan_celeba_attr5_refine_result.txt",
+        "outputs/reports/stargan_celeba_attr5_refine_quality_eval.txt"
+      ],
+      "entrypoints": [
+        "src/stargan/train_stargan_celeba.py",
+        "src/stargan/sample_stargan_celeba.py",
+        "src/stargan/evaluate_stargan_quality.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    },
+    {
+      "key": "reconstruction",
+      "title": "3D face reconstruction",
+      "stage": "Phase 3",
+      "status": "complete",
+      "summary": "Official 3DDFA_V2 dense reconstruction was integrated and the resulting mesh was rendered from six views with OpenGL.",
+      "metrics": [
+        "Vertices: 38,365",
+        "Triangles: 76,073",
+        "OpenGL views: 6"
+      ],
+      "media": [
+        "outputs/3d_reconstruction/3ddfa_v2/images/indoor_016_original_3ddfa_v2_projected_mesh.jpg",
+        "outputs/3d_reconstruction/3ddfa_v2/opengl/indoor_016_original_3ddfa_v2_opengl_multiview_grid.jpg"
+      ],
+      "reports": [
+        "outputs/reports/face_3d_reconstruction_3ddfa_v2_result.txt",
+        "outputs/reports/face_3d_reconstruction_opengl_render_result.txt"
+      ],
+      "entrypoints": [
+        "src/reconstruction/run_3ddfa_v2_reconstruction.py",
+        "src/reconstruction/render_3ddfa_mesh_opengl.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    },
+    {
+      "key": "effects",
+      "title": "Dynamic face effects",
+      "stage": "Phase 3",
+      "status": "complete",
+      "summary": "Dense landmarks drive animated glasses, a hat, beauty smoothing, lipstick, and blush in a reproducible video demo.",
+      "metrics": [
+        "Output: 96 frames @ 24 FPS",
+        "Processing throughput: 6.66 FPS"
+      ],
+      "media": [
+        "outputs/effects/images/indoor_016_effects_grid.jpg",
+        "outputs/effects/videos/dynamic_face_effects_contact_sheet.jpg",
+        "outputs/effects/videos/dynamic_face_effects_demo.mp4"
+      ],
+      "reports": [
+        "outputs/reports/effects_baseline_result.txt",
+        "outputs/reports/dynamic_effects_demo_result.txt"
+      ],
+      "entrypoints": [
+        "src/effects/run_effect_demo.py",
+        "src/effects/run_dynamic_effects_demo.py"
+      ],
+      "missing_media": [],
+      "missing_reports": [],
+      "missing_entrypoints": []
+    }
+  ]
+}

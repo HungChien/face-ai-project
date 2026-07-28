@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Face AI Project - Final Demo</title>
+<style>
+:root { color-scheme: light; --ink:#17212b; --muted:#607080; --line:#d6dde3; --panel:#f7f9fa; --green:#18794e; --amber:#8a5a00; --accent:#006d77; }
+* { box-sizing:border-box; } body { margin:0; color:var(--ink); background:#fff; font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+header { border-bottom:1px solid var(--line); background:var(--panel); } .shell { width:min(1180px,calc(100% - 32px)); margin:0 auto; }
+.intro { padding:36px 0 28px; } h1 { margin:0 0 8px; font-size:32px; letter-spacing:0; } h2 { margin:0; font-size:21px; letter-spacing:0; }
+h3 { margin:0 0 8px; font-size:14px; letter-spacing:0; } p { margin:8px 0 14px; } .summary { display:flex; gap:24px; color:var(--muted); }
+nav { display:flex; gap:6px; overflow-x:auto; padding:10px 0; border-top:1px solid var(--line); } nav a { padding:7px 10px; color:var(--ink); text-decoration:none; white-space:nowrap; }
+nav a:hover { color:var(--accent); } main { padding:28px 0 48px; } .module { padding:24px 0 30px; border-bottom:1px solid var(--line); }
+.module-head { display:flex; align-items:start; justify-content:space-between; gap:16px; } .stage { margin:0 0 2px; color:var(--muted); font-size:12px; font-weight:700; text-transform:uppercase; }
+.status { min-width:72px; padding:4px 8px; border:1px solid currentColor; border-radius:4px; text-align:center; font-size:12px; font-weight:700; }
+.status.complete { color:var(--green); } .status.partial { color:var(--amber); } .metrics { display:flex; flex-wrap:wrap; gap:8px 24px; margin:0 0 18px; padding-left:20px; font-weight:600; }
+.media { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; align-items:start; } figure { margin:0; }
+img,video { display:block; width:100%; max-height:520px; object-fit:contain; background:#eef2f4; border:1px solid var(--line); }
+figcaption { padding-top:5px; color:var(--muted); font-size:12px; } details { margin-top:16px; } summary { cursor:pointer; font-weight:700; }
+.evidence-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; padding:14px 0 0; } .evidence-grid ul { margin:0; padding-left:18px; overflow-wrap:anywhere; }
+a { color:var(--accent); } a.missing { color:#a33; text-decoration-style:dotted; } .muted { color:var(--muted); } footer { padding:22px 0; border-top:1px solid var(--line); color:var(--muted); }
+@media (max-width:680px) { .summary,.evidence-grid { display:block; } .summary span { display:block; } .media { grid-template-columns:1fr; } h1 { font-size:26px; } }
+</style></head><body><header><div class="shell"><div class="intro"><h1>Face AI Project - Final Demo</h1>
+<p class="muted">A single evidence dashboard for face analysis, recognition, generation, reconstruction, and effects.</p>
+<div class="summary"><span><strong>8</strong> integrated modules</span><span><strong>6</strong> complete</span><span><strong>2</strong> partial</span></div>
+</div><nav aria-label="Module navigation"><a href="#datasets">Dataset exploration</a><a href="#detection">Face detection</a><a href="#landmarks">Landmarks and alignment</a><a href="#recognition">Face recognition</a><a href="#optimization">Optimization and deployment</a><a href="#stargan">Face attribute editing</a><a href="#reconstruction">3D face reconstruction</a><a href="#effects">Dynamic face effects</a></nav></div></header><main class="shell"><section class="module" id="datasets">
+<div class="module-head"><div><p class="stage">Phase 1</p><h2>Dataset exploration</h2></div>
+<span class="status complete">Complete</span></div>
+<p>LFW and CelebA formats, annotations, distributions, pairs, and preprocessing were inspected with OpenCV and Matplotlib.</p><ul class="metrics"><li>LFW: 13,233 images / 5,749 identities</li><li>CelebA: 202,599 images / 40 attributes</li></ul>
+<div class="media"><figure><a href="../images/lfw_opencv_pair_examples.jpg"><img loading="lazy" src="../images/lfw_opencv_pair_examples.jpg" alt="lfw_opencv_pair_examples.jpg"></a><figcaption>lfw_opencv_pair_examples.jpg</figcaption></figure><figure><a href="../images/celeba_opencv_annotation_examples.jpg"><img loading="lazy" src="../images/celeba_opencv_annotation_examples.jpg" alt="celeba_opencv_annotation_examples.jpg"></a><figcaption>celeba_opencv_annotation_examples.jpg</figcaption></figure></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/lfw_exploration_result.txt">outputs/reports/lfw_exploration_result.txt</a></li><li><a href="../reports/celeba_exploration_result.txt">outputs/reports/celeba_exploration_result.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/datasets/explore_lfw.py">src/datasets/explore_lfw.py</a></li><li><a href="../../src/datasets/explore_lfw_pairs.py">src/datasets/explore_lfw_pairs.py</a></li><li><a href="../../src/datasets/explore_celeba.py">src/datasets/explore_celeba.py</a></li></ul></div>
+</div></details></section><section class="module" id="detection">
+<div class="module-head"><div><p class="stage">Phases 1-2</p><h2>Face detection</h2></div>
+<span class="status partial">Partial</span></div>
+<p>MMDetection inference and a RetinaNet WIDER FACE training pipeline were completed; the formal run was limited to one CPU epoch.</p><ul class="metrics"><li>WIDER FACE epoch-1 mAP/AP50: 0.3283</li><li>MMDetection test image: 1 face</li></ul>
+<div class="media"><figure><a href="../mmdetection_face_detection/vis/face_test.jpg"><img loading="lazy" src="../mmdetection_face_detection/vis/face_test.jpg" alt="face_test.jpg"></a><figcaption>face_test.jpg</figcaption></figure><figure><a href="../images/widerface_epoch1_checkpoint/face_test_debug_det.jpg"><img loading="lazy" src="../images/widerface_epoch1_checkpoint/face_test_debug_det.jpg" alt="face_test_debug_det.jpg"></a><figcaption>face_test_debug_det.jpg</figcaption></figure></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/mmdetection_face_detection_result.txt">outputs/reports/mmdetection_face_detection_result.txt</a></li><li><a href="../reports/widerface_epoch1_eval_result.txt">outputs/reports/widerface_epoch1_eval_result.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/mmdetection/run_face_detection_mmdet.py">src/mmdetection/run_face_detection_mmdet.py</a></li><li><a href="../../src/mmdetection/train_widerface.py">src/mmdetection/train_widerface.py</a></li><li><a href="../../src/mmdetection/evaluate_widerface.py">src/mmdetection/evaluate_widerface.py</a></li></ul></div>
+</div></details></section><section class="module" id="landmarks">
+<div class="module-head"><div><p class="stage">Phase 2</p><h2>Landmarks and alignment</h2></div>
+<span class="status complete">Complete</span></div>
+<p>A 68-point 300W regressor, five-point extraction, calibrated alignment template, and GT-versus-prediction comparison were implemented.</p><ul class="metrics"><li>Best validation NME: 0.1721</li><li>Best checkpoint epoch: 29 / 30</li></ul>
+<div class="media"><figure><a href="../landmarks/landmark_cnn_300w_aug30_predictions.jpg"><img loading="lazy" src="../landmarks/landmark_cnn_300w_aug30_predictions.jpg" alt="landmark_cnn_300w_aug30_predictions.jpg"></a><figcaption>landmark_cnn_300w_aug30_predictions.jpg</figcaption></figure><figure><a href="../landmarks/alignment_compare_300w/gt_vs_pred_alignment_grid.jpg"><img loading="lazy" src="../landmarks/alignment_compare_300w/gt_vs_pred_alignment_grid.jpg" alt="gt_vs_pred_alignment_grid.jpg"></a><figcaption>gt_vs_pred_alignment_grid.jpg</figcaption></figure></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/landmark_300w_aug30_training_result.txt">outputs/reports/landmark_300w_aug30_training_result.txt</a></li><li><a href="../reports/landmark_300w_alignment_compare_result.txt">outputs/reports/landmark_300w_alignment_compare_result.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/landmarks/train_landmark_regressor.py">src/landmarks/train_landmark_regressor.py</a></li><li><a href="../../src/landmarks/align_with_landmark_model.py">src/landmarks/align_with_landmark_model.py</a></li><li><a href="../../src/landmarks/compare_gt_pred_alignment.py">src/landmarks/compare_gt_pred_alignment.py</a></li></ul></div>
+</div></details></section><section class="module" id="recognition">
+<div class="module-head"><div><p class="stage">Phase 2</p><h2>Face recognition</h2></div>
+<span class="status partial">Partial</span></div>
+<p>ResNet50 + ArcFace was trained on a 10,000-identity aligned MS1M subset and evaluated with the official LFW 6,000-pair 10-fold protocol.</p><ul class="metrics"><li>Closed-set validation accuracy: 97.94%</li><li>Self-trained LFW accuracy: 76.98%</li><li>Face-pretrained reference: 96.77%</li></ul>
+<div class="media"><figure><a href="../images/resnet50_ms1m10000_reproduce_server_curves.jpg"><img loading="lazy" src="../images/resnet50_ms1m10000_reproduce_server_curves.jpg" alt="resnet50_ms1m10000_reproduce_server_curves.jpg"></a><figcaption>resnet50_ms1m10000_reproduce_server_curves.jpg</figcaption></figure></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/resnet50_ms1m10000_reproduce_server_result.txt">outputs/reports/resnet50_ms1m10000_reproduce_server_result.txt</a></li><li><a href="../reports/resnet50_ms1m10000_reproduce_server_lfw_10fold_result.txt">outputs/reports/resnet50_ms1m10000_reproduce_server_lfw_10fold_result.txt</a></li><li><a href="../reports/facenet_vggface2_lfw_10fold_result.txt">outputs/reports/facenet_vggface2_lfw_10fold_result.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/recognition/train_arcface_celeba_subset.py">src/recognition/train_arcface_celeba_subset.py</a></li><li><a href="../../src/recognition/evaluate_lfw_10fold_resnet_arcface.py">src/recognition/evaluate_lfw_10fold_resnet_arcface.py</a></li><li><a href="../../src/recognition/evaluate_lfw_10fold_facenet.py">src/recognition/evaluate_lfw_10fold_facenet.py</a></li></ul></div>
+</div></details></section><section class="module" id="optimization">
+<div class="module-head"><div><p class="stage">Phase 2</p><h2>Optimization and deployment</h2></div>
+<span class="status complete">Complete</span></div>
+<p>The final ArcFace model was dynamically quantized, exported to ONNX, and benchmarked with output-consistency checks.</p><ul class="metrics"><li>Quantized: -20.21% size / 1.174x CPU speedup</li><li>ONNXRuntime: 1.170x CPU speedup</li></ul>
+<div class="media"><p class="muted">No preview artifact is available.</p></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/resnet50_ms1m10000_dynamic_quantization_report.txt">outputs/reports/resnet50_ms1m10000_dynamic_quantization_report.txt</a></li><li><a href="../reports/resnet50_ms1m10000_onnx_export_report.txt">outputs/reports/resnet50_ms1m10000_onnx_export_report.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/optimization/quantize_arcface_model.py">src/optimization/quantize_arcface_model.py</a></li><li><a href="../../src/optimization/export_arcface_onnx.py">src/optimization/export_arcface_onnx.py</a></li></ul></div>
+</div></details></section><section class="module" id="stargan">
+<div class="module-head"><div><p class="stage">Phase 3</p><h2>Face attribute editing</h2></div>
+<span class="status complete">Complete</span></div>
+<p>StarGAN was trained on aligned CelebA for hair color, gender, and age-related editing, then refined to 30 epochs.</p><ul class="metrics"><li>Training images: 100,000</li><li>FID: 66.40</li><li>Inception Score: 2.178</li></ul>
+<div class="media"><figure><a href="../stargan/images/stargan_celeba_attr5_refine/epoch_030.jpg"><img loading="lazy" src="../stargan/images/stargan_celeba_attr5_refine/epoch_030.jpg" alt="epoch_030.jpg"></a><figcaption>epoch_030.jpg</figcaption></figure><figure><a href="../stargan/curves/stargan_celeba_attr5_refine_quality_summary.jpg"><img loading="lazy" src="../stargan/curves/stargan_celeba_attr5_refine_quality_summary.jpg" alt="stargan_celeba_attr5_refine_quality_summary.jpg"></a><figcaption>stargan_celeba_attr5_refine_quality_summary.jpg</figcaption></figure></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/stargan_celeba_attr5_refine_result.txt">outputs/reports/stargan_celeba_attr5_refine_result.txt</a></li><li><a href="../reports/stargan_celeba_attr5_refine_quality_eval.txt">outputs/reports/stargan_celeba_attr5_refine_quality_eval.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/stargan/train_stargan_celeba.py">src/stargan/train_stargan_celeba.py</a></li><li><a href="../../src/stargan/sample_stargan_celeba.py">src/stargan/sample_stargan_celeba.py</a></li><li><a href="../../src/stargan/evaluate_stargan_quality.py">src/stargan/evaluate_stargan_quality.py</a></li></ul></div>
+</div></details></section><section class="module" id="reconstruction">
+<div class="module-head"><div><p class="stage">Phase 3</p><h2>3D face reconstruction</h2></div>
+<span class="status complete">Complete</span></div>
+<p>Official 3DDFA_V2 dense reconstruction was integrated and the resulting mesh was rendered from six views with OpenGL.</p><ul class="metrics"><li>Vertices: 38,365</li><li>Triangles: 76,073</li><li>OpenGL views: 6</li></ul>
+<div class="media"><figure><a href="../3d_reconstruction/3ddfa_v2/images/indoor_016_original_3ddfa_v2_projected_mesh.jpg"><img loading="lazy" src="../3d_reconstruction/3ddfa_v2/images/indoor_016_original_3ddfa_v2_projected_mesh.jpg" alt="indoor_016_original_3ddfa_v2_projected_mesh.jpg"></a><figcaption>indoor_016_original_3ddfa_v2_projected_mesh.jpg</figcaption></figure><figure><a href="../3d_reconstruction/3ddfa_v2/opengl/indoor_016_original_3ddfa_v2_opengl_multiview_grid.jpg"><img loading="lazy" src="../3d_reconstruction/3ddfa_v2/opengl/indoor_016_original_3ddfa_v2_opengl_multiview_grid.jpg" alt="indoor_016_original_3ddfa_v2_opengl_multiview_grid.jpg"></a><figcaption>indoor_016_original_3ddfa_v2_opengl_multiview_grid.jpg</figcaption></figure></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/face_3d_reconstruction_3ddfa_v2_result.txt">outputs/reports/face_3d_reconstruction_3ddfa_v2_result.txt</a></li><li><a href="../reports/face_3d_reconstruction_opengl_render_result.txt">outputs/reports/face_3d_reconstruction_opengl_render_result.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/reconstruction/run_3ddfa_v2_reconstruction.py">src/reconstruction/run_3ddfa_v2_reconstruction.py</a></li><li><a href="../../src/reconstruction/render_3ddfa_mesh_opengl.py">src/reconstruction/render_3ddfa_mesh_opengl.py</a></li></ul></div>
+</div></details></section><section class="module" id="effects">
+<div class="module-head"><div><p class="stage">Phase 3</p><h2>Dynamic face effects</h2></div>
+<span class="status complete">Complete</span></div>
+<p>Dense landmarks drive animated glasses, a hat, beauty smoothing, lipstick, and blush in a reproducible video demo.</p><ul class="metrics"><li>Output: 96 frames @ 24 FPS</li><li>Processing throughput: 6.66 FPS</li></ul>
+<div class="media"><figure><a href="../effects/images/indoor_016_effects_grid.jpg"><img loading="lazy" src="../effects/images/indoor_016_effects_grid.jpg" alt="indoor_016_effects_grid.jpg"></a><figcaption>indoor_016_effects_grid.jpg</figcaption></figure><figure><a href="../effects/videos/dynamic_face_effects_contact_sheet.jpg"><img loading="lazy" src="../effects/videos/dynamic_face_effects_contact_sheet.jpg" alt="dynamic_face_effects_contact_sheet.jpg"></a><figcaption>dynamic_face_effects_contact_sheet.jpg</figcaption></figure><figure><video controls preload="metadata" src="../effects/videos/dynamic_face_effects_demo.mp4"></video><figcaption>dynamic_face_effects_demo.mp4</figcaption></figure></div>
+<details><summary>Evidence and entry points</summary><div class="evidence-grid">
+<div><h3>Reports</h3><ul><li><a href="../reports/effects_baseline_result.txt">outputs/reports/effects_baseline_result.txt</a></li><li><a href="../reports/dynamic_effects_demo_result.txt">outputs/reports/dynamic_effects_demo_result.txt</a></li></ul></div>
+<div><h3>Code</h3><ul><li><a href="../../src/effects/run_effect_demo.py">src/effects/run_effect_demo.py</a></li><li><a href="../../src/effects/run_dynamic_effects_demo.py">src/effects/run_dynamic_effects_demo.py</a></li></ul></div>
+</div></details></section></main>
+<footer><div class="shell">Generated from local experiment artifacts. Missing links are shown in red.</div></footer></body></html>

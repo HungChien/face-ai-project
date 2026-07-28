@@ -1,0 +1,29 @@
+{
+  "method": "real-time MediaPipe FaceLandmarker tracking with dynamic AR sticker and beauty/makeup effects",
+  "source": "outputs\\effects\\images\\indoor_016_original.jpg",
+  "input_video": null,
+  "landmarker_model": "models\\checkpoints\\face_landmarker.task",
+  "frames": 96,
+  "video_fps": 24.0,
+  "frame_width": 360,
+  "detection_width": 180,
+  "detect_every": 4,
+  "processing_seconds": 14.423475199961103,
+  "processing_fps": 6.655816207196646,
+  "detected_frames": 24,
+  "detection_rate": 0.25,
+  "reused_previous_landmarks": 72,
+  "effects": [
+    "dynamic glasses",
+    "animated hat",
+    "skin smoothing",
+    "brightening",
+    "lipstick",
+    "blush",
+    "tracking overlay"
+  ],
+  "outputs": {
+    "video": "outputs\\effects\\videos\\dynamic_face_effects_demo.mp4",
+    "contact_sheet": "outputs\\effects\\videos\\dynamic_face_effects_contact_sheet.jpg"
+  }
+}
