@@ -1,6 +1,6 @@
 # Dynamic Face Effects Demo
 
-This module covers the dynamic effects part of Phase 3.
+This module covers dynamic landmark-driven face effects and video composition.
 
 ## Method
 
@@ -25,7 +25,7 @@ Implemented effects:
 ```powershell
 D:\Anaconda3\envs\ml-gpu\python.exe src\effects\run_dynamic_effects_demo.py `
   --image outputs\effects\images\indoor_016_original.jpg `
-  --model models\checkpoints\face_landmarker.task `
+  --model models\checkpoints\face_landmarker.experiment `
   --frames 96 `
   --fps 24 `
   --width 360 `

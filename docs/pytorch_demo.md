@@ -4,7 +4,7 @@
 
 The objective of this demo is to verify that the project environment can successfully run a complete minimal PyTorch training workflow.
 
-This demo is part of the Week 1 setup and baseline verification tasks. It confirms that the local environment supports basic deep learning operations before moving on to face detection, facial landmark detection, face alignment, face recognition, and facial effects.
+This demo is part of the environment and baseline verification workflow. It confirms that the local environment supports basic deep learning operations before moving on to face detection, facial landmark detection, face alignment, face recognition, and facial effects.
 
 This demo verifies the following PyTorch workflow:
 
@@ -86,7 +86,7 @@ python src\pytorch_demo.py
 
 ## 6. Method
 
-This demo uses a small synthetic binary classification task.
+This demo uses a small synthetic binary classification experiment.
 
 The data is randomly generated instead of being loaded from real images. This keeps the demo simple and focuses only on verifying the PyTorch training pipeline.
 
@@ -192,7 +192,7 @@ The main purpose of this experiment is to verify that the following operations w
 8. Model checkpoints can be saved locally.
 ```
 
-The successful completion of the training loop confirms that the PyTorch environment is ready for more complex deep learning tasks.
+The successful completion of the training loop confirms that the PyTorch environment is ready for more complex deep learning experiments.
 
 ## 11. Error Analysis
 
@@ -234,7 +234,7 @@ Later stages will use real computer vision datasets and more suitable model arch
 
 After this PyTorch demo, the project can move to computer vision and face-related baselines.
 
-The next tasks include:
+Useful next steps include:
 
 ```text
 1. OpenCV face detection baseline
@@ -276,6 +276,6 @@ Synthetic input data
 
 The model ran on `cuda`, which confirms that PyTorch can use the local NVIDIA GeForce RTX 2060 GPU.
 
-Although the accuracy is not high, this is expected because the task uses randomly generated data. The important result is that the loss decreased during training and the full PyTorch training pipeline worked correctly.
+Although the accuracy is not high, this is expected because the experiment uses randomly generated data. The important result is that the loss decreased during training and the full PyTorch training pipeline worked correctly.
 
-Overall, this demo is considered successful because it verifies that the project environment is ready for later deep learning tasks, including face detection, facial landmark detection, face recognition, and facial effects.
+Overall, this demo is considered successful because it verifies that the project environment is ready for later deep learning experiments, including face detection, facial landmark detection, face recognition, and facial effects.

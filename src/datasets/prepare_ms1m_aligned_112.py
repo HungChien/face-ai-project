@@ -134,7 +134,7 @@ def main() -> None:
     preview_count = save_preview(args.output_root, args.preview, args.preview_identities, args.preview_images_per_identity)
     elapsed = time.perf_counter() - started
     summary = {
-        "task": "prepare MS1M aligned 112x112 folder dataset",
+        "module": "prepare MS1M aligned 112x112 folder dataset",
         "input_root": str(args.input_root),
         "output_root": str(args.output_root),
         "image_size": args.image_size,

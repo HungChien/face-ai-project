@@ -1,5 +1,5 @@
 {
-  "task": "CelebA 100-image detection and landmark evaluation",
+  "module": "CelebA 100-image detection and landmark evaluation",
   "dataset": "CelebA",
   "data_root": "data\\raw",
   "sample_size": 100,

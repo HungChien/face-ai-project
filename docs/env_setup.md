@@ -1,4 +1,4 @@
-# Environment Setup
+﻿# Environment Setup
 
 ## 1. Objective
 
@@ -27,15 +27,15 @@ Example:
 
 ```text
 <project-root>/
-├── configs/
-├── data/
-├── docs/
-├── models/
-├── notebooks/
-├── outputs/
-├── src/
-├── README.md
-└── requirements.txt
+|-- configs/
+|-- data/
+|-- docs/
+|-- models/
+|-- notebooks/
+|-- outputs/
+|-- src/
+|-- README.md
+`-- requirements.txt
 ```
 
 ## 3. Conda Environment
@@ -135,13 +135,13 @@ jupyter==1.1.1
 The environment check script is located at:
 
 ```text
-src/check_env.py
+|-- src/
 ```
 
 Run the script from `<project-root>`:
 
 ```bash
-python src/check_env.py
+|-- src/
 ```
 
 On Windows, this command can also be written as:
@@ -153,7 +153,7 @@ python src\check_env.py
 The script generates the following report:
 
 ```text
-outputs/reports/env_check_result.txt
+|-- outputs/
 ```
 
 ## 7. Local Verification Result
@@ -185,7 +185,7 @@ The environment check confirms that:
 6. NumPy is installed successfully.
 ```
 
-The result shows that GPU acceleration is available for later deep learning tasks.
+The result shows that GPU acceleration is available for later deep learning experiments.
 
 ## 9. Notes
 
@@ -204,7 +204,7 @@ cd face-ai-project
 Run the environment check script:
 
 ```bash
-python src/check_env.py
+|-- src/
 ```
 
 If new dependencies are installed later, update `requirements.txt`:
@@ -219,4 +219,4 @@ The project environment has been successfully configured.
 
 PyTorch can detect and use the local NVIDIA GeForce RTX 2060 GPU through CUDA 12.1. OpenCV, NumPy, ONNX, ONNX Runtime, and other basic dependencies are also installed successfully.
 
-The environment is ready for Week 1 tasks and later computer vision experiments.
+The environment is ready for the computer vision experiments in this repository.

@@ -1,6 +1,6 @@
 ﻿# Face Recognition ArcFace Baseline
 
-This note records the Phase 2 Task 5 smoke baseline for face recognition model training.
+This note records the ArcFace smoke baseline for face recognition model training.
 
 ## Goal
 
@@ -98,7 +98,7 @@ This is expected for a randomly initialized ResNet18 trained on only 10 LFW iden
 
 ## ResNet50 + ArcFace CelebA200 Training
 
-The script `src/recognition/train_arcface_celeba_subset.py` trains a larger ArcFace baseline on a CelebA identity subset. This is the first non-smoke training run for Phase 2 Task 5.
+The script `src/recognition/train_arcface_celeba_subset.py` trains a larger ArcFace baseline on a CelebA identity subset. This is the first non-smoke training run for ArcFace training workflow.
 
 Training command:
 

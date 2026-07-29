@@ -169,7 +169,7 @@ def main() -> None:
     real, generated, grid_meta = split_torchvision_grid(args.grid, args.ncols, args.padding)
 
     result = {
-        "task": "StarGAN generated image quality evaluation",
+        "module": "StarGAN generated image quality evaluation",
         "grid": str(args.grid),
         "device": str(device),
         "grid_meta": grid_meta,

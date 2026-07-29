@@ -27,7 +27,7 @@ Visualization tools:
 - OpenCV: image-level sample grid with text labels.
 
 Preprocessing notes:
-- LFW is identity-labeled and suitable for face verification tasks.
+- LFW is identity-labeled and suitable for face verification experiments.
 - Images should be detected, aligned, resized, and normalized before recognition.
 - Pair-based evaluation should build positive pairs from the same identity and negative pairs from different identities.
 - Identities with only one image are useful for gallery statistics but cannot form positive verification pairs alone.

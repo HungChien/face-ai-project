@@ -1,5 +1,5 @@
 {
-  "task": "MMDetection face detection",
+  "module": "MMDetection face detection",
   "model": "grounding_dino_swin-t_pretrain_obj365_goldg",
   "model_role": "MMDetection open-vocabulary detector with face text prompt",
   "text_prompt": "face",

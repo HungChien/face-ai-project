@@ -279,9 +279,9 @@ def main() -> None:
         [
             "",
             "Preprocessing notes:",
-            "- Detection task: use bbox only after confirming it matches the image coordinate system.",
-            "- Landmark task: use five-point landmarks for face alignment.",
-            "- Attribute task: resize images consistently and keep binary labels aligned with image filenames.",
+            "- Detection use case: use bbox only after confirming it matches the image coordinate system.",
+            "- Landmark use case: use five-point landmarks for face alignment.",
+            "- Attribute use case: resize images consistently and keep binary labels aligned with image filenames.",
             "- Recognition preprocessing: for img_align_celeba, prefer five-point landmarks for alignment/cropping visualization.",
             "- Keep original annotations unchanged; write processed crops to data/processed if needed.",
             "",

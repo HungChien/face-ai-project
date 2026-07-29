@@ -1,5 +1,5 @@
 {
-  "task": "Face landmark detection",
+  "module": "Face landmark detection",
   "model": "MediaPipe FaceLandmarker",
   "model_path": "models\\checkpoints\\face_landmarker.task",
   "input_image": "data\\samples\\face_test.jpg",

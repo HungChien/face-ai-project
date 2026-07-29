@@ -148,7 +148,7 @@ def detect_opencv_faces(image_bgr: np.ndarray) -> list[np.ndarray]:
 def load_mediapipe_landmarker(model_path: Path):
     import mediapipe as mp
     from mediapipe.tasks import python
-    from mediapipe.tasks.python import vision
+    from mediapipe.experiments.python import vision
 
     base_options = python.BaseOptions(model_asset_path=str(model_path))
     options = vision.FaceLandmarkerOptions(
@@ -353,7 +353,7 @@ def main() -> None:
     mediapipe_scored = len(mediapipe_nmes)
 
     summary = {
-        "task": "CelebA 100-image detection and landmark evaluation",
+        "module": "CelebA 100-image detection and landmark evaluation",
         "dataset": "CelebA",
         "data_root": str(args.data_root),
         "sample_size": sample_size,

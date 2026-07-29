@@ -32,7 +32,7 @@ MODULES = (
     ModuleResult(
         key="datasets",
         title="Dataset exploration",
-        stage="Phase 1",
+        stage="Data foundations",
         status="complete",
         summary="LFW and CelebA formats, annotations, distributions, pairs, and preprocessing were inspected with OpenCV and Matplotlib.",
         metrics=("LFW: 13,233 images / 5,749 identities", "CelebA: 202,599 images / 40 attributes"),
@@ -43,7 +43,7 @@ MODULES = (
     ModuleResult(
         key="detection",
         title="Face detection",
-        stage="Phases 1-2",
+        stage="Detection stack",
         status="partial",
         summary="MMDetection inference and a RetinaNet WIDER FACE training pipeline were completed; the formal run was limited to one CPU epoch.",
         metrics=("WIDER FACE epoch-1 mAP/AP50: 0.3283", "MMDetection test image: 1 face"),
@@ -54,7 +54,7 @@ MODULES = (
     ModuleResult(
         key="landmarks",
         title="Landmarks and alignment",
-        stage="Phase 2",
+        stage="Geometry stack",
         status="complete",
         summary="A 68-point 300W regressor, five-point extraction, calibrated alignment template, and GT-versus-prediction comparison were implemented.",
         metrics=("Best validation NME: 0.1721", "Best checkpoint epoch: 29 / 30"),
@@ -65,7 +65,7 @@ MODULES = (
     ModuleResult(
         key="recognition",
         title="Face recognition",
-        stage="Phase 2",
+        stage="Recognition stack",
         status="partial",
         summary="ResNet50 + ArcFace was trained on a 10,000-identity aligned MS1M subset and evaluated with the official LFW 6,000-pair 10-fold protocol.",
         metrics=("Closed-set validation accuracy: 97.94%", "Self-trained LFW accuracy: 76.98%", "Face-pretrained reference: 96.77%"),
@@ -80,7 +80,7 @@ MODULES = (
     ModuleResult(
         key="optimization",
         title="Optimization and deployment",
-        stage="Phase 2",
+        stage="Deployment stack",
         status="complete",
         summary="The final ArcFace model was dynamically quantized, exported to ONNX, and benchmarked with output-consistency checks.",
         metrics=("Quantized: -20.21% size / 1.174x CPU speedup", "ONNXRuntime: 1.170x CPU speedup"),
@@ -91,7 +91,7 @@ MODULES = (
     ModuleResult(
         key="stargan",
         title="Face attribute editing",
-        stage="Phase 3",
+        stage="Generative editing",
         status="complete",
         summary="StarGAN was trained on aligned CelebA for hair color, gender, and age-related editing, then refined to 30 epochs.",
         metrics=("Training images: 100,000", "FID: 66.40", "Inception Score: 2.178"),
@@ -102,7 +102,7 @@ MODULES = (
     ModuleResult(
         key="reconstruction",
         title="3D face reconstruction",
-        stage="Phase 3",
+        stage="3D geometry",
         status="complete",
         summary="Official 3DDFA_V2 dense reconstruction was integrated and the resulting mesh was rendered from six views with OpenGL.",
         metrics=("Vertices: 38,365", "Triangles: 76,073", "OpenGL views: 6"),
@@ -116,7 +116,7 @@ MODULES = (
     ModuleResult(
         key="effects",
         title="Dynamic face effects",
-        stage="Phase 3",
+        stage="Real-time effects",
         status="complete",
         summary="Dense landmarks drive animated glasses, a hat, beauty smoothing, lipstick, and blush in a reproducible video demo.",
         metrics=("Output: 96 frames @ 24 FPS", "Processing throughput: 6.66 FPS"),
@@ -212,7 +212,7 @@ def generate(output_dir: Path) -> tuple[Path, Path]:
     manifest_path = output_dir / "manifest.json"
     index_path.write_text(build_html(output_dir), encoding="utf-8")
     manifest = {
-        "project_root": str(PROJECT_ROOT),
+        "project": PROJECT_ROOT.name,
         "modules": [
             {
                 **asdict(module),

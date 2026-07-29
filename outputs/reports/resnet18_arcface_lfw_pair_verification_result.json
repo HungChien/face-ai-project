@@ -1,5 +1,5 @@
 {
-  "task": "LFW pair verification with trained ResNet18 ArcFace smoke checkpoint",
+  "module": "LFW pair verification with trained ResNet18 ArcFace smoke checkpoint",
   "checkpoint": "models\\checkpoints\\resnet18_arcface_lfw_smoke10_best.pt",
   "device": "cuda",
   "backbone": "resnet18",

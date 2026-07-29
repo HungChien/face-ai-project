@@ -1,10 +1,10 @@
-# OpenCV Demo
+﻿# OpenCV Demo
 
 ## 1. Objective
 
 The objective of this demo is to verify that OpenCV can correctly read, process, and save images in the project environment.
 
-This demo is part of the Week 1 setup tasks. It confirms that the local Python environment can perform basic computer vision operations before moving on to face detection, facial landmark detection, face alignment, and face recognition.
+This demo is part of the environment setup workflow. It confirms that the local Python environment can perform basic computer vision operations before moving on to face detection, facial landmark detection, face alignment, and face recognition.
 
 ## 2. Repository Context
 
@@ -14,15 +14,15 @@ Example:
 
 ```text
 <project-root>/
-├── configs/
-├── data/
-├── docs/
-├── models/
-├── notebooks/
-├── outputs/
-├── src/
-├── README.md
-└── requirements.txt
+鈹溾攢鈹€ configs/
+鈹溾攢鈹€ data/
+鈹溾攢鈹€ docs/
+鈹溾攢鈹€ models/
+鈹溾攢鈹€ notebooks/
+鈹溾攢鈹€ outputs/
+鈹溾攢鈹€ src/
+鈹溾攢鈹€ README.md
+鈹斺攢鈹€ requirements.txt
 ```
 
 Before running the script, enter the project root directory:
@@ -129,7 +129,7 @@ This confirms that OpenCV can correctly read images, perform basic image transfo
 
 For this demo, a non-face image is recommended because the goal is only to test basic image processing functionality.
 
-For later face-related tasks, such as face detection and face recognition, use appropriate public research datasets or properly authorized synthetic face images. Do not upload large datasets or unauthorized human face images to the GitHub repository.
+For later face-related experiments, such as face detection and face recognition, use appropriate public research datasets or properly authorized synthetic face images. Do not upload large datasets or unauthorized human face images to the GitHub repository.
 
 Recommended practice:
 
@@ -137,11 +137,11 @@ Recommended practice:
 data/samples/      - Small demo images that can be safely committed
 data/raw/          - Local datasets, ignored by Git
 outputs/images/    - Small generated demo results
-outputs/videos/    - Large video outputs, ignored by Git if necessary
+outputs/effects/videos/ - Generated dynamic-effect videos, ignored by Git if necessary
 ```
 
 ## 11. Conclusion
 
 The OpenCV demo was completed successfully if the script generated the grayscale, blurred, and edge-detection images under `outputs/images/`.
 
-This confirms that the project environment is ready for basic computer vision processing and can proceed to later Week 1 tasks, including PyTorch testing and the first face detection baseline.
+This confirms that the project environment is ready for basic computer vision processing and can proceed to later computer vision experiments, including PyTorch testing and the first face detection baseline.

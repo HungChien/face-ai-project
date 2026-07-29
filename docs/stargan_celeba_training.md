@@ -1,6 +1,6 @@
 ﻿# CelebA StarGAN Training
 
-This note records the server-side commands for task 7.2: training a StarGAN baseline on CelebA for facial attribute editing.
+This note records the server-side commands for training a StarGAN baseline on CelebA for facial attribute editing.
 
 ## Dataset
 

@@ -1,6 +1,6 @@
 # 300W Dataset Download and Placement
 
-This project uses 300W for Phase 2 facial landmark detection and alignment.
+This project uses 300W for facial landmark detection and alignment.
 
 ## Official Source
 

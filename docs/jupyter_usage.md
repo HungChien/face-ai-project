@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-The objective of this task is to learn how to use Jupyter Notebook for interactive computer vision experiments.
+The goal of this walkthrough is to learn how to use Jupyter Notebook for interactive computer vision experiments.
 
 The experiment verifies the Python environment and demonstrates a basic OpenCV image processing workflow.
 

@@ -1,5 +1,5 @@
 {
-  "task": "WIDER FACE debug checkpoint visualization",
+  "module": "WIDER FACE debug checkpoint visualization",
   "config": "configs\\mmdetection\\widerface_retinanet_r50_fpn_debug_infer.py",
   "checkpoint": "outputs\\mmdetection_widerface\\retinanet_r50_fpn_debug\\epoch_1.pth",
   "device": "cpu",

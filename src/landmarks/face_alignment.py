@@ -106,7 +106,7 @@ def main() -> None:
     cv2.imwrite(str(comparison_path), comparison)
 
     summary = {
-        "task": "five-point face alignment",
+        "module": "five-point face alignment",
         "image": str(args.image),
         "landmarks_json": str(args.landmarks_json),
         "point_order": FIVE_POINT_ORDER,

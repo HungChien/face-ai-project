@@ -1,5 +1,5 @@
 {
-  "task": "prepare MS1M aligned 112x112 folder dataset",
+  "module": "prepare MS1M aligned 112x112 folder dataset",
   "input_root": "data\\raw\\ms-celeb-1m-subset-5000",
   "output_root": "data\\processed\\ms1m-aligned-112-5000",
   "image_size": 112,

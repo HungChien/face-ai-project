@@ -493,7 +493,7 @@ def main() -> None:
     history_path.write_text(json.dumps(history, indent=2), encoding="utf-8")
 
     report = {
-        "task": "CelebA StarGAN attribute editing baseline",
+        "module": "CelebA StarGAN attribute editing baseline",
         "run_name": args.run_name,
         "celeba_root": str(args.celeba_root),
         "image_dir": str(image_dir),

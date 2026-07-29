@@ -93,7 +93,7 @@ def visualize_checkpoint(
     json_report.write_text(
         json.dumps(
             {
-                "task": "WIDER FACE debug checkpoint visualization",
+                "module": "WIDER FACE debug checkpoint visualization",
                 "config": str(config),
                 "checkpoint": str(checkpoint),
                 "device": device,

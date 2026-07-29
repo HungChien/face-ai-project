@@ -1,10 +1,10 @@
 {
-  "project_root": "F:\\Internship\\Bytedance\\face-ai-project",
+  "project": "face-ai-project",
   "modules": [
     {
       "key": "datasets",
       "title": "Dataset exploration",
-      "stage": "Phase 1",
+      "stage": "Data foundations",
       "status": "complete",
       "summary": "LFW and CelebA formats, annotations, distributions, pairs, and preprocessing were inspected with OpenCV and Matplotlib.",
       "metrics": [
@@ -31,7 +31,7 @@
     {
       "key": "detection",
       "title": "Face detection",
-      "stage": "Phases 1-2",
+      "stage": "Detection stack",
       "status": "partial",
       "summary": "MMDetection inference and a RetinaNet WIDER FACE training pipeline were completed; the formal run was limited to one CPU epoch.",
       "metrics": [
@@ -58,7 +58,7 @@
     {
       "key": "landmarks",
       "title": "Landmarks and alignment",
-      "stage": "Phase 2",
+      "stage": "Geometry stack",
       "status": "complete",
       "summary": "A 68-point 300W regressor, five-point extraction, calibrated alignment template, and GT-versus-prediction comparison were implemented.",
       "metrics": [
@@ -85,7 +85,7 @@
     {
       "key": "recognition",
       "title": "Face recognition",
-      "stage": "Phase 2",
+      "stage": "Recognition stack",
       "status": "partial",
       "summary": "ResNet50 + ArcFace was trained on a 10,000-identity aligned MS1M subset and evaluated with the official LFW 6,000-pair 10-fold protocol.",
       "metrics": [
@@ -113,7 +113,7 @@
     {
       "key": "optimization",
       "title": "Optimization and deployment",
-      "stage": "Phase 2",
+      "stage": "Deployment stack",
       "status": "complete",
       "summary": "The final ArcFace model was dynamically quantized, exported to ONNX, and benchmarked with output-consistency checks.",
       "metrics": [
@@ -136,7 +136,7 @@
     {
       "key": "stargan",
       "title": "Face attribute editing",
-      "stage": "Phase 3",
+      "stage": "Generative editing",
       "status": "complete",
       "summary": "StarGAN was trained on aligned CelebA for hair color, gender, and age-related editing, then refined to 30 epochs.",
       "metrics": [
@@ -164,7 +164,7 @@
     {
       "key": "reconstruction",
       "title": "3D face reconstruction",
-      "stage": "Phase 3",
+      "stage": "3D geometry",
       "status": "complete",
       "summary": "Official 3DDFA_V2 dense reconstruction was integrated and the resulting mesh was rendered from six views with OpenGL.",
       "metrics": [
@@ -191,7 +191,7 @@
     {
       "key": "effects",
       "title": "Dynamic face effects",
-      "stage": "Phase 3",
+      "stage": "Real-time effects",
       "status": "complete",
       "summary": "Dense landmarks drive animated glasses, a hat, beauty smoothing, lipstick, and blush in a reproducible video demo.",
       "metrics": [

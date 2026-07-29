@@ -1,5 +1,5 @@
 {
-  "task": "LFW pretrained face recognition verification",
+  "module": "LFW pretrained face recognition verification",
   "model_library": "InsightFace",
   "model_name": "buffalo_l",
   "provider": "CPUExecutionProvider",

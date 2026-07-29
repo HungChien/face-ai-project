@@ -82,7 +82,7 @@ This project uses RetinaNet R50-FPN as the first WIDER FACE training baseline.
 
 ## 5. Evaluation Metrics
 
-For Task 3.3, the required evaluation report should include:
+The validation summary should include:
 
 | Metric | Meaning |
 | --- | --- |
@@ -94,11 +94,11 @@ MMDetection's built-in WIDER FACE config uses `VOCMetric` with `mAP` in 11-point
 
 ## 6. Practical Plan
 
-The immediate Week 3 path is:
+The immediate detector training path is:
 
 1. Prepare WIDER FACE in Pascal VOC XML format.
 2. Verify dataset paths and annotation files.
 3. Train RetinaNet R50-FPN with MMDetection.
 4. Evaluate validation mAP.
 5. Visualize detections on test images.
-6. Compare the trained detector with the Phase 1 GroundingDINO face-prompt result.
+6. Compare the trained detector with the GroundingDINO face-prompt result.

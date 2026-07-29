@@ -2,9 +2,9 @@
 
 ## 1. Objective
 
-The objective of this task is to learn the basic Docker workflow and verify that the project can run a Python program inside a container.
+The goal of this walkthrough is to learn the basic Docker workflow and verify that the project can run a Python program inside a container.
 
-The task covers:
+The workflow covers:
 
 ```text
 Dockerfile creation
@@ -130,6 +130,6 @@ Project datasets
 Model checkpoints
 ```
 
-The purpose of this task is only to verify the basic Docker workflow.
+The purpose of this check is only to verify the basic Docker workflow.
 
 A more complete project image can be created later after the main dependencies and framework versions are finalized.

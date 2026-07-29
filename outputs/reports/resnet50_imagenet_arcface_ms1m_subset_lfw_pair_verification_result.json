@@ -1,5 +1,5 @@
 {
-  "task": "LFW pair verification with trained ResNet ArcFace checkpoint",
+  "module": "LFW pair verification with trained ResNet ArcFace checkpoint",
   "checkpoint": "models\\checkpoints\\resnet50_imagenet_arcface_ms1m_subset_best.pt",
   "device": "cuda",
   "backbone": "resnet50",

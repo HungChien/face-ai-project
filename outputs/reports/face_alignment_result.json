@@ -1,5 +1,5 @@
 {
-  "task": "five-point face alignment",
+  "module": "five-point face alignment",
   "image": "data\\samples\\face_test.jpg",
   "landmarks_json": "outputs\\reports\\face_landmark_mediapipe_result.json",
   "point_order": [

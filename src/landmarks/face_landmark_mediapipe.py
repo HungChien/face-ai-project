@@ -6,8 +6,8 @@ from pathlib import Path
 import cv2
 import mediapipe as mp
 import numpy as np
-from mediapipe.tasks.python.core.base_options import BaseOptions
-from mediapipe.tasks.python import vision
+from mediapipe.experiments.python.core.base_options import BaseOptions
+from mediapipe.experiments.python import vision
 
 
 DEFAULT_IMAGE = Path("data/samples/face_test.jpg")
@@ -50,7 +50,7 @@ def parse_args() -> argparse.Namespace:
         "--model",
         type=Path,
         default=DEFAULT_MODEL,
-        help="MediaPipe FaceLandmarker .task model path.",
+        help="MediaPipe FaceLandmarker .experiment model path.",
     )
     return parser.parse_args()
 
@@ -228,7 +228,7 @@ def main() -> None:
 
     successful_faces = sum(item["status"] == "successful" for item in landmark_results)
     summary = {
-        "task": "Face landmark detection",
+        "module": "Face landmark detection",
         "model": "MediaPipe FaceLandmarker",
         "model_path": str(args.model),
         "input_image": str(args.image),

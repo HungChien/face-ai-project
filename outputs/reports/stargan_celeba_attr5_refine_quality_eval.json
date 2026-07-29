@@ -1,5 +1,5 @@
 {
-  "task": "StarGAN generated image quality evaluation",
+  "module": "StarGAN generated image quality evaluation",
   "grid": "server_downloads\\stargan_refine\\stargan_celeba_attr5_refine\\epoch_030.jpg",
   "device": "cuda",
   "grid_meta": {

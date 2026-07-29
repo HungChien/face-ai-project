@@ -1,4 +1,4 @@
-# Phase 2 Task 4: Face Landmark Detection and Alignment
+# Face Landmark Detection and Alignment
 
 ## 4.1 Common Landmark Algorithms
 
@@ -51,7 +51,7 @@ For this project:
 
 ## 4.2 Dataset Plan: 300W or COFW
 
-The internship requirement asks for training on 300W or COFW. These datasets are not currently present in `data/raw`, so this project provides dataset-check and training entry scripts first.
+The landmark pipeline supports supervised training on 300W or COFW. These datasets are not currently present in `data/raw`, so this project provides dataset-check and training entry scripts first.
 
 Expected 300W-style structure:
 

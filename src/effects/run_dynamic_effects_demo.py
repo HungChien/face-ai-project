@@ -7,8 +7,8 @@ from pathlib import Path
 import cv2
 import mediapipe as mp
 import numpy as np
-from mediapipe.tasks.python import vision
-from mediapipe.tasks.python.core.base_options import BaseOptions
+from mediapipe.experiments.python import vision
+from mediapipe.experiments.python.core.base_options import BaseOptions
 
 
 DEFAULT_IMAGE = Path("outputs/effects/images/indoor_016_original.jpg")

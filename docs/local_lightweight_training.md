@@ -35,7 +35,7 @@ This reduces GPU computation, CPU image loading pressure, and sustained thermal 
 From PowerShell:
 
 ```powershell
-cd F:\Internship\Bytedance\face-ai-project
+cd <project-root>
 .\scripts\run_local_mobilefacenet_light.ps1
 ```
 

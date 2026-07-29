@@ -318,7 +318,7 @@ def run_lfw_recognition_verification(args: argparse.Namespace) -> None:
     elapsed = time.perf_counter() - start_time
 
     summary = {
-        "task": "LFW pretrained face recognition verification",
+        "module": "LFW pretrained face recognition verification",
         "model_library": "InsightFace",
         "model_name": args.model_name,
         "provider": "CPUExecutionProvider",
@@ -452,7 +452,7 @@ def main() -> None:
             "- Detect face region if raw images are used.",
             "- Align faces using eye or five-point landmarks before embedding extraction.",
             "- Resize aligned crops to the recognition model input size, commonly 112x112.",
-            "- Normalize pixel values according to the backbone model requirement.",
+            "- Normalize pixel values according to the backbone model input convention.",
             "- Build positive pairs from the same identity and negative pairs from different identities.",
             "- Keep train/test pair files separate to avoid evaluation leakage.",
             "",

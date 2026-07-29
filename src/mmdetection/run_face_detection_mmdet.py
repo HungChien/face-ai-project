@@ -121,7 +121,7 @@ def main() -> None:
     prediction_path = output_dir / "preds" / f"{args.image.stem}.json"
 
     summary = {
-        "task": "MMDetection face detection",
+        "module": "MMDetection face detection",
         "model": args.model,
         "model_role": "MMDetection open-vocabulary detector with face text prompt",
         "text_prompt": args.text_prompt,
